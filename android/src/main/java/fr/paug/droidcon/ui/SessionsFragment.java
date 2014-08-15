@@ -762,7 +762,8 @@ public class SessionsFragment extends Fragment implements
             mImageLoader.loadImage(photo, photoView, true /*crop*/);
         } else {
             // cleaning the (potentially) recycled photoView, in case this session has no photo:
-            photoView.setImageDrawable(null);
+//            photoView.setImageDrawable(null);
+            photoView.setImageResource(R.drawable.default_session_img);
         }
 
         // render title

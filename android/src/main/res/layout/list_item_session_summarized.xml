@@ -22,6 +22,7 @@
 
     <!-- Session image -->
     <ImageView android:id="@+id/session_photo_colored"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
