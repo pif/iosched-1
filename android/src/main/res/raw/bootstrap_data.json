@@ -482,7 +482,8 @@
       "id": "session_jan_chong_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "leparisien"
     },
@@ -505,7 +506,8 @@
       "id": "session_xavier_hallade_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_FR"
+        "THEME_FR",
+        "THEME_BEGINNER"
       ],
       "room": "salon"
     },
@@ -528,7 +530,8 @@
       "id": "session_taylorling_1",
       "tags": [
         "TOPIC_UI_UX",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_BEGINNER"
       ],
       "room": "auditorium"
     },
@@ -557,7 +560,8 @@ See how to eliminate all boiler plate from your favorite librairies and boost yo
       "id": "session_stephanenicolas_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_EXPERT"
       ],
       "room": "salon"
     },
@@ -590,7 +594,8 @@ This session won’t be about RSS feed or another Flappy bird. It will tackle co
       "id": "session_fabiendevos_1",
       "tags": [
         "TOPIC_OTHER",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_EXPERT"
       ],
       "room": "auditorium"
     },
@@ -615,7 +620,8 @@ In this session, Nabil will be focusing on creating a Plugin that cooperates wit
       "id": "session_nabilhachicha_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "leparisien"
     },
@@ -643,7 +649,8 @@ He will also explain the potential issues you might be encountering, but if you 
       "id": "session_guillaumelaforge_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_FR"
+        "THEME_FR",
+        "THEME_BEGINNER"
       ],
       "room": "leparisien"
     },
@@ -666,7 +673,8 @@ He will also explain the potential issues you might be encountering, but if you 
       "id": "session_geoffreydorne_1",
       "tags": [
         "TOPIC_OTHER",
-        "THEME_FR"
+        "THEME_FR",
+        "THEME_BEGINNER"
       ],
       "room": "leparisien"
     },
@@ -695,7 +703,8 @@ He will also explain the potential issues you might be encountering, but if you 
       "id": "session_marcdecourville_1",
       "tags": [
         "TOPIC_EVERYWHERE",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "auditorium"
     },
@@ -720,7 +729,8 @@ This talk will explain how we ported VLC to Android using the NDK, the issues we
       "id": "session_jbkempf_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "salon"
     },
@@ -745,7 +755,8 @@ In this talk the security flaws and UX implications of passwords will be discuss
       "id": "session_timmesserschmidt_1",
       "tags": [
         "TOPIC_UI_UX",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_BEGINNER"
       ],
       "room": "leparisien"
     },
@@ -768,7 +779,8 @@ In this talk the security flaws and UX implications of passwords will be discuss
       "id": "session_hoilam_1",
       "tags": [
         "TOPIC_EVERYWHERE",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_BEGINNER"
       ],
       "room": "auditorium"
     },
@@ -795,7 +807,8 @@ In this talk, Mario will be presenting how to easily setup and include Android W
       "id": "session_marioviviani_1",
       "tags": [
         "TOPIC_EVERYWHERE",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "auditorium"
     },
@@ -823,7 +836,8 @@ In this talk, Cédric and Jean-Loup will be answering these questions. They will
       "id": "session_cedriccreusot_jeanloupyu_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "leparisien"
     },
@@ -846,7 +860,8 @@ In this talk, Cédric and Jean-Loup will be answering these questions. They will
       "id": "session_benjaminaugustin_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_EXPERT"
       ],
       "room": "salon"
     },
@@ -871,7 +886,8 @@ Thomas will be presenting, with code, how the latter works, the pros and cons. P
       "id": "session_thomasguerin_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_FR"
+        "THEME_FR",
+        "THEME_INTERMEDIATE"
       ],
       "room": "salon"
     },
@@ -898,7 +914,8 @@ Connect the dots in the spotty documentation the Android team has assembled, and
       "id": "session_sebastianopoggi_1",
       "tags": [
         "TOPIC_UI_UX",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "auditorium"
     },
@@ -923,7 +940,8 @@ In his talk, Mathieu will be presenting how each technique works and how they ha
       "id": "session_mathieucalba_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "leparisien"
     },
@@ -946,7 +964,8 @@ In his talk, Mathieu will be presenting how each technique works and how they ha
       "id": "session_pyricau_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_INTERMEDIATE"
       ],
       "room": "auditorium"
     },
@@ -969,7 +988,8 @@ In his talk, Mathieu will be presenting how each technique works and how they ha
       "id": "session_nicolasklein_1",
       "tags": [
         "TOPIC_DEVELOPMENT",
-        "THEME_FR"
+        "THEME_FR",
+        "THEME_INTERMEDIATE"
       ],
       "room": "salon"
     },
@@ -993,7 +1013,8 @@ In his talk, Mathieu will be presenting how each technique works and how they ha
       "id": "session_chprunier_remygottschalk_1",
       "tags": [
         "TOPIC_EVERYWHERE",
-        "THEME_FR"
+        "THEME_FR",
+        "THEME_EXPERT"
       ],
       "room": "salon"
     },
@@ -1021,7 +1042,8 @@ In this session, Jean will cover:
       "id": "session_jeanmaisonnial_1",
       "tags": [
         "TOPIC_EVERYWHERE",
-        "THEME_EN"
+        "THEME_EN",
+        "THEME_BEGINNER"
       ],
       "room": "leparisien"
     }
@@ -1278,6 +1300,30 @@ In this session, Jean will cover:
       "tag": "THEME_EN",
       "original_id": "c120fdc1-8dd0-e311-b297-00155d5066d8",
       "order_in_category": 2
+    },
+{
+      "category": "THEME",
+      "name": "Beginner",
+      "abstract": "",
+      "tag": "THEME_BEGINNER",
+      "original_id": "c120fdc1-8dd0-e311-b297-00155d5068",
+      "order_in_category": 1
+    },
+{
+      "category": "THEME",
+      "name": "Intermediate",
+      "abstract": "",
+      "tag": "THEME_INTERMEDIATE",
+      "original_id": "c120fdc1-8dd0-e311-b297-00155066d8",
+      "order_in_category": 2
+    },
+{
+      "category": "THEME",
+      "name": "Expert",
+      "abstract": "",
+      "tag": "THEME_EXPERT",
+      "original_id": "c120fdc1-8dd0-e311-b297-055d5066d8",
+      "order_in_category": 3
     }
   ]
 }
