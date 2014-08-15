@@ -189,6 +189,12 @@ public class SessionsHandler extends JSONHandler {
             if (!TextUtils.isEmpty(session.color)) {
                 color = Color.parseColor(session.color);
             }
+            else
+            {
+                Tag tag = mTagMap.get(session.mainTag);
+                if(tag != null && !TextUtils.isEmpty(tag.color))
+                    color = Color.parseColor(tag.color);
+            }
         } catch (IllegalArgumentException ex) {
             LOGD(TAG, "Ignoring invalid formatted session color: "+session.color);
         }
