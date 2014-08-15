@@ -79,7 +79,7 @@
 
     <!-- Shown in a drop-down list on the main screen, indicating that all session types
     are being displayed. Some examples of session types are: session, office hours, code lab. -->
-    <string name="all_types">All Types</string>
+    <string name="all_types">All languages</string>
 
     <!-- Shown in a drop-down list on the Video Library screen, indicating that videos from all
     I/O years are being displayed. -->
@@ -801,7 +801,7 @@
     <string name="topics">Topics</string>
 
     <!-- Label for exploration category which groups session types -->
-    <string name="types">Types</string>
+    <string name="types">Languages</string>
 
     <!-- Text for a session subtitle indicating it does not have a room specified -->
     <string name="unknown_room">(Unspecified Room)</string>
