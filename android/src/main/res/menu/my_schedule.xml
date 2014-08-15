@@ -31,22 +31,22 @@
         android:orderInCategory="98"
         android:showAsAction="never" />
 
-    <item android:id="@+id/menu_i_o_hunt"
-          android:title="@string/description_i_o_hunt"
-          android:orderInCategory="99"
-          android:showAsAction="never" />
+    <!--<item android:id="@+id/menu_i_o_hunt"-->
+          <!--android:title="@string/description_i_o_hunt"-->
+          <!--android:orderInCategory="99"-->
+          <!--android:showAsAction="never" />-->
 
-    <item android:id="@+id/menu_io_extended"
-        android:visible="false"
-        android:title="@string/description_i_o_extended"
-        android:orderInCategory="99"
-        android:showAsAction="never" />
+    <!--<item android:id="@+id/menu_io_extended"-->
+        <!--android:visible="false"-->
+        <!--android:title="@string/description_i_o_extended"-->
+        <!--android:orderInCategory="99"-->
+        <!--android:showAsAction="never" />-->
 
-    <item android:id="@+id/menu_map"
-        android:visible="false"
-        android:title="@string/description_map"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
+    <!--<item android:id="@+id/menu_map"-->
+        <!--android:visible="false"-->
+        <!--android:title="@string/description_map"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:showAsAction="never" />-->
 
     <item android:id="@+id/menu_debug"
         android:visible="false"
