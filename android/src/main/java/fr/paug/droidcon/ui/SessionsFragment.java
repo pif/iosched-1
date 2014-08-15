@@ -874,7 +874,7 @@ public class SessionsFragment extends Fragment implements
         if (!PrefUtils.hasAnsweredLocalOrRemote(getActivity()) &&
                 !TimeUtils.hasConferenceEnded(getActivity())) {
             // show the "in person" vs "remote" card
-            setupLocalOrRemoteCard(card);
+//            setupLocalOrRemoteCard(card);
             return true;
         } else if (WiFiUtils.shouldOfferToSetupWifi(getActivity(), true)) {
             // show wifi setup card
@@ -888,39 +888,6 @@ public class SessionsFragment extends Fragment implements
             card.setVisibility(View.GONE);
             return false;
         }
-    }
-
-    private void setupLocalOrRemoteCard(final MessageCardView card) {
-        card.overrideBackground(R.drawable.card_bg);
-        card.setText(getString(R.string.question_local_or_remote));
-        card.setButton(0, getString(R.string.attending_remotely), CARD_ANSWER_ATTENDING_REMOTELY,
-                false, 0);
-        card.setButton(1, getString(R.string.attending_in_person), CARD_ANSWER_ATTENDING_IN_PERSON,
-                true, 0);
-        final Context context = getActivity().getApplicationContext();
-        final Activity activity = getActivity();
-        card.setListener(new MessageCardView.OnMessageCardButtonClicked() {
-            @Override
-            public void onMessageCardButtonClicked(final String tag) {
-                final boolean inPerson = CARD_ANSWER_ATTENDING_IN_PERSON.equals(tag);
-                card.dismiss(true);
-
-                if (activity != null) {
-                    Toast.makeText(activity, inPerson ? R.string.explore_attending_in_person_toast
-                            : R.string.explore_attending_remotely_toast, Toast.LENGTH_LONG).show();
-                }
-
-                // post delayed to give card time to animate
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        PrefUtils.setAttendeeAtVenue(context, inPerson);
-                        PrefUtils.markAnsweredLocalOrRemote(context);
-                    }
-                }, CARD_DISMISS_ACTION_DELAY);
-            }
-        });
-        card.show();
     }
 
     private void setupWifiOfferCard(final MessageCardView card) {

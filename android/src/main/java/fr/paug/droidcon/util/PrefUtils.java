@@ -200,8 +200,9 @@ public class PrefUtils  {
     }
 
     public static boolean hasAnsweredLocalOrRemote(Context context) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        return sp.getBoolean(PREF_ANSWERED_LOCAL_OR_REMOTE, false);
+//        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+//        return sp.getBoolean(PREF_ANSWERED_LOCAL_OR_REMOTE, false);
+        return true;
     }
 
     public static void markAnsweredLocalOrRemote(final Context context) {
@@ -266,15 +267,16 @@ public class PrefUtils  {
      * (with an overflow item in the menu, for instance).
      */
     public static boolean shouldOfferIOExtended(final Context context, boolean actively) {
-        boolean isRemote = !PrefUtils.isAttendeeAtVenue(context);
-        boolean hasNotDismissed = !PrefUtils.hasDismissedIOExtendedCard(context);
-        boolean conferenceGoingOn = !TimeUtils.hasConferenceEnded(context);
-
-        if (actively) {
-            return isRemote && hasNotDismissed && conferenceGoingOn;
-        } else {
-            return isRemote && conferenceGoingOn;
-        }
+//        boolean isRemote = !PrefUtils.isAttendeeAtVenue(context);
+//        boolean hasNotDismissed = !PrefUtils.hasDismissedIOExtendedCard(context);
+//        boolean conferenceGoingOn = !TimeUtils.hasConferenceEnded(context);
+//
+//        if (actively) {
+//            return isRemote && hasNotDismissed && conferenceGoingOn;
+//        } else {
+//            return isRemote && conferenceGoingOn;
+//        }
+        return false;
     }
 
     public static boolean isAnalyticsEnabled(final Context context) {
