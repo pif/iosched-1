@@ -366,7 +366,7 @@
                 <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="com.google.sample.apps.iosched.ACTION_NOTIFICATION_DISMISSAL"/>
+                <action android:name="fr.paug.droidcon.ACTION_NOTIFICATION_DISMISSAL"/>
             </intent-filter>
         </service>
 
