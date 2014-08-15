@@ -39,7 +39,6 @@ import fr.paug.droidcon.R;
 import fr.paug.droidcon.provider.ScheduleContract;
 import fr.paug.droidcon.ui.BrowseSessionsActivity;
 import fr.paug.droidcon.ui.MyScheduleActivity;
-import fr.paug.droidcon.ui.SessionFeedbackActivity;
 import fr.paug.droidcon.util.FeedbackUtils;
 import fr.paug.droidcon.util.PrefUtils;
 import fr.paug.droidcon.util.UIUtils;
@@ -63,10 +62,6 @@ public class SessionAlarmService extends IntentService
 
     public static final String ACTION_NOTIFY_SESSION =
             "fr.paug.droidcon.action.NOTIFY_SESSION";
-    public static final String ACTION_NOTIFY_SESSION_FEEDBACK =
-            "fr.paug.droidcon.action.NOTIFY_SESSION_FEEDBACK";
-    public static final String ACTION_SCHEDULE_FEEDBACK_NOTIFICATION =
-            "fr.paug.droidcon.action.SCHEDULE_FEEDBACK_NOTIFICATION";
     public static final String ACTION_SCHEDULE_STARRED_BLOCK =
             "fr.paug.droidcon.action.SCHEDULE_STARRED_BLOCK";
     public static final String ACTION_SCHEDULE_ALL_STARRED_BLOCKS =
@@ -136,7 +131,6 @@ public class SessionAlarmService extends IntentService
         if (ACTION_SCHEDULE_ALL_STARRED_BLOCKS.equals(action)) {
             LOGD(TAG, "Scheduling all starred blocks.");
             scheduleAllStarredBlocks();
-            scheduleAllStarredSessionFeedbacks();
             return;
         }
 
@@ -151,34 +145,6 @@ public class SessionAlarmService extends IntentService
                 intent.getLongExtra(SessionAlarmService.EXTRA_SESSION_ALARM_OFFSET,
                         UNDEFINED_ALARM_OFFSET);
         LOGD(TAG, "Session alarm offset is: " + sessionAlarmOffset);
-
-        // Feedback notifications have a slightly different set of extras.
-        if (ACTION_SCHEDULE_FEEDBACK_NOTIFICATION.equals(action) ||
-                ACTION_NOTIFY_SESSION_FEEDBACK.equals(action)) {
-            final String sessionId = intent.getStringExtra(SessionAlarmService.EXTRA_SESSION_ID);
-            final String sessionTitle = intent.getStringExtra(
-                    SessionAlarmService.EXTRA_SESSION_TITLE);
-            final String sessionRoom = intent.getStringExtra(
-                    SessionAlarmService.EXTRA_SESSION_ROOM);
-            final String sessionSpeakers = intent.getStringExtra(
-                    SessionAlarmService.EXTRA_SESSION_SPEAKERS);
-            if (sessionTitle == null || sessionEnd == UNDEFINED_VALUE ||
-                    sessionId == null) {
-                Log.e(TAG,
-                        "Attempted to schedule or notify for feedback without providing extras.");
-                return;
-            }
-            if (ACTION_SCHEDULE_FEEDBACK_NOTIFICATION.equals(action)) {
-                LOGD(TAG, "Scheduling feedback alarm for session: " + sessionTitle);
-                scheduleFeedbackAlarm(sessionId, sessionEnd, sessionAlarmOffset, sessionTitle,
-                        sessionRoom, sessionSpeakers);
-            } else {
-                LOGD(TAG, "Notifying for feedback on session: " + sessionTitle);
-                notifySessionFeedback(sessionId, sessionEnd, sessionTitle, sessionRoom,
-                        sessionSpeakers);
-            }
-            return;
-        }
 
         final long sessionStart =
                 intent.getLongExtra(SessionAlarmService.EXTRA_SESSION_START, UNDEFINED_VALUE);
@@ -200,45 +166,6 @@ public class SessionAlarmService extends IntentService
             LOGD(TAG, "-> Alarm offset: " + sessionAlarmOffset);
             scheduleAlarm(sessionStart, sessionEnd, sessionAlarmOffset);
         }
-    }
-
-    public void scheduleFeedbackAlarm(final String sessionId, final long sessionEnd,
-            final long alarmOffset, final String sessionTitle, String sessionRoom,
-            String sessionSpeakers) {
-        // By default, feedback alarms fire 5 minutes before session end time. If alarm offset is
-        // provided, alarm is set to go off that much time from now (useful for testing).
-        long alarmTime;
-        if (alarmOffset == UNDEFINED_ALARM_OFFSET) {
-            alarmTime = sessionEnd - MILLI_FIVE_MINUTES;
-        } else {
-            alarmTime = UIUtils.getCurrentTime(this) + alarmOffset;
-        }
-
-        LOGD(TAG, "Scheduling session feedback alarm for session '" + sessionTitle + "'");
-        LOGD(TAG, "  -> end time: " + sessionEnd + " = " + (new Date(sessionEnd)).toString());
-        LOGD(TAG, "  -> alarm time: " + alarmTime + " = " + (new Date(alarmTime)).toString());
-        LOGD(TAG, "  -> room name: " + sessionRoom);
-        LOGD(TAG, "  -> speakers: " + sessionSpeakers);
-
-        final Intent feedbackIntent = new Intent(
-                ACTION_NOTIFY_SESSION_FEEDBACK,
-                null,
-                this,
-                SessionAlarmService.class);
-        feedbackIntent.setData(
-                new Uri.Builder().authority("fr.paug.droidcon")
-                        .path(sessionId).build()
-        );
-        feedbackIntent.putExtra(SessionAlarmService.EXTRA_SESSION_END, sessionEnd);
-        feedbackIntent.putExtra(SessionAlarmService.EXTRA_SESSION_ALARM_OFFSET, alarmOffset);
-        feedbackIntent.putExtra(SessionAlarmService.EXTRA_SESSION_ID, sessionId);
-        feedbackIntent.putExtra(SessionAlarmService.EXTRA_SESSION_TITLE, sessionTitle);
-        feedbackIntent.putExtra(SessionAlarmService.EXTRA_SESSION_SPEAKERS, sessionSpeakers);
-        feedbackIntent.putExtra(SessionAlarmService.EXTRA_SESSION_ROOM, sessionRoom);
-        PendingIntent pi = PendingIntent.getService(
-                this, 1, feedbackIntent, PendingIntent.FLAG_CANCEL_CURRENT);
-        final AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        am.set(AlarmManager.RTC_WAKEUP, alarmTime, pi);
     }
 
     private void scheduleAlarm(final long sessionStart,
@@ -291,88 +218,88 @@ public class SessionAlarmService extends IntentService
         am.set(AlarmManager.RTC_WAKEUP, alarmTime, pi);
     }
 
-    // A starred session is about to end; notify the user to provide session feedback.
-    // Constructs and triggers a system notification. Does nothing if the session has already
-    // concluded.
-    private void notifySessionFeedback(final String sessionId, final long sessionEnd,
-            final String sessionTitle, final String sessionRoom, final String sessionSpeakers) {
-        LOGD(TAG, "Considering firing notification for feedback for session: " + sessionTitle);
-        boolean isDebug = DEBUG_SESSION_ID.equals(sessionId);
-
-        if (isDebug) {
-            LOGD(TAG, "Note: this is a debug notification.");
-        }
-
-        // Don't fire notification if this feature is disabled in settings
-        if (!PrefUtils.shouldShowSessionFeedbackReminders(this)) {
-            LOGD(TAG, "Skipping session feedback notification for session " + sessionId + " ("
-                    + sessionTitle + "). Disabled in settings.");
-            return;
-        }
-
-        // Avoid repeated notifications.
-        if (!isDebug && UIUtils.isFeedbackNotificationFiredForSession(this, sessionId)) {
-            LOGD(TAG, "Skipping repeated session feedback notification for session '"
-                    + sessionTitle + "'");
-            return;
-        }
-
-        // If the session is no longer is MY_SCHEDULE, don't notify for it.
-        final Uri myScheduleUri = ScheduleContract.MySchedule.buildMyScheduleUri(this);
-        final Cursor c = getContentResolver().query(
-                myScheduleUri, MySessionsExistenceQuery.PROJECTION,
-                MySessionsExistenceQuery.WHERE_CLAUSE, new String[]{sessionId}, null);
-        if (!isDebug && (c == null || !c.moveToFirst())) {
-            // no longer in MY_SCHEDULE
-            return;
-        }
-
-        LOGD(TAG, "Going forward with session feedback notification for: " + sessionTitle);
-        final Uri sessionUri = ScheduleContract.Sessions.buildSessionUri(sessionId);
-
-        final Resources res = getResources();
-        String contentText = res.getString(R.string.session_feedback_notification_text,
-                sessionTitle);
-
-        PendingIntent pi = TaskStackBuilder.create(this)
-                .addNextIntent(new Intent(this, MyScheduleActivity.class))
-                .addNextIntent(new Intent(Intent.ACTION_VIEW, sessionUri, this,
-                        SessionFeedbackActivity.class))
-                .getPendingIntent(1, PendingIntent.FLAG_CANCEL_CURRENT);
-
-        // this is used to synchronize deletion of notifications on phone and wear
-        Intent dismissalIntent = new Intent(ACTION_NOTIFICATION_DISMISSAL);
-        dismissalIntent.putExtra(KEY_SESSION_ID, sessionId);
-        PendingIntent dismissalPendingIntent = PendingIntent
-                .getService(this, (int) new Date().getTime(), dismissalIntent,
-                        PendingIntent.FLAG_UPDATE_CURRENT);
-
-        NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(this)
-                .setContentTitle(sessionTitle)
-                .setContentText(contentText)
-                //.setColor(getResources().getColor(R.color.theme_primary))
-                            // Note: setColor() is available in the support lib v21+.
-                            // We commented it out because we want the source to compile 
-                            // against support lib v20. If you are using support lib
-                            // v21 or above on Android L, uncomment this line.
-                .setTicker(res.getString(R.string.session_feedback_notification_ticker))
-                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                .setLights(
-                        SessionAlarmService.NOTIFICATION_ARGB_COLOR,
-                        SessionAlarmService.NOTIFICATION_LED_ON_MS,
-                        SessionAlarmService.NOTIFICATION_LED_OFF_MS)
-                .setSmallIcon(R.drawable.ic_stat_notification)
-                .setContentIntent(pi)
-                .setPriority(Notification.PRIORITY_MAX)
-                .setLocalOnly(true) // make it local to the phone
-                .setDeleteIntent(dismissalPendingIntent)
-                .setAutoCancel(true);
-        NotificationManager nm = (NotificationManager) getSystemService(
-                Context.NOTIFICATION_SERVICE);
-        LOGD(TAG, "Now showing session feedback notification!");
-        nm.notify(sessionId, FEEDBACK_NOTIFICATION_ID, notifBuilder.build());
-        setupNotificationOnWear(sessionId, sessionRoom, sessionTitle, sessionSpeakers);
-    }
+//    // A starred session is about to end; notify the user to provide session feedback.
+//    // Constructs and triggers a system notification. Does nothing if the session has already
+//    // concluded.
+//    private void notifySessionFeedback(final String sessionId, final long sessionEnd,
+//            final String sessionTitle, final String sessionRoom, final String sessionSpeakers) {
+//        LOGD(TAG, "Considering firing notification for feedback for session: " + sessionTitle);
+//        boolean isDebug = DEBUG_SESSION_ID.equals(sessionId);
+//
+//        if (isDebug) {
+//            LOGD(TAG, "Note: this is a debug notification.");
+//        }
+//
+//        // Don't fire notification if this feature is disabled in settings
+//        if (!PrefUtils.shouldShowSessionFeedbackReminders(this)) {
+//            LOGD(TAG, "Skipping session feedback notification for session " + sessionId + " ("
+//                    + sessionTitle + "). Disabled in settings.");
+//            return;
+//        }
+//
+//        // Avoid repeated notifications.
+//        if (!isDebug && UIUtils.isFeedbackNotificationFiredForSession(this, sessionId)) {
+//            LOGD(TAG, "Skipping repeated session feedback notification for session '"
+//                    + sessionTitle + "'");
+//            return;
+//        }
+//
+//        // If the session is no longer is MY_SCHEDULE, don't notify for it.
+//        final Uri myScheduleUri = ScheduleContract.MySchedule.buildMyScheduleUri(this);
+//        final Cursor c = getContentResolver().query(
+//                myScheduleUri, MySessionsExistenceQuery.PROJECTION,
+//                MySessionsExistenceQuery.WHERE_CLAUSE, new String[]{sessionId}, null);
+//        if (!isDebug && (c == null || !c.moveToFirst())) {
+//            // no longer in MY_SCHEDULE
+//            return;
+//        }
+//
+//        LOGD(TAG, "Going forward with session feedback notification for: " + sessionTitle);
+//        final Uri sessionUri = ScheduleContract.Sessions.buildSessionUri(sessionId);
+//
+//        final Resources res = getResources();
+//        String contentText = res.getString(R.string.session_feedback_notification_text,
+//                sessionTitle);
+//
+//        PendingIntent pi = TaskStackBuilder.create(this)
+//                .addNextIntent(new Intent(this, MyScheduleActivity.class))
+//                .addNextIntent(new Intent(Intent.ACTION_VIEW, sessionUri, this,
+//                        SessionFeedbackActivity.class))
+//                .getPendingIntent(1, PendingIntent.FLAG_CANCEL_CURRENT);
+//
+//        // this is used to synchronize deletion of notifications on phone and wear
+//        Intent dismissalIntent = new Intent(ACTION_NOTIFICATION_DISMISSAL);
+//        dismissalIntent.putExtra(KEY_SESSION_ID, sessionId);
+//        PendingIntent dismissalPendingIntent = PendingIntent
+//                .getService(this, (int) new Date().getTime(), dismissalIntent,
+//                        PendingIntent.FLAG_UPDATE_CURRENT);
+//
+//        NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(this)
+//                .setContentTitle(sessionTitle)
+//                .setContentText(contentText)
+//                //.setColor(getResources().getColor(R.color.theme_primary))
+//                            // Note: setColor() is available in the support lib v21+.
+//                            // We commented it out because we want the source to compile
+//                            // against support lib v20. If you are using support lib
+//                            // v21 or above on Android L, uncomment this line.
+//                .setTicker(res.getString(R.string.session_feedback_notification_ticker))
+//                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+//                .setLights(
+//                        SessionAlarmService.NOTIFICATION_ARGB_COLOR,
+//                        SessionAlarmService.NOTIFICATION_LED_ON_MS,
+//                        SessionAlarmService.NOTIFICATION_LED_OFF_MS)
+//                .setSmallIcon(R.drawable.ic_stat_notification)
+//                .setContentIntent(pi)
+//                .setPriority(Notification.PRIORITY_MAX)
+//                .setLocalOnly(true) // make it local to the phone
+//                .setDeleteIntent(dismissalPendingIntent)
+//                .setAutoCancel(true);
+//        NotificationManager nm = (NotificationManager) getSystemService(
+//                Context.NOTIFICATION_SERVICE);
+//        LOGD(TAG, "Now showing session feedback notification!");
+//        nm.notify(sessionId, FEEDBACK_NOTIFICATION_ID, notifBuilder.build());
+//        setupNotificationOnWear(sessionId, sessionRoom, sessionTitle, sessionSpeakers);
+//    }
 
     /**
      * Builds corresponding notification for the Wear device that is paired to this handset. This
@@ -568,37 +495,6 @@ public class SessionAlarmService extends IntentService
             final long sessionStart = c.getLong(0);
             final long sessionEnd = c.getLong(1);
             scheduleAlarm(sessionStart, sessionEnd, UNDEFINED_ALARM_OFFSET);
-        }
-    }
-
-    // Schedules feedback alarms for all starred sessions.
-    private void scheduleAllStarredSessionFeedbacks() {
-        final ContentResolver cr = getContentResolver();
-        // TODO: Should we also check that SESSION_IN_MY_SCHEDULE is true?
-        final Cursor c = cr.query(ScheduleContract.Sessions.CONTENT_MY_SCHEDULE_URI,
-                new String[]{
-                        ScheduleContract.Sessions.SESSION_ID,
-                        ScheduleContract.Sessions.SESSION_TITLE,
-                        ScheduleContract.Sessions.SESSION_END,
-                        ScheduleContract.Sessions.SESSION_IN_MY_SCHEDULE,
-                        ScheduleContract.Sessions.ROOM_NAME,
-                        ScheduleContract.Sessions.SESSION_SPEAKER_NAMES,
-                },
-                null,
-                null,
-                null
-        );
-        if (c == null) {
-            return;
-        }
-        while (c.moveToNext()) {
-            final String sessionId = c.getString(0);
-            final String sessionTitle = c.getString(1);
-            final long sessionEnd = c.getLong(2);
-            final String sessionRoom = c.getString(3);
-            final String sessionSpeakers = c.getString(4);
-            scheduleFeedbackAlarm(sessionId, sessionEnd, UNDEFINED_ALARM_OFFSET, sessionTitle,
-                    sessionRoom, sessionSpeakers);
         }
     }
 

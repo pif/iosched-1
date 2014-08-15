@@ -49,8 +49,6 @@ public class DebugActionRunnerFragment extends Fragment {
         tests.addView(createTestAction(new ForceAppDataSyncNowAction()));
         tests.addView(createTestAction(new TestScheduleHelperAction()));
         tests.addView(createTestAction(new ScheduleStarredSessionAlarmsAction()));
-        tests.addView(createTestAction(new SimulateBadgeScannedAction()));
-        tests.addView(createTestAction(new ShowFeedbackNotificationAction()));
         tests.addView(createTestAction(new ShowSessionNotificationDebugAction()
         ));
         return rootView;

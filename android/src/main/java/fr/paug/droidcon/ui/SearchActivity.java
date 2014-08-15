@@ -29,7 +29,6 @@ import android.widget.SearchView;
 import fr.paug.droidcon.R;
 import fr.paug.droidcon.model.TagMetadata;
 import fr.paug.droidcon.provider.ScheduleContract;
-import fr.paug.droidcon.ui.debug.actions.ShowFeedbackNotificationAction;
 import fr.paug.droidcon.util.AnalyticsManager;
 
 import static fr.paug.droidcon.util.LogUtils.*;
@@ -133,9 +132,6 @@ public class SearchActivity extends BaseActivity implements SessionsFragment.Cal
                     @Override
                     public boolean onQueryTextSubmit(String s) {
                         view.clearFocus();
-                        if ("zzznotif".equals(s)) {
-                            (new ShowFeedbackNotificationAction()).run(SearchActivity.this, null);
-                        }
                         return true;
                     }
 

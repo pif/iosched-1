@@ -202,7 +202,6 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
         FrameLayout boxView = (FrameLayout) view.findViewById(R.id.box);
         TextView slotTitleView = (TextView) view.findViewById(R.id.slot_title);
         TextView slotSubtitleView = (TextView) view.findViewById(R.id.slot_subtitle);
-        ImageButton giveFeedbackButton = (ImageButton) view.findViewById(R.id.give_feedback_button);
         int heightNormal = res.getDimensionPixelSize(R.dimen.my_schedule_item_height);
         int heightBreak = ViewGroup.LayoutParams.WRAP_CONTENT;
         int heightPast = res.getDimensionPixelSize(R.dimen.my_schedule_item_height_past);
@@ -262,9 +261,6 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             boxView.setForeground(res.getDrawable(R.drawable.schedule_item_touchoverlay_dark));
             bgImageView.setVisibility(View.GONE);
             sessionImageView.setVisibility(View.GONE);
-            if (giveFeedbackButton != null) {
-                giveFeedbackButton.setVisibility(View.GONE);
-            }
             slotTitleView.setText(R.string.browse_sessions);
             slotTitleView.setTextColor(res.getColor(R.color.theme_primary));
             slotTitleView.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
@@ -282,9 +278,6 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             boxView.setForeground(null);
             bgImageView.setVisibility(View.GONE);
             sessionImageView.setVisibility(View.GONE);
-            if (giveFeedbackButton != null) {
-                giveFeedbackButton.setVisibility(View.GONE);
-            }
             slotTitleView.setText(item.title);
             slotTitleView.setTextColor(res.getColor(R.color.body_text_1));
             slotTitleView.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
@@ -299,35 +292,6 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             boxView.setForeground(res.getDrawable(R.drawable.schedule_item_touchoverlay));
             bgImageView.setVisibility(View.VISIBLE);
             sessionImageView.setVisibility(View.VISIBLE);
-            if (giveFeedbackButton != null) {
-                boolean showFeedbackButton = !item.hasGivenFeedback;
-                // Can't use isPastDuringConference because we want to show feedback after the
-                // conference too.
-                if (showFeedbackButton) {
-                    if (item.endTime > now) {
-                        // Session hasn't finished yet, don't show button.
-                        showFeedbackButton = false;
-                    }
-                }
-                giveFeedbackButton.setVisibility(showFeedbackButton ? View.VISIBLE : View.GONE);
-                giveFeedbackButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        /* [ANALYTICS:EVENT]
-                         * TRIGGER:   Click on the Send Feedback action for a session on the Schedule page.
-                         * CATEGORY:  'Session'
-                         * ACTION:    'Feedback'
-                         * LABEL:     session title/subtitle
-                         * [/ANALYTICS]
-                         */
-                        AnalyticsManager.sendEvent("My Schedule", "Feedback", item.title, 0L);
-                        Intent feedbackIntent = new Intent(Intent.ACTION_VIEW,
-                                ScheduleContract.Sessions.buildSessionUri(item.sessionId),
-                                mContext, SessionFeedbackActivity.class);
-                        mContext.startActivity(feedbackIntent);
-                    }
-                });
-            }
             int color = UIUtils.scaleSessionColorToDefaultBG(
                     item.backgroundColor == 0 ? mDefaultSessionColor : item.backgroundColor);
 
