@@ -5,6 +5,8 @@
       "name": "Cyril Mottier",
       "company": "Capitaine Train",
       "plusoneUrl": "https://plus.google.com/+CyrilMottier",
+      "website": "http://cyrilmottier.com/",
+      "twitter": "https://twitter.com/cyrilmottier",
       "thumbnailUrl": "https://lh3.googleusercontent.com/-LWYaRkiLVvM/Ut48DO9cP1I/AAAAAAAAQkU/HvZg4UrVXtI/s500-no/me.jpg",
       "id": "cyrilmottier"
     },
@@ -13,6 +15,8 @@
       "name": "Xavier Hallade",
       "company": "Intel",
       "plusoneUrl": "https://plus.google.com/+XavierHallade",
+      "website": "http://ph0b.com/",
+      "twitter": "https://twitter.com/ph0b ",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Xavier-Hallade.jpg",
       "id": "xavierhallade"
     },
@@ -21,6 +25,8 @@
       "name": "Jan Chong",
       "company": "Twitter",
       "plusoneUrl": "https://plus.google.com/107409019686006760010",
+      "website": "",
+      "twitter": "https://twitter.com/lessachu",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Jan-Chong-222x222.png",
       "id": "janchong"
     },
@@ -29,6 +35,8 @@
       "name": "Taylor Ling",
       "company": "Snappymob",
       "plusoneUrl": "https://plus.google.com/+TaylorLing",
+      "website": "http://androiduiux.com/",
+      "twitter": "https://twitter.com/taylorling",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Taylor-Ling-final-222x222.png",
       "id": "taylorling"
     },
@@ -37,6 +45,8 @@
       "name": "Stéphane Nicolas",
       "company": "Groupon",
       "plusoneUrl": "https://plus.google.com/+StéphaneNICOLAS-OnG",
+      "website": "",
+      "twitter": "",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/st%C3%A9phane-nicolas-222x222.jpg",
       "id": "stephanenicolas"
     },
@@ -45,6 +55,8 @@
       "name": "Fabien Devos",
       "company": "Upthere",
       "plusoneUrl": "https://plus.google.com/116057947663114842022",
+      "website": "",
+      "twitter": "https://twitter.com/Fabien_Devos",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Fabien-Devos-222x222.jpg",
       "id": "fabiendevos"
     },
@@ -53,6 +65,8 @@
       "name": "Guillaume Laforge",
       "company": "Pivotal",
       "plusoneUrl": "https://plus.google.com/+GuillaumeLaforge",
+      "website": "",
+      "twitter": "https://twitter.com/glaforge",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Guillaume-Laforge-222x222.png",
       "id": "guillaumelaforge"
     },
@@ -61,6 +75,8 @@
       "name": "Nabil Hachicha",
       "company": "The App Business",
       "plusoneUrl": "https://plus.google.com/110610526826489061446",
+      "website": "",
+      "twitter": "https://twitter.com/nabil_hachicha",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Nabil-Hachicha-222x222.jpg",
       "id": "nabilhachicha"
     },
@@ -69,6 +85,8 @@
       "name": "Geoffrey Dorne",
       "company": "Design & Human",
       "plusoneUrl": "https://plus.google.com/116718314329691158716",
+      "website": "http://designandhuman.com/",
+      "twitter": "https://twitter.com/GeoffreyDorne",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Geoffrey-Dorne-222x222.jpg",
       "id": "goeffreydorne"
     },
@@ -77,6 +95,8 @@
       "name": "Marc de Courville",
       "company": "Archos",
       "plusoneUrl": "https://plus.google.com/+MarcdeCourville",
+      "website": "",
+      "twitter": "https://twitter.com/marcdecourville",
       "thumbnailUrl": "https://lh6.googleusercontent.com/-gW61S7OilRU/Ukrbut8uhqI/AAAAAAAAAMk/tvCi34Iq8JM/w661-h655-no/MarcDeCourville_3.jpg",
       "id": "marcdecourville"
     },
@@ -85,6 +105,8 @@
       "name": "Jean-Baptiste Kempf",
       "company": "VideoLAN",
       "plusoneUrl": "https://plus.google.com/100674486160360423322",
+      "website": "",
+      "twitter": "",
       "thumbnailUrl": "https://lh5.googleusercontent.com/-M1Mwx3wQnB0/T6ptwS8gRiI/AAAAAAAAAEQ/eV7RBejAH48/w652-h655-no/JB-IMG_1103_DxO_1-Resize.jpg",
       "id": "jbkempf"
     },
@@ -93,6 +115,8 @@
       "name": "Tim Messerschmidt",
       "company": "PayPal",
       "plusoneUrl": "https://plus.google.com/+TimMesserschmidt",
+      "website": "",
+      "twitter": "https://twitter.com/SeraAndroid",
       "thumbnailUrl": "https://lh4.googleusercontent.com/-G0EKTKz1vGI/UW6XHy-ncVI/AAAAAAAALbQ/quBFmBndiD4/w654-h655-no/IMG_0843_web.jpg",
       "id": "timmesserschmidt"
     },
@@ -101,6 +125,8 @@
       "name": "Hoi Lam",
       "company": "Google",
       "plusoneUrl": "https://plus.google.com/+HoiLam",
+      "website": "",
+      "twitter": "https://twitter.com/hcl21",
       "thumbnailUrl": "https://lh4.googleusercontent.com/-VUBOaPF8tcM/UV3-2sDPqhI/AAAAAAAAU-E/GHTsNmt2__o/w653-h655-no/20090802-DSC_8688.png",
       "id": "hoilam"
     },
@@ -109,6 +135,8 @@
       "name": "Mario Viviani",
       "company": "Mariux Apps",
       "plusoneUrl": "https://plus.google.com/+MarioViviani",
+      "website": "",
+      "twitter": "https://twitter.com/Mariuxtheone",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Mario-Viviani-222x222.jpg",
       "id": "marioviviani"
     },
@@ -117,6 +145,8 @@
       "name": "Cédric Creusot",
       "company": "Meetic",
       "plusoneUrl": "",
+      "website": "",
+      "twitter": "",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/C%C3%A9dric-Creusot-222x222.jpg",
       "id": "cedriccreusot"
     },
@@ -125,6 +155,8 @@
       "name": "Jean-Loup Yu",
       "company": "Meetic",
       "plusoneUrl": "https://plus.google.com/112882583085432640120",
+      "website": "",
+      "twitter": "https://twitter.com/djelmen",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Jean-Loup-Yu-222x222.jpg",
       "id": "jeanloupyu"
     },
@@ -133,6 +165,8 @@
       "name": "Thomas Guerin",
       "company": "Xebia",
       "plusoneUrl": "https://plus.google.com/112041335454373673694",
+      "website": "",
+      "twitter": "https://twitter.com/Tom404_",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Thomas-Guerin-222x222.jpg",
       "id": "thomasguerin"
     },
@@ -141,6 +175,8 @@
       "name": "Benjamin Augustin",
       "company": "Novoda",
       "plusoneUrl": "https://plus.google.com/113116875847268618115",
+      "website": "",
+      "twitter": "https://twitter.com/Dorvaryn",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Benjamin-Augustin-222x222.jpg",
       "id": "beanjaminaugustin"
     },
@@ -149,6 +185,8 @@
       "name": "Sebastiano Poggi",
       "company": "Novoda",
       "plusoneUrl": "https://plus.google.com/+SebastianoPoggi",
+      "website": "",
+      "twitter": "https://twitter.com/seebrock3r",
       "thumbnailUrl": "https://lh3.googleusercontent.com/-uhZ-3UFgzzo/T4XR5D4VHiI/AAAAAAABBp4/PNiNGfhEHUs/w354-h352-no/Face_malga.jpg",
       "id": "sebastianopoggi"
     },
@@ -157,6 +195,8 @@
       "name": "Mathieu Calba",
       "company": "Capitaine Train",
       "plusoneUrl": "https://plus.google.com/+MathieuCalba",
+      "website": "",
+      "twitter": "https://twitter.com/Mathieu_Calba",
       "thumbnailUrl": "https://lh4.googleusercontent.com/-8hq7bSTRUjk/U8-lC8_87tI/AAAAAAAASXI/ZCwhRO7DtvI/s655-no/MathieuCalba_Profile.jpg",
       "id": "mathieucalba"
     },
@@ -165,6 +205,8 @@
       "name": "Pierre-Yves Ricau",
       "company": "Square",
       "plusoneUrl": "https://plus.google.com/+PierreYvesRicau",
+      "website": "",
+      "twitter": "https://twitter.com/Piwai",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Pierre-Yves-Ricau-222x222.jpg",
       "id": "pyricau"
     },
@@ -173,6 +215,8 @@
       "name": "Nicolas Klein",
       "company": "Google",
       "plusoneUrl": "https://plus.google.com/+NicolasKlein86",
+      "website": "http://www.foxykeep.com/homepage/",
+      "twitter": "https://twitter.com/foxykeep",
       "thumbnailUrl": "https://lh4.googleusercontent.com/-4sigh6so5Xk/UuqYNIa-AXI/AAAAAAAABGo/UYflVH4bQ2w/w654-h655-no/fox_irl2_centered.png",
       "id": "nicolasklein"
     },
@@ -181,6 +225,8 @@
       "name": "Charles-Henry Prunier",
       "company": "Genymobile",
       "plusoneUrl": "https://plus.google.com/113947333441309712266",
+      "website": "",
+      "twitter": "",
       "thumbnailUrl": "https://lh6.googleusercontent.com/-Xku8jvfCRRY/UvJ84ze_BBI/AAAAAAAAAPg/wW1jyNGkaBw/w656-h655-no/Charly.jpg",
       "id": "chprunier"
     },
@@ -189,6 +235,8 @@
       "name": "Rémy Gottschalk",
       "company": "Genymobile",
       "plusoneUrl": "https://plus.google.com/115906133301850752077",
+      "website": "",
+      "twitter": "",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/R%C3%A9my-Gottschak-222x222.jpg",
       "id": "remygottschalk"
     },
@@ -197,6 +245,8 @@
       "name": "Jean Maisonnial",
       "company": "Google",
       "plusoneUrl": "https://plus.google.com/102884676049998981590",
+      "website": "",
+      "twitter": "",
       "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Jean-Maisonnial-222x222.jpg",
       "id": "jeanmaisonnial"
     }

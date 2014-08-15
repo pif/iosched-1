@@ -16,6 +16,7 @@
 
 package fr.paug.droidcon.ui;
 
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.LoaderManager;
 import android.content.*;
@@ -987,6 +988,8 @@ public class SessionDetailFragment extends Fragment implements
             final String speakerImageUrl = cursor.getString(SpeakersQuery.SPEAKER_IMAGE_URL);
             final String speakerCompany = cursor.getString(SpeakersQuery.SPEAKER_COMPANY);
             final String speakerUrl = cursor.getString(SpeakersQuery.SPEAKER_URL);
+            final String speakerWebsiteUrl = cursor.getString(SpeakersQuery.SPEAKER_WEBSITE_URL);
+            final String speakerTwitterUrl = cursor.getString(SpeakersQuery.SPEAKER_TWITTER_URL);
             final String speakerAbstract = cursor.getString(SpeakersQuery.SPEAKER_ABSTRACT);
 
             String speakerHeader = speakerName;
@@ -1012,17 +1015,91 @@ public class SessionDetailFragment extends Fragment implements
                     getString(R.string.speaker_googleplus_profile, speakerHeader));
             UIUtils.setTextMaybeHtml(speakerAbstractView, speakerAbstract);
 
-            if (!TextUtils.isEmpty(speakerUrl)) {
+            if (!TextUtils.isEmpty(speakerUrl) || !TextUtils.isEmpty(speakerWebsiteUrl) || !TextUtils.isEmpty(speakerTwitterUrl)) {
                 speakerImageView.setEnabled(true);
                 speakerImageView.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent speakerProfileIntent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse(speakerUrl));
-                        speakerProfileIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-                        UIUtils.preferPackageForIntent(getActivity(), speakerProfileIntent,
-                                UIUtils.GOOGLE_PLUS_PACKAGE_NAME);
-                        startActivity(speakerProfileIntent);
+                        int count = 0;
+                        if(!TextUtils.isEmpty(speakerUrl))
+                            count++;
+                        if(!TextUtils.isEmpty(speakerWebsiteUrl))
+                            count++;
+                        if(!TextUtils.isEmpty(speakerTwitterUrl))
+                            count++;
+
+                        if(count > 1) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                            String[] chooser = new String[count];
+
+                            int current = 0;
+                            if(!TextUtils.isEmpty(speakerUrl))
+                            {
+                                chooser[current] = getString(R.string.speaker_google_plus_link);
+                                current++;
+                            }
+                            if(!TextUtils.isEmpty(speakerWebsiteUrl))
+                            {
+                                chooser[current] = getString(R.string.speaker_website_link);
+                                current++;
+                            }
+                            if(!TextUtils.isEmpty(speakerTwitterUrl))
+                            {
+                                chooser[current] = getString(R.string.speaker_twitter_link);
+                                current++;
+                            }
+
+                            builder.setItems(chooser, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    int current = 0;
+                                    if(!TextUtils.isEmpty(speakerUrl))
+                                    {
+                                        if(current == which)
+                                        {
+                                            goToGooglePlusDetails(speakerUrl);
+                                            return;
+                                        }
+                                        current++;
+                                    }
+                                    if(!TextUtils.isEmpty(speakerWebsiteUrl))
+                                    {
+                                        if(current == which)
+                                        {
+                                            goToWebsiteDetails(speakerWebsiteUrl);
+                                            return;
+                                        }
+                                        current++;
+                                    }
+                                    if(!TextUtils.isEmpty(speakerTwitterUrl))
+                                    {
+                                        if(current == which)
+                                        {
+                                            goToTwitterDetails(speakerTwitterUrl);
+                                            return;
+                                        }
+                                        current++;
+                                    }
+                                }
+                            });
+
+                            builder.show();
+                        }
+                        else
+                        {
+                            if(!TextUtils.isEmpty(speakerUrl))
+                            {
+                                goToGooglePlusDetails(speakerUrl);
+                            }
+                            else if(!TextUtils.isEmpty(speakerWebsiteUrl))
+                            {
+                                goToWebsiteDetails(speakerWebsiteUrl);
+                            }
+                            else if(!TextUtils.isEmpty(speakerTwitterUrl))
+                            {
+                                goToTwitterDetails(speakerTwitterUrl);
+                            }
+                        }
                     }
                 });
             } else {
@@ -1041,6 +1118,34 @@ public class SessionDetailFragment extends Fragment implements
         if (mSessionCursor && !mHasSummaryContent) {
             mRootView.findViewById(android.R.id.empty).setVisibility(View.VISIBLE);
         }
+    }
+
+    private void goToTwitterDetails(String speakerTwitterUrl) {
+        Intent speakerProfileIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(speakerTwitterUrl));
+
+        speakerProfileIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        UIUtils.preferPackageForIntent(getActivity(), speakerProfileIntent,
+                UIUtils.TWITTER_PACKAGE_NAME);
+        startActivity(speakerProfileIntent);
+    }
+
+    private void goToWebsiteDetails(String speakerWebsiteUrl) {
+        Intent speakerProfileIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(speakerWebsiteUrl));
+
+        speakerProfileIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        startActivity(speakerProfileIntent);
+    }
+
+    private void goToGooglePlusDetails(String speakerUrl) {
+        Intent speakerProfileIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(speakerUrl));
+
+        speakerProfileIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        UIUtils.preferPackageForIntent(getActivity(), speakerProfileIntent,
+                UIUtils.GOOGLE_PLUS_PACKAGE_NAME);
+        startActivity(speakerProfileIntent);
     }
 
     @Override
@@ -1195,6 +1300,8 @@ public class SessionDetailFragment extends Fragment implements
                 ScheduleContract.Speakers.SPEAKER_COMPANY,
                 ScheduleContract.Speakers.SPEAKER_ABSTRACT,
                 ScheduleContract.Speakers.SPEAKER_URL,
+                ScheduleContract.Speakers.SPEAKER_WEBSITE_URL,
+                ScheduleContract.Speakers.SPEAKER_TWITTER_URL,
         };
 
         int SPEAKER_NAME = 0;
@@ -1202,6 +1309,8 @@ public class SessionDetailFragment extends Fragment implements
         int SPEAKER_COMPANY = 2;
         int SPEAKER_ABSTRACT = 3;
         int SPEAKER_URL = 4;
+        int SPEAKER_WEBSITE_URL = 5;
+        int SPEAKER_TWITTER_URL = 6;
     }
 
     private interface FeedbackQuery {

@@ -101,6 +101,7 @@ public class UIUtils {
 
     public static final String GOOGLE_PLUS_PACKAGE_NAME = "com.google.android.apps.plus";
     public static final String YOUTUBE_PACKAGE_NAME = "com.google.android.youtube";
+    public static final String TWITTER_PACKAGE_NAME = "com.twitter.android";
 
     public static final int ANIMATION_FADE_IN_TIME = 250;
     public static final String TRACK_ICONS_TAG = "tracks";

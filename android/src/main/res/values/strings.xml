@@ -86,7 +86,7 @@
     <string name="all_years">All Years</string>
 
     <!-- Name of the application, shown in the application's title bar. -->
-    <string name="app_name">Droidcon Paris 2014</string>
+    <string name="app_name">Droidcon Paris</string>
 
     <!-- Label on a button that is one possible answer to the question "Are you attending the
     conference in person in San Francisco or remotely via livestream?" -->
@@ -829,5 +829,8 @@
     <string name="wifi_install_error_message">Sorry, unable to update WiFi configuration</string>
     <string name="description_i_o_hunt">I/O Hunt</string>
 
+    <string name="speaker_google_plus_link">Google Plus</string>
+    <string name="speaker_website_link">Website</string>
+    <string name="speaker_twitter_link">Twitter</string>
 </resources>
 

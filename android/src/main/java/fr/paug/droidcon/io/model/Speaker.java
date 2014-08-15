@@ -25,6 +25,8 @@ public class Speaker {
     public String name;
     public String company;
     public String plusoneUrl;
+    public String website;
+    public String twitter;
     public String thumbnailUrl;
 
     public String getImportHashcode() {
@@ -35,6 +37,8 @@ public class Speaker {
                 .append("name").append(name == null ? "" : name)
                 .append("company").append(company== null ? "" : company)
                 .append("plusoneUrl").append(plusoneUrl == null ? "" : plusoneUrl)
+                .append("website").append(website == null ? "" : website)
+                .append("twitter").append(twitter == null ? "" : twitter)
                 .append("thumbnailUrl").append(thumbnailUrl == null ? "" : thumbnailUrl);
         return HashUtils.computeWeakHash(sb.toString());
     }

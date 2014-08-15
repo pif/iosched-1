@@ -176,6 +176,12 @@ public class ScheduleContract {
         String SPEAKER_ABSTRACT = "speaker_abstract";
         /** Full URL to the speaker's profile. */
         String SPEAKER_URL = "speaker_url";
+        /** Full URL to the speaker's profile. */
+        String SPEAKER_WEBSITE_URL = "speaker_website_url";
+        /** Full URL to the speaker's profile. */
+        String SPEAKER_TWITTER_URL = "speaker_twitter_url";
+
+
         /** The hashcode of the data used to create this record. */
         String SPEAKER_IMPORT_HASHCODE = "speaker_import_hashcode";
     }

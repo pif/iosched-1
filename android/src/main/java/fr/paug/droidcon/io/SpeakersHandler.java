@@ -112,6 +112,8 @@ public class SpeakersHandler extends JSONHandler {
                 .withValue(ScheduleContract.Speakers.SPEAKER_COMPANY, speaker.company)
                 .withValue(ScheduleContract.Speakers.SPEAKER_IMAGE_URL, speaker.thumbnailUrl)
                 .withValue(ScheduleContract.Speakers.SPEAKER_URL, speaker.plusoneUrl)
+                .withValue(ScheduleContract.Speakers.SPEAKER_WEBSITE_URL, speaker.website)
+                .withValue(ScheduleContract.Speakers.SPEAKER_TWITTER_URL, speaker.twitter)
                 .withValue(ScheduleContract.Speakers.SPEAKER_IMPORT_HASHCODE,
                         speaker.getImportHashcode())
                 .build());

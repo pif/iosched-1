@@ -43,9 +43,7 @@ public class ScheduleDatabase extends SQLiteOpenHelper {
     // NOTE: carefully update onUpgrade() when bumping database versions to make
     // sure user data is saved.
 
-    private static final int VER_2014_RELEASE_A = 122; // app version 2.0.0, 2.0.1
-    private static final int VER_2014_RELEASE_C = 207; // app version 2.1.x
-    private static final int CUR_DATABASE_VERSION = VER_2014_RELEASE_C;
+    private static final int CUR_DATABASE_VERSION = 1;
 
     private final Context mContext;
 
@@ -251,6 +249,8 @@ public class ScheduleDatabase extends SQLiteOpenHelper {
                 + SpeakersColumns.SPEAKER_COMPANY + " TEXT,"
                 + SpeakersColumns.SPEAKER_ABSTRACT + " TEXT,"
                 + SpeakersColumns.SPEAKER_URL + " TEXT,"
+                + SpeakersColumns.SPEAKER_WEBSITE_URL + " TEXT,"
+                + SpeakersColumns.SPEAKER_TWITTER_URL + " TEXT,"
                 + SpeakersColumns.SPEAKER_IMPORT_HASHCODE + " TEXT NOT NULL DEFAULT '',"
                 + "UNIQUE (" + SpeakersColumns.SPEAKER_ID + ") ON CONFLICT REPLACE)");
 
@@ -464,12 +464,12 @@ public class ScheduleDatabase extends SQLiteOpenHelper {
         boolean dataInvalidated = true;
 
         // Check if we can upgrade from release A to release C
-        if (version == VER_2014_RELEASE_A) {
-            // release A format can be upgraded to release C format
-            LOGD(TAG, "Upgrading database from 2014 release A to 2014 release C.");
-            upgradeAtoC(db);
-            version = VER_2014_RELEASE_C;
-        }
+//        if (version == VER_2014_RELEASE_A) {
+//            // release A format can be upgraded to release C format
+//            LOGD(TAG, "Upgrading database from 2014 release A to 2014 release C.");
+//            upgradeAtoC(db);
+//            version = VER_2014_RELEASE_C;
+//        }
 
         LOGD(TAG, "After upgrade logic, at version " + version);
 
