@@ -144,11 +144,10 @@ public class SyncHelper {
         // individual failures on each)
         final int OP_REMOTE_SYNC = 0;
         final int OP_USER_SCHEDULE_SYNC = 1;
-        final int OP_USER_FEEDBACK_SYNC = 2;
 
         int[] opsToPerform = userDataOnly ?
                 new int[] { OP_USER_SCHEDULE_SYNC } :
-                new int[] { OP_REMOTE_SYNC, OP_USER_SCHEDULE_SYNC, OP_USER_FEEDBACK_SYNC};
+                new int[] { OP_REMOTE_SYNC, OP_USER_SCHEDULE_SYNC};
 
 
         for (int op : opsToPerform) {
@@ -159,9 +158,6 @@ public class SyncHelper {
                         break;
                     case OP_USER_SCHEDULE_SYNC:
                         dataChanged |= doUserScheduleSync(account.name);
-                        break;
-                    case OP_USER_FEEDBACK_SYNC:
-                        doUserFeedbackSync();
                         break;
                 }
             } catch (AuthException ex) {
@@ -191,7 +187,6 @@ public class SyncHelper {
                 LOGE(TAG, "Error performing post sync chores.");
             }
         }
-        clearExpertsIfNecessary();
         choresDuration = System.currentTimeMillis() - opStart;
 
         int operations = mConferenceDataHandler.getContentProviderOperationsDone();
@@ -236,11 +231,6 @@ public class SyncHelper {
         Intent intent = new Intent(SessionCalendarService.ACTION_UPDATE_ALL_SESSIONS_CALENDAR);
         intent.setClass(context, SessionCalendarService.class);
         context.startService(intent);
-    }
-
-    private void doUserFeedbackSync() {
-        LOGD(TAG, "Syncing feedback");
-        new FeedbackSyncHelper(mContext).sync();
     }
 
     /**
@@ -327,14 +317,6 @@ public class SyncHelper {
             ++syncResult.stats.numEntries;
             ++syncResult.stats.numUpdates;
         }
-    }
-
-    private boolean clearExpertsIfNecessary() {
-        if (Config.hasExpertsDirectoryExpired()) {
-            return 0 < mContext.getContentResolver()
-                    .delete(ScheduleContract.Experts.CONTENT_URI, null, null);
-        }
-        return false;
     }
 
     public static class AuthException extends RuntimeException {

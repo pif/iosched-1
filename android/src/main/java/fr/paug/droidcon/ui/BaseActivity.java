@@ -110,7 +110,6 @@ public abstract class BaseActivity extends Activity implements
     protected static final int NAVDRAWER_ITEM_VIDEO_LIBRARY = 4;
     protected static final int NAVDRAWER_ITEM_SIGN_IN = 5;
     protected static final int NAVDRAWER_ITEM_SETTINGS = 6;
-    protected static final int NAVDRAWER_ITEM_EXPERTS_DIRECTORY = 7;
     protected static final int NAVDRAWER_ITEM_PEOPLE_IVE_MET = 8;
     protected static final int NAVDRAWER_ITEM_INVALID = -1;
     protected static final int NAVDRAWER_ITEM_SEPARATOR = -2;
@@ -682,7 +681,6 @@ public abstract class BaseActivity extends Activity implements
                 return true;
 
             case R.id.menu_i_o_hunt:
-                launchIoHunt();
                 return true;
 
             case R.id.menu_debug:
@@ -696,8 +694,6 @@ public abstract class BaseActivity extends Activity implements
                 break;
 
             case R.id.menu_io_extended:
-                startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse(Config.IO_EXTENDED_LINK)));
                 break;
 
             case R.id.menu_map:
@@ -706,25 +702,6 @@ public abstract class BaseActivity extends Activity implements
                 break;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private void launchIoHunt() {
-        if (!TextUtils.isEmpty(Config.IO_HUNT_PACKAGE_NAME)) {
-            LOGD(TAG, "Attempting to launch I/O hunt.");
-            PackageManager pm = getPackageManager();
-            Intent launchIntent = pm.getLaunchIntentForPackage(Config.IO_HUNT_PACKAGE_NAME);
-            if (launchIntent != null) {
-                // start I/O Hunt
-                LOGD(TAG, "I/O hunt intent found, launching.");
-                startActivity(launchIntent);
-            } else {
-                // send user to the Play Store to download it
-                LOGD(TAG, "I/O hunt intent NOT found, going to Play Store.");
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
-                        Config.PLAY_STORE_URL_PREFIX + Config.IO_HUNT_PACKAGE_NAME));
-                startActivity(intent);
-            }
-        }
     }
 
     protected void requestDataRefresh() {
@@ -759,11 +736,6 @@ public abstract class BaseActivity extends Activity implements
 //                break;
             case NAVDRAWER_ITEM_SOCIAL:
                 intent = new Intent(this, SocialActivity.class);
-                startActivity(intent);
-                finish();
-                break;
-            case NAVDRAWER_ITEM_EXPERTS_DIRECTORY:
-                intent = new Intent(this, ExpertsDirectoryActivity.class);
                 startActivity(intent);
                 finish();
                 break;
@@ -853,11 +825,6 @@ public abstract class BaseActivity extends Activity implements
         final MenuItem mapItem = menu.findItem(R.id.menu_map);
         if (mapItem != null) {
             mapItem.setVisible(isRemote);
-        }
-
-        MenuItem ioHuntItem = menu.findItem(R.id.menu_i_o_hunt);
-        if (ioHuntItem != null) {
-            ioHuntItem.setVisible(!isRemote && !TextUtils.isEmpty(Config.IO_HUNT_PACKAGE_NAME));
         }
     }
 

@@ -71,7 +71,6 @@ public class ConferenceDataHandler {
     private static final String DATA_KEY_SESSIONS = "sessions";
     private static final String DATA_KEY_SEARCH_SUGGESTIONS = "search_suggestions";
     private static final String DATA_KEY_HASHTAGS = "hashtags";
-    private static final String DATA_KEY_EXPERTS = "experts";
     private static final String DATA_KEY_VIDEOS = "video_library";
     private static final String DATA_KEY_PARTNERS = "partners";
 
@@ -83,7 +82,6 @@ public class ConferenceDataHandler {
             DATA_KEY_SESSIONS,
             DATA_KEY_SEARCH_SUGGESTIONS,
             DATA_KEY_HASHTAGS,
-            DATA_KEY_EXPERTS,
             DATA_KEY_VIDEOS,
             DATA_KEY_PARTNERS
     };
@@ -97,7 +95,6 @@ public class ConferenceDataHandler {
     SpeakersHandler mSpeakersHandler = null;
     SessionsHandler mSessionsHandler = null;
     SearchSuggestHandler mSearchSuggestHandler = null;
-    ExpertsHandler mExpertsHandler = null;
     HashtagsHandler mHashtagsHandler = null;
     VideosHandler mVideosHandler = null;
     PartnersHandler mPartnersHandler = null;
@@ -134,7 +131,6 @@ public class ConferenceDataHandler {
         mHandlerForKey.put(DATA_KEY_SESSIONS, mSessionsHandler = new SessionsHandler(mContext));
         mHandlerForKey.put(DATA_KEY_SEARCH_SUGGESTIONS, mSearchSuggestHandler =
                 new SearchSuggestHandler(mContext));
-        mHandlerForKey.put(DATA_KEY_EXPERTS, mExpertsHandler = new ExpertsHandler(mContext));
         mHandlerForKey.put(DATA_KEY_HASHTAGS, mHashtagsHandler = new HashtagsHandler(mContext));
         mHandlerForKey.put(DATA_KEY_VIDEOS, mVideosHandler = new VideosHandler(mContext));
         mHandlerForKey.put(DATA_KEY_PARTNERS, mPartnersHandler = new PartnersHandler(mContext));

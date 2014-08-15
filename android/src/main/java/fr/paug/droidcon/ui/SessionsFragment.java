@@ -871,18 +871,9 @@ public class SessionsFragment extends Fragment implements
             LOGE(TAG, "Message card not found in UI (R.id.message_card).");
             return false;
         }
-        if (!PrefUtils.hasAnsweredLocalOrRemote(getActivity()) &&
-                !TimeUtils.hasConferenceEnded(getActivity())) {
-            // show the "in person" vs "remote" card
-//            setupLocalOrRemoteCard(card);
-            return true;
-        } else if (WiFiUtils.shouldOfferToSetupWifi(getActivity(), true)) {
+        if (WiFiUtils.shouldOfferToSetupWifi(getActivity(), true)) {
             // show wifi setup card
             setupWifiOfferCard(card);
-            return true;
-        } else if (PrefUtils.shouldOfferIOExtended(getActivity(), true)) {
-            // show the I/O extended card
-            setupIOExtendedCard(card);
             return true;
         } else {
             card.setVisibility(View.GONE);
@@ -914,36 +905,6 @@ public class SessionsFragment extends Fragment implements
                         } else {
                             PrefUtils.markDeclinedWifiSetup(context);
                         }
-                    }
-                }, CARD_DISMISS_ACTION_DELAY);
-            }
-        });
-        card.show();
-    }
-
-    private void setupIOExtendedCard(final MessageCardView card) {
-        card.overrideBackground(R.drawable.card_bg);
-        card.setText(getString(R.string.question_i_o_extended));
-        card.setButton(0, getString(R.string.no_thanks), CARD_ANSWER_NO,
-                false, 0);
-        card.setButton(1, getString(R.string.browse_events), CARD_ANSWER_YES,
-                true, 0);
-        final Context context = getActivity().getApplicationContext();
-        card.setListener(new MessageCardView.OnMessageCardButtonClicked() {
-            @Override
-            public void onMessageCardButtonClicked(final String tag) {
-                card.dismiss(true);
-
-                // post delayed to give card time to animate
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (CARD_ANSWER_YES.equals(tag)) {
-                            Intent intent = new Intent(Intent.ACTION_VIEW,
-                                    Uri.parse(Config.IO_EXTENDED_LINK));
-                            startActivity(intent);
-                        }
-                        PrefUtils.markDismissedIOExtendedCard(SessionsFragment.this.getActivity());
                     }
                 }, CARD_DISMISS_ACTION_DELAY);
             }

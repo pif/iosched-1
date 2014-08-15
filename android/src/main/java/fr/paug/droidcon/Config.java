@@ -118,22 +118,6 @@ public class Config {
     public static final String VIDEO_LIBRARY_FALLBACK_THUMB_URL_FMT =
             "http://img.youtube.com/vi/%s/default.jpg";
 
-    // Link to Google I/O Extended events presented in Explore screen
-    public static final String IO_EXTENDED_LINK = "http://www.google.com/events/io/io-extended";
-
-    // 2014-07-25: Time of expiration for experts directory data.
-    // Represented as elapsed milliseconds since the epoch.
-    public static final long EXPERTS_DIRECTORY_EXPIRATION = 1406214000000L;
-
-    /**
-     * Check if the experts directory data expired.
-     *
-     * @return True if the experts directory data expired and should be removed.
-     */
-    public static boolean hasExpertsDirectoryExpired() {
-        return EXPERTS_DIRECTORY_EXPIRATION < System.currentTimeMillis();
-    }
-
     // URL to use for resolving NearbyDevice metadata.
     public static final String METADATA_URL =
             // "http://url-caster.appspot.com/resolve-scan"
@@ -170,9 +154,6 @@ public class Config {
     // How long we snooze the stale data notification for after the user has acted on it
     // (to keep from showing it repeatedly and being annoying)
     public static final long STALE_DATA_WARNING_SNOOZE = 10 * MINUTE_MILLIS;
-
-    // Package name for the I/O Hunt game
-    public static final String IO_HUNT_PACKAGE_NAME = "com.google.wolff.androidhunt2";
 
     // Play store URL prefix
     public static final String PLAY_STORE_URL_PREFIX
@@ -213,15 +194,6 @@ public class Config {
         Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_TOPIC, 1);
         Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_TYPE, 2);
     }
-
-    // Values for the EventPoint feedback API. Sync happens at the same time as schedule sync,
-    // and before that values are stored locally in the database.
-
-    public static final String FEEDBACK_API_CODE = "";
-    public static final String FEEDBACK_URL = "";
-    public static final String FEEDBACK_API_KEY = "";
-    public static final String FEEDBACK_DUMMY_REGISTRANT_ID = "";
-    public static final String FEEDBACK_SURVEY_ID = "";
 
     // URL prefix for web links to session pages
     public static final Uri SESSION_DETAIL_WEB_URL_PREFIX
