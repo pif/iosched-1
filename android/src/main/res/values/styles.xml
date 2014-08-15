@@ -34,7 +34,6 @@
     <style name="Theme" parent="FrameworkRoot.Theme">
         <!-- Only needed for pre-L -->
         <item name="android:actionOverflowButtonStyle">@style/ActionButton.Overflow</item>
-        <item name="android:editTextBackground">@drawable/edit_text</item>
         <item name="android:editTextStyle">@style/Widget.IOSched.EditText</item>
         <item name="android:actionBarWidgetTheme">@style/Theme.IOSched.Widget</item>
         <item name="android:actionDropDownStyle">@style/Widget.IOSched.HeaderBar.Spinner</item>
@@ -313,7 +312,6 @@
     </style>
 
     <style name="Widget.IOSched.EditText" parent="FrameworkRoot.EditText">
-        <item name="android:background">@drawable/edit_text</item>
     </style>
 
     <style name="SessionDetailPlusOne">

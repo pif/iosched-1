@@ -132,13 +132,10 @@ public abstract class BaseActivity extends Activity implements
     private static final int[] NAVDRAWER_ICON_RES_ID = new int[] {
             R.drawable.ic_drawer_my_schedule,  // My Schedule
             R.drawable.ic_drawer_explore,  // Explore
-            R.drawable.ic_drawer_map, // Map
             R.drawable.ic_drawer_social, // Social
             R.drawable.ic_drawer_video_library, // Video Library
             0, // Sign in
             R.drawable.ic_drawer_settings,
-            R.drawable.ic_drawer_experts,
-            R.drawable.ic_drawer_people_met,
     };
 
     // delay to launch nav drawer item, to allow close animation to play
