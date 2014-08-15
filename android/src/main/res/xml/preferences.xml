@@ -46,10 +46,10 @@
         android:summary="@string/pref_notify_starred_sessions_description"
         android:defaultValue="true" />
 
-    <CheckBoxPreference
-        android:key="pref_show_session_feedback_reminders"
-        android:title="@string/pref_notify_feedback_title"
-        android:summary="@string/pref_notify_feedback_description"
-        android:defaultValue="true" />
+    <!--<CheckBoxPreference-->
+        <!--android:key="pref_show_session_feedback_reminders"-->
+        <!--android:title="@string/pref_notify_feedback_title"-->
+        <!--android:summary="@string/pref_notify_feedback_description"-->
+        <!--android:defaultValue="true" />-->
 
 </PreferenceScreen>
