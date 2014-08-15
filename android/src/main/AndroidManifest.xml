@@ -188,10 +188,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ui.NearbyEulaActivity"
-            android:theme="@style/Theme.IOSched.Welcome" />
-
 
         <!-- TaskStackBuilder proxy activity for widgets and notifications. -->
 
@@ -203,11 +199,6 @@
             android:name=".ui.debug.DebugActionRunnerActivity"
             android:label="@string/title_activity_debug_test_runner"
             android:parentActivityName=".ui.MyScheduleActivity" />
-
-        <!-- Experts directory -->
-        <activity android:name=".ui.ExpertsDirectoryActivity"
-            android:label="@string/title_experts_directory"
-            android:theme="@style/Theme.IOSched.ExpertsDirectory"/>
 
         <activity
             android:name=".ui.debug.actions.ViewFilesInAppFolderActivity"
