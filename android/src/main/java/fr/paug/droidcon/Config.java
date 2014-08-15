@@ -43,12 +43,12 @@ public class Config {
     public static final String BOOTSTRAP_DATA_TIMESTAMP = "Thu, 10 Apr 2014 00:01:03 GMT";
 
     // Conference hashtag
-    public static final String CONFERENCE_HASHTAG = "#io14";
+    public static final String CONFERENCE_HASHTAG = "#droidconparis";
 
     // Patterns that, when absent from a hashtag, will trigger the addition of the
     // CONFERENCE_HASHTAG on sharing snippets. Ex: "#Android" will be shared as "#io14 #Android",
     // but "#iohunt" won't be modified.
-    public static final String CONFERENCE_HASHTAG_PREFIX = "#io";
+    public static final String CONFERENCE_HASHTAG_PREFIX = "#droidcon";
 
     // Hard-coded conference dates. This is hardcoded here instead of extracted from the conference
     // data to avoid the Schedule UI breaking if some session is incorrectly set to a wrong date.
