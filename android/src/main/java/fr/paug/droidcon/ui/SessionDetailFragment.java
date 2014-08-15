@@ -445,23 +445,6 @@ public class SessionDetailFragment extends Fragment implements
         } else {
             LOGD(TAG, "Not scheduling notification about session start, too late.");
         }
-
-        // Schedule feedback notification
-        if (UIUtils.getCurrentTime(context) < mSessionEnd) {
-            LOGD(TAG, "Scheduling notification about session feedback.");
-            scheduleIntent = new Intent(
-                    SessionAlarmService.ACTION_SCHEDULE_FEEDBACK_NOTIFICATION,
-                    null, context, SessionAlarmService.class);
-            scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_ID, mSessionId);
-            scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_START, mSessionStart);
-            scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_END, mSessionEnd);
-            scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_TITLE, mTitleString);
-            scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_ROOM, mRoomName);
-            scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_SPEAKERS, mSpeakers);
-            context.startService(scheduleIntent);
-        } else {
-            LOGD(TAG, "Not scheduling feedback notification, too late.");
-        }
     }
 
     private void updateTimeBasedUi() {
@@ -474,11 +457,6 @@ public class SessionDetailFragment extends Fragment implements
                 && currentTimeMillis <= mSessionEnd) {
             // show the "watch now" card
             showWatchNowCard();
-        } else if (!mAlreadyGaveFeedback && mInitStarred && currentTimeMillis >= (mSessionEnd -
-                Config.FEEDBACK_MILLIS_BEFORE_SESSION_END)
-                && !sDismissedFeedbackCard.contains(mSessionId)) {
-            // show the "give feedback" card
-            showGiveFeedbackCard();
         }
 
         String timeHint = "";
@@ -808,15 +786,6 @@ public class SessionDetailFragment extends Fragment implements
                     getWatchLiveIntent(context)));
         }
 
-        // Add session feedback link, if appropriate
-        if (!mAlreadyGaveFeedback && currentTimeMillis > mSessionEnd
-                - Config.FEEDBACK_MILLIS_BEFORE_SESSION_END) {
-            links.add(new Pair<Integer, Object>(
-                    R.string.session_feedback_submitlink,
-                    getFeedbackIntent()
-            ));
-        }
-
         for (int i = 0; i < SessionsQuery.LINKS_INDICES.length; i++) {
             final String linkUrl = cursor.getString(SessionsQuery.LINKS_INDICES[i]);
             if (TextUtils.isEmpty(linkUrl)) {
@@ -940,37 +909,6 @@ public class SessionDetailFragment extends Fragment implements
                 }
             }
         });
-    }
-
-    private void showGiveFeedbackCard() {
-        final MessageCardView messageCardView = (MessageCardView) mRootView.findViewById(
-                R.id.give_feedback_card);
-        messageCardView.show();
-        messageCardView.setListener(new MessageCardView.OnMessageCardButtonClicked() {
-            @Override
-            public void onMessageCardButtonClicked(String tag) {
-                if ("GIVE_FEEDBACK".equals(tag)) {
-                    /* [ANALYTICS:EVENT]
-                     * TRIGGER:   Click on the Send Feedback action on the Session Details page.
-                     * CATEGORY:  'Session'
-                     * ACTION:    'Feedback'
-                     * LABEL:     session title/subtitle
-                     * [/ANALYTICS]
-                     */
-                    AnalyticsManager.sendEvent("Session", "Feedback", mTitleString, 0L);
-                    Intent intent = getFeedbackIntent();
-                    startActivity(intent);
-                } else {
-                    sDismissedFeedbackCard.add(mSessionId);
-                    messageCardView.dismiss();
-                }
-            }
-        });
-    }
-
-    private Intent getFeedbackIntent() {
-        return new Intent(Intent.ACTION_VIEW, mSessionUri, getActivity(),
-                SessionFeedbackActivity.class);
     }
 
     private void enableSocialStreamMenuItemDeferred() {
