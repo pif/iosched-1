@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.iosched.util;
+package fr.paug.droidcon.util;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -34,7 +34,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
-import com.google.samples.apps.iosched.R;
+import fr.paug.droidcon.R;
 
 import java.lang.Override;
 import java.util.List;
