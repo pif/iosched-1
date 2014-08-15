@@ -224,6 +224,13 @@
       "type": "free"
     },
     {
+      "end": "2014-09-22T09:25:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T08:35:00.000Z",
+      "type": "free"
+    },
+    {
       "end": "2014-09-22T09:55:00.000Z",
       "title": "Break",
       "subtitle": "",
@@ -250,7 +257,8 @@
       "subtitle": "Main Hall, Level 1",
       "start": "2014-09-22T11:05:00.000Z",
       "type": "break"
-    }{
+    },
+    {
       "end": "2014-09-22T12:50:00.000Z",
       "title": "",
       "subtitle": "",
@@ -403,8 +411,7 @@
       "subtitle": "",
       "start": "2014-09-23T16:00:00.000Z",
       "type": "free"
-    },
-    
+    }
   ],
   "partners": [
     
@@ -428,7 +435,8 @@
       "captionsUrl": "",
       "id": "__keynote__",
       "tags": [
-        "FLAG_KEYNOTE"
+        "FLAG_KEYNOTE",
+        "THEME_EN"
       ],
       "room": "auditorium"
     },
@@ -445,14 +453,577 @@
       "mainTag": "TOPIC_DEVELOPMENT",
       "endTimestamp": "2014-09-22T08:35:00Z",
       "color": "#3f51b5",
-      "hashtag": "development",
+      "hashtag": "",
       "isLivestream": false,
       "captionsUrl": "",
-      "id": "39066a0d-99e6-e311-b297-00155d5066d7",
+      "id": "session_cyril_mottier_1",
       "tags": [
-        "TOPIC_DEVELOPMENT"
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
       ],
       "room": "auditorium"
+    },
+    {
+      "speakers": [
+        "janchong"
+      ],
+      "description": "In January 2012, nearly all Twitter for Android code was written by three engineers. As of January 2014, Twitter for Android has several dozens unique contributors from over ten different teams.  In this talk, Jan will be presenting how Twitter moved to develop at scale from a single team-based development model to a project based development model that welcomes contributions from across the company and highlight some of the challenges that they ran into on the way.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-22T07:55:00Z",
+      "title": "Scaling Android Development at Twitter",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-22T08:35:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_jan_chong_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
+      ],
+      "room": "leparisien"
+    },
+    {
+      "speakers": [
+        "xavierhallade"
+      ],
+      "description": "The Android SDK is set to use some content displayed on connected screen from Android 4.2 Discover how to display a different content from your application when your Android is connected to a second screen through HDMI/MHL/SlimPort or wireless through Miracast or Chromecast with equipments that allow the screencasting support.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-22T07:55:00Z",
+      "title": "Ajouter le support du multi-écran dans une application Android",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-22T08:35:00Z",
+      "color": "",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_xavier_hallade_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_FR"
+      ],
+      "room": "salon"
+    },
+    {
+      "speakers": [
+        "taylorling"
+      ],
+      "description": "There are an increasing number of apps that come with great design nowadays, and most of the carefully crafted apps resonate with the Android users due to their great and consistent User Experience (UX) design. Many developers and designers try hard to create an app with great UX by largely referring to the Android Design Guideline, however, to make remarkable UX design is certainly more than that, and often they missed certain important items from their check list. If you want to check if your app(s) is heading the right direction to awesomeness, be sure to check out this ‘advanced’ check list in making awesome Android apps.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-22T08:35:00Z",
+      "title": "Ingredients for an Awesome App",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_UI_UX",
+      "endTimestamp": "2014-09-22T09:25:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_taylorling_1",
+      "tags": [
+        "TOPIC_UI_UX",
+        "THEME_EN"
+      ],
+      "room": "auditorium"
+    },
+    {
+      "speakers": [
+        "stephanenicolas"
+      ],
+      "description": "During the last few years, we have all assisted or participated to a small revolution on Android: annotation processing. Most libs now rely on annotation processing during build to pre-compute a lot of stuff that will boost them at runtime. Let’s think about Dagger, ButerKnife, Hugo, RoboGuice, BoundBox, Memento, IcePick etc.
+
+Nevertheless, writing an annotation processor is far from obvious as it offers an API that is very difficult to understand. The main idea of this session is to suggest an alternative technology (or a complement in some cases): post-compilation processing and byte code manipulation.
+
+This session is an in-depth review of byte code manipulation in Java and its limitations on Android. Stéphane will also explore a few techniques and librairies that make it simple to write a post compiler byte code processor, with gradle and maven examples. He will be presenting two librairies during his session: AfterBurner and Mimic.
+
+See how to eliminate all boiler plate from your favorite librairies and boost your applications.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-22T08:35:00Z",
+      "title": "Byte code manipulation for Android",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-22T09:25:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_stephanenicolas_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
+      ],
+      "room": "salon"
+    },
+{
+      "speakers": [
+        "fabiendevos"
+      ],
+      "description": "A lot have ideas but only few realize their potential. In this talk, Fabien will present how to develop an application within four months from start to launch.
+
+This session won’t be about RSS feed or another Flappy bird. It will tackle complex issues involving not only UI but also development and strategy.  These are few questions that will be raised during the session:
+
+- How can you choose and confirm an idea?
+
+- How can you make an UI intuitive ?
+
+- How can you tackle and solve complex development issues ?
+
+- How can you set and reach goals?",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-22T09:55:00Z",
+      "title": "The making of an app: from having an idea to shipping it",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_OTHER",
+      "endTimestamp": "2014-09-22T10:45:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_fabiendevos_1",
+      "tags": [
+        "TOPIC_OTHER",
+        "THEME_EN"
+      ],
+      "room": "auditorium"
+    },
+{
+      "speakers": [
+        "nabilhachicha"
+      ],
+      "description": "Gradle is becoming more & more adopted by developers as their main build system especially after the release of Android Studio. Thanks to the plugins architecture, Gradle allows users to reuse patterns and practices, avoiding boilerplate build code.
+
+In this session, Nabil will be focusing on creating a Plugin that cooperates with the existing “android plugin”, in order to demonstrate some key concepts like: tasks, lifecycle, defining a custom DSL, incremental build and testing…",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-22T09:55:00Z",
+      "title": "Android Tools: create your custom Gradle plugin",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-22T10:45:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_nabilhachicha_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
+      ],
+      "room": "leparisien"
+    },
+{
+      "speakers": [
+        "guillaumelaforge"
+      ],
+      "description": "For the past 10 years, Groovy has vastly improved the productivity of Java developers. With its unique features, like closures, builders, code transformations, traits, static compilation and many others, Groovy has become a very competitive language on the JVM platform. Compared to other alternative JVM languages, Groovy has the advantage of offering the best interoperability story with Java, while still keeping a concise syntax familiar to Java developers.
+What about the mobile story? In particular, with Android, developers basically only hava Java as sole choice.
+Couldn’t they too benefit from advantages provided by Groovy?
+Can’t we make Android developers life less painful too?
+In this session, Guillaume will show how you can use Groovy to develop Android applications, bringing all the productivity and modernity Groovy provides on the Android platform.
+He will also explain the potential issues you might be encountering, but if you are jealous of your iOS friends with Swift, get your smile back, Groovy is there for you!",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-22T09:55:00Z",
+      "title": "Groovy sur Android",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-22T10:45:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_guillaumelaforge_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_FR"
+      ],
+      "room": "leparisien"
+    },
+{
+      "speakers": [
+        "geoffreydorne"
+      ],
+      "description": "How is design useful in our lives? Design is used not only to make things beautiful but also to promote innovation and improvement in humain beings individually, collectively and collaboratively. Using examples and key elements, Geoffrey invites you to discover how the creation of services, products, objects and experiences may change our lives.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T08:15:00Z",
+      "title": "Petit design pour grande Humanité",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_OTHER",
+      "endTimestamp": "2014-09-23T09:05:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_geoffreydorne_1",
+      "tags": [
+        "TOPIC_OTHER",
+        "THEME_FR"
+      ],
+      "room": "leparisien"
+    },
+{
+      "speakers": [
+        "marcdecourville"
+      ],
+      "description": "Archos has just launched a full connected home solution based on a Android tablet and relying on Bluetooth Low Energy accessories. The purpose of the talk:
+
+- how Android can play a major role in the connected home revolution
+
+- the overall system architecture based on Android BLE, Google Cloud Messaging, Google Apps Engine, STUN/ICE remote connection
+
+- the strategy to open up the Archos applications and accessories",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T08:15:00Z",
+      "title": "Archos Android based connected home solutions",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_EVERYWHERE",
+      "endTimestamp": "2014-09-23T09:05:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_marcdecourville_1",
+      "tags": [
+        "TOPIC_EVERYWHERE",
+        "THEME_EN"
+      ],
+      "room": "auditorium"
+    },
+{
+      "speakers": [
+        "jbkempf"
+      ],
+      "description": "VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files, discs and streams. VLC runs on most platforms and is developed by volunteers.
+
+This talk will explain how we ported VLC to Android using the NDK, the issues we faced and how we solved most of them. It will also detail the future of VLC on the Android platform.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T09:35:00Z",
+      "title": "Porting VLC on Android",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-23T10:25:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_jbkempf_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
+      ],
+      "room": "salon"
+    },
+{
+      "speakers": [
+        "timmesserschmidt"
+      ],
+      "description": "User authentication in mobile applications is a very common and integral use case. Implementing regular passwords is an easy solution for developers but comes with several pitfalls that impair user experience like (re-)entering passwords, the need to create a new unique password or even just the input of personal data on a flaky keyboard while registering a new account.
+
+In this talk the security flaws and UX implications of passwords will be discussed and highlighted which different techniques exist that are able to offer a more mobile friendly flow. Highlighting authorization and authentication techniques like OAuth, OpenID Connect and even hardware features like Bluetooth Low Energy. This talk will be interesting for anyone who’s facing a situation where creating and storing user accounts matters.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T09:35:00Z",
+      "title": "Death to Passwords",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_UI_UX",
+      "endTimestamp": "2014-09-23T10:25:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_timmesserschmidt_1",
+      "tags": [
+        "TOPIC_UI_UX",
+        "THEME_EN"
+      ],
+      "room": "leparisien"
+    },
+{
+      "speakers": [
+        "hoilam"
+      ],
+      "description": "Outline the key considerations while designing and building for Android Wear. In addition, Hoi will talk about some of the lessons learnt from experiences and give developer an opportunity to ask questions.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T09:35:00Z",
+      "title": "Android Wear",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_EVERYWHERE",
+      "endTimestamp": "2014-09-23T10:25:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_hoilam_1",
+      "tags": [
+        "TOPIC_EVERYWHERE",
+        "THEME_EN"
+      ],
+      "room": "auditorium"
+    },
+{
+      "speakers": [
+        "marioviviani"
+      ],
+      "description": "With the addition of Android Wear to the Android ecosystem, the “wearables era” is officially opened. Android apps can now extend beyond the limits of smartphone and tablets, providing to the user a new kind of interaction where “less is more” and opening new ways for developers to engage users within their apps.
+
+However, the approach to Wear development is slightly different from handheld Android coding, and different are also the types of applications developers can design, develop and distribute for Wear devices.
+
+In this talk, Mario will be presenting how to easily setup and include Android Wear features within your Android App in just a few minutes, an overview of Android Studio tools for Wear development, what are the best practices of Wear APIs you should keep in mind and what are the main difference between “classic” Android handheld development and Wear.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T10:25:00Z",
+      "title": "Kick-start your experience with Android Wear",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_EVERYWHERE",
+      "endTimestamp": "2014-09-23T11:15:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_marioviviani_1",
+      "tags": [
+        "TOPIC_EVERYWHERE",
+        "THEME_EN"
+      ],
+      "room": "auditorium"
+    },
+{
+      "speakers": [
+        "cedriccreusot",
+        "jeanloupyu"
+      ],
+      "description": "Mobile is becoming slowly but surely the future of our habits. European Leader of Dating website, Meetic is a pioneer in the French Web which is deeply transforming to adapt to new functions. One of the main painful issues that you can meet before releasing an app: is it ready to be released? Did we break a feature while building this new version? In short, do we have the right to launch the application ?
+
+This is for this reason and their wish to tackle this painful issue that thet have worked on automatical functional tests for mobile applications and the tool Calaba.sh in particular. Why and how can we write high level automatical tests? What executive strategy can we opt for?
+
+In this talk, Cédric and Jean-Loup will be answering these questions. They will give feedback on their experience and will show you how they integrated this tool to their development cycle.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T10:25:00Z",
+      "title": "Feu vert pour les apps avec Calaba.sh !",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-23T11:15:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_cedriccreusot_jeanloupyu_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
+      ],
+      "room": "leparisien"
+    },
+{
+      "speakers": [
+        "benjaminaugustin"
+      ],
+      "description": "Ever had to deal with a terribly designed API or spent hours re-factoring your code to deal with an updated API? You have also hard about RxJava but can’t see how it could benefit your project? In his talk, Benjamin will take the practical approach of a complex API to explain how RxJava and Functional Reactive Programming (FRP) can be used on every projects to make your life easier.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T10:25:00Z",
+      "title": "Rx-Fy all the things!",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-23T11:15:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_benjaminaugustin_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
+      ],
+      "room": "salon"
+    },
+{
+      "speakers": [
+        "thomasguerin"
+      ],
+      "description": "Ladies and gentlemen, get prepared. In the red corner, with a 104KB – weight, the most popular among all Test Frameworks: Robotium. In the blue corner, with a 262KB-weight and supporting by Google Teams, there is the one qualified by “new comer”: Espresso. Let’s the battle start!!
+
+Thomas will be presenting, with code, how the latter works, the pros and cons. Plus, he will talk about Calabash Android and UI Automator.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T12:15:00Z",
+      "title": "Robotium vs Espresso: Get ready to rumble !",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-23T13:05:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_thomasguerin_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_FR"
+      ],
+      "room": "salon"
+    },
+{
+      "speakers": [
+        "sebastianopoggi"
+      ],
+      "description": "In his talk, Sebastiano will guide you through a topic that is often ignored: the Canvas API. Even if there’s only scarce documentation for it, the Canvas API is at the heart of everything that shows a UI on Android. You’ll need to tame this powerful and mysterious creature if you want to create great custom views and brilliant, lightweight UIs for your apps.
+
+What is a Canvas? How do you Paint? Can you draw Paths? What is Skia, and who invited it anyway? What actually happens during a drawing pass? What are Shaders? What are Filters? Is it true that text is basically impossible to measure correctly? What shape does a Shape have if noone’s painting it? These are some of the questions which will be answered during the session.
+
+Connect the dots in the spotty documentation the Android team has assembled, and become a true pixel pusher!",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T12:15:00Z",
+      "title": "Framing the Canvas",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_UI_UX",
+      "endTimestamp": "2014-09-23T13:05:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_sebastianopoggi_1",
+      "tags": [
+        "TOPIC_UI_UX",
+        "THEME_EN"
+      ],
+      "room": "auditorium"
+    },
+{
+      "speakers": [
+        "mathieucalba"
+      ],
+      "description": "Almost every mobile application needs to synchronise data with a server, on Android too. Nonetheless their are many ways to do it : Alert Managers & Services or SyncAdapter  … and each ones has its pros & cons. Recently Google added a new way to do asynchronous work on Android in the L preview release : JobScheduler.
+
+In his talk, Mathieu will be presenting how each technique works and how they have done it in the Capitaine Train Android application for a feedback with a complex data model.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T12:15:00Z",
+      "title": "The Death of the Refresh Button",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-23T13:05:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_mathieucalba_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
+      ],
+      "room": "leparisien"
+    },
+{
+      "speakers": [
+        "pyricau"
+      ],
+      "description": "At Droidcon Paris, Pierre-Yves will be talking about how to remove Fragments from your appplications by splitting the logic into reusable Views and Presenters, with the help of the Mortar Library.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T13:05:00Z",
+      "title": "Défragmentez vos apps avec Mortar !",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-23T13:55:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_pyricau_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_EN"
+      ],
+      "room": "auditorium"
+    },
+{
+      "speakers": [
+        "nicolasklein"
+      ],
+      "description": "",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T13:05:00Z",
+      "title": "A Quest for Engaged, Happy Players: Google Play Game Services Year 2",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-23T13:55:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_nicolasklein_1",
+      "tags": [
+        "TOPIC_DEVELOPMENT",
+        "THEME_FR"
+      ],
+      "room": "salon"
+    },
+{
+      "speakers": [
+        "chprunier",
+        "remygottschalk"
+      ],
+      "description": "This session is about the android build system, especially its makefiles and how to use them well. Both Rémy and Charles-Henry will be giving this talk.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T15:15:00Z",
+      "title": "buildsystem.mk",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_EVERYWHERE",
+      "endTimestamp": "2014-09-23T16:00:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_chprunier_remygottschalk_1",
+      "tags": [
+        "TOPIC_EVERYWHERE",
+        "THEME_FR"
+      ],
+      "room": "salon"
+    },
+{
+      "speakers": [
+        "jeanmaisonnial"
+      ],
+      "description": "Every day, more than 2,5k applications are added to app stores globally. Less than 50% of these will become sustainable businesses. To turn mobile apps into a business, a successful revenue strategy is essential.
+In this session, Jean will cover:
+- Mobile app monetization models and industry trends.
+- Valuable users and how to identify them
+- Driving engagement and focusing on the long term value of users
+- Monetizing your audience using different revenue channels.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-23T15:15:00Z",
+      "title": "Maximize App engagement and monetization",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_EVERYWHERE",
+      "endTimestamp": "2014-09-23T16:00:00Z",
+      "color": "#3f51b5",
+      "hashtag": "",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "session_jeanmaisonnial_1",
+      "tags": [
+        "TOPIC_EVERYWHERE",
+        "THEME_EN"
+      ],
+      "room": "leparisien"
     }
   ],
   "video_library": [
@@ -659,7 +1230,7 @@
     {
       "category": "TOPIC",
       "name": "Development",
-      "color": "#607d8b",
+      "color": "#A4C739",
       "abstract": "",
       "tag": "TOPIC_DEVELOPMENT",
       "original_id": "eea54986-3688-e311-84db-00155d5066d7",
@@ -668,7 +1239,7 @@
     {
       "category": "TOPIC",
       "name": "Android Everywhere",
-      "color": "#607d8b",
+      "color": "#03A9F4",
       "abstract": "",
       "tag": "TOPIC_EVERYWHERE",
       "original_id": "eea54986-3688-e311-84db-00155d5066d8",
@@ -677,7 +1248,7 @@
     {
       "category": "TOPIC",
       "name": "UI/UX",
-      "color": "#607d8b",
+      "color": "#E91E63",
       "abstract": "",
       "tag": "TOPIC_UI_UX",
       "original_id": "eea54986-3688-e311-84db-00155d5066d9",
@@ -686,11 +1257,27 @@
     {
       "category": "TOPIC",
       "name": "Other",
-      "color": "#607d8b",
+      "color": "#FFC107",
       "abstract": "",
       "tag": "TOPIC_OTHER",
       "original_id": "eea54986-3688-e311-84db-00155d5066e0",
       "order_in_category": 4
+    },
+{
+      "category": "TYPE",
+      "name": "Français",
+      "abstract": "",
+      "tag": "THEME_FR",
+      "original_id": "c120fdc1-8dd0-e311-b297-00155d5066d7",
+      "order_in_category": 2
+    },
+{
+      "category": "TYPE",
+      "name": "English",
+      "abstract": "",
+      "tag": "THEME_EN",
+      "original_id": "c120fdc1-8dd0-e311-b297-00155d5066d8",
+      "order_in_category": 2
     }
   ]
 }
