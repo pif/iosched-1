@@ -27,5 +27,7 @@
     <item name="menu_io_extended" type="id"/>
     <item name="menu_i_o_hunt" type="id"/>
     <item name="menu_map" type="id"/>
+    <item name="menu_map_room" type="id"/>
+
 
 </resources>

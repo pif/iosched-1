@@ -1111,8 +1111,8 @@ public class SessionDetailFragment extends Fragment implements
                  * LABEL:     session title/subtitle
                  * [/ANALYTICS]
                  */
-                AnalyticsManager.sendEvent("Session", "Map", mTitleString, 0L);
-                helper.startMapActivity(mRoomId);
+//                AnalyticsManager.sendEvent("Session", "Map", mTitleString, 0L);
+//                helper.startMapActivity(mRoomId);
                 return true;
 
             case R.id.menu_share:

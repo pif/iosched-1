@@ -29,8 +29,6 @@ import fr.paug.droidcon.R;
 import fr.paug.droidcon.appwidget.ScheduleWidgetProvider;
 import fr.paug.droidcon.provider.ScheduleContract;
 import fr.paug.droidcon.sync.SyncHelper;
-import fr.paug.droidcon.ui.MapFragment;
-import fr.paug.droidcon.ui.phone.MapActivity;
 
 import static fr.paug.droidcon.util.LogUtils.LOGD;
 import static fr.paug.droidcon.util.LogUtils.makeLogTag;
@@ -46,14 +44,6 @@ public final class SessionsHelper {
 
     public SessionsHelper(Activity activity) {
         mActivity = activity;
-    }
-
-    public void startMapActivity(String roomId) {
-        Intent intent = new Intent(mActivity.getApplicationContext(),
-                UIUtils.getMapActivityClass(mActivity));
-        intent.putExtra(MapFragment.EXTRA_ROOM, roomId);
-        intent.putExtra(MapActivity.EXTRA_DETACHED_MODE, true);
-        mActivity.startActivity(intent);
     }
 
     public Intent createShareIntent(int messageTemplateResId, String title, String hashtags,

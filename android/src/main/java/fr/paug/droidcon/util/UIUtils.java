@@ -49,8 +49,6 @@ import fr.paug.droidcon.Config;
 import fr.paug.droidcon.R;
 import fr.paug.droidcon.provider.ScheduleContract;
 import fr.paug.droidcon.provider.ScheduleContract.Rooms;
-import fr.paug.droidcon.ui.phone.MapActivity;
-import fr.paug.droidcon.ui.tablet.MapMultiPaneActivity;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -390,14 +388,6 @@ public class UIUtils {
         } catch (ClassNotFoundException e) {
             LOGE(TAG, "Activity not found within package.", e);
         }
-    }
-
-    public static Class getMapActivityClass(Context context) {
-        if (UIUtils.isTablet(context)) {
-            return MapMultiPaneActivity.class;
-        }
-
-        return MapActivity.class;
     }
 
     /**

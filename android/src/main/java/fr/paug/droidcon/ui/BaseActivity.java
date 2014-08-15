@@ -701,8 +701,8 @@ public abstract class BaseActivity extends Activity implements
                 break;
 
             case R.id.menu_map:
-                startActivity(new Intent(this, UIUtils.getMapActivityClass(this)));
-                finish();
+//                startActivity(new Intent(this, UIUtils.getMapActivityClass(this)));
+//                finish();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -752,11 +752,11 @@ public abstract class BaseActivity extends Activity implements
                 startActivity(intent);
                 finish();
                 break;
-            case NAVDRAWER_ITEM_MAP:
-                intent = new Intent(this, UIUtils.getMapActivityClass(this));
-                startActivity(intent);
-                finish();
-                break;
+//            case NAVDRAWER_ITEM_MAP:
+//                intent = new Intent(this, UIUtils.getMapActivityClass(this));
+//                startActivity(intent);
+//                finish();
+//                break;
             case NAVDRAWER_ITEM_SOCIAL:
                 intent = new Intent(this, SocialActivity.class);
                 startActivity(intent);

@@ -214,27 +214,6 @@
             android:name=".ui.NearbyEulaActivity"
             android:theme="@style/Theme.IOSched.Welcome" />
 
-        <!-- Phone-only activities -->
-        <activity
-            android:name=".ui.phone.MapActivity"
-            android:label="@string/title_map"
-            android:exported="true"
-            android:configChanges="orientation|keyboardHidden"
-            android:theme="@style/Theme.IOSched.Map">
-            <meta-data android:name="fr.paug.droidcon.meta.TARGET_FORM_FACTOR"
-                android:value="handset" />
-        </activity>
-
-        <!-- Tablet-only activities -->
-        <activity
-            android:name=".ui.tablet.MapMultiPaneActivity"
-            android:label="@string/title_map"
-            android:exported="true"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.IOSched.Map">
-            <meta-data android:name="fr.paug.droidcon.meta.TARGET_FORM_FACTOR"
-                android:value="tablet" />
-        </activity>
 
         <!-- TaskStackBuilder proxy activity for widgets and notifications. -->
 

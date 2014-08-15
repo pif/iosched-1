@@ -22,13 +22,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
 
 import fr.paug.droidcon.R;
 import fr.paug.droidcon.provider.ScheduleContract;
-import fr.paug.droidcon.ui.MapFragment;
 import fr.paug.droidcon.ui.debug.DebugAction;
-import fr.paug.droidcon.util.UIUtils;
 
 /**
 * Show a notification that a session is about to start. Simplified version of the one shown at
@@ -42,15 +39,6 @@ public class ShowSessionNotificationDebugAction implements DebugAction {
                 ScheduleContract.Sessions.buildSessionUri("__keynote__"));
 
         PendingIntent pi = PendingIntent.getActivity(context, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
-        Intent mapIntent = new Intent(context,
-                UIUtils.getMapActivityClass(context));
-        mapIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK |
-                Intent.FLAG_ACTIVITY_TASK_ON_HOME);
-        mapIntent.putExtra(MapFragment.EXTRA_ROOM, "keynote");
-        PendingIntent piMap = TaskStackBuilder
-                .create(context)
-                .addNextIntent(mapIntent)
-                .getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
 
          //= PendingIntent.getActivity(context, 0, mapIntent, 0);
 
@@ -63,9 +51,6 @@ public class ShowSessionNotificationDebugAction implements DebugAction {
                 .setContentIntent(pi)
                 .setPriority(Notification.PRIORITY_MAX)
                 .setAutoCancel(true);
-        notifBuilder.addAction(R.drawable.ic_map_holo_dark,
-                context.getString(R.string.title_map),
-                piMap);
 
         NotificationCompat.InboxStyle richNotification = new NotificationCompat.InboxStyle(
                 notifBuilder)
