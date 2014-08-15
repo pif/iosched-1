@@ -56,10 +56,10 @@ public class Config {
 
     public static final long[][] CONFERENCE_DAYS = new long[][] {
             // start and end of day 1
-            { ParserUtils.parseTime("2014-09-22T07:00:00.000Z"),
-              ParserUtils.parseTime("2014-09-23T06:59:59.999Z") },
+            { ParserUtils.parseTime("2014-09-22T06:30:00.000Z"),
+              ParserUtils.parseTime("2014-09-23T06:29:59.999Z") },
             // start and end of day 2
-            { ParserUtils.parseTime("2014-09-23T07:00:00.000Z"),
+            { ParserUtils.parseTime("2014-09-23T06:30:00.000Z"),
               ParserUtils.parseTime("2014-09-24T06:59:59.999Z") },
         };
 
