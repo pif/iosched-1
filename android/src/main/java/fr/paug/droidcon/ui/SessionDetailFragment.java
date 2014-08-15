@@ -80,6 +80,10 @@ public class SessionDetailFragment extends Fragment implements
     private static final float PHOTO_ASPECT_RATIO = 1.7777777f;
 
     public static final String VIEW_NAME_PHOTO = "photo";
+    public static final String TOPIC_EVERYWHERE = "TOPIC_EVERYWHERE";
+    public static final String TOPIC_DEVELOPMENT = "TOPIC_DEVELOPMENT";
+    public static final String TOPIC_UI_UX = "TOPIC_UI_UX";
+    public static final String TOPIC_OTHER = "TOPIC_OTHER";
 
     private Handler mHandler = new Handler();
     private static final int TIME_HINT_UPDATE_INTERVAL = 10000; // 10 sec
@@ -624,13 +628,13 @@ public class SessionDetailFragment extends Fragment implements
         mTagsString = cursor.getString(SessionsQuery.TAGS);
         mIsKeynote = mTagsString.contains(Config.Tags.SPECIAL_KEYNOTE);
 
-        if(mSessionMainTag.equals("TOPIC_EVERYWHERE"))
+        if(mSessionMainTag.equals(TOPIC_EVERYWHERE))
             mAddScheduleButton.setBackgroundResource(R.drawable.add_schedule_fab_background_everywhere);
-        else if(mSessionMainTag.equals("TOPIC_DEVELOPMENT"))
+        else if(mSessionMainTag.equals(TOPIC_DEVELOPMENT))
             mAddScheduleButton.setBackgroundResource(R.drawable.add_schedule_fab_background_development);
-        else if(mSessionMainTag.equals("TOPIC_UI_UX"))
+        else if(mSessionMainTag.equals(TOPIC_UI_UX))
             mAddScheduleButton.setBackgroundResource(R.drawable.add_schedule_fab_background_ui_ux);
-        else if(mSessionMainTag.equals("TOPIC_OTHER"))
+        else if(mSessionMainTag.equals(TOPIC_OTHER))
             mAddScheduleButton.setBackgroundResource(R.drawable.add_schedule_fab_background_other);
 
         mAddScheduleButton.setVisibility(
@@ -937,9 +941,23 @@ public class SessionDetailFragment extends Fragment implements
 
         mAddScheduleButton.setChecked(mStarred, allowAnimate);
 
+        int resId = R.drawable.add_schedule_button_icon_checked;
+        if(!TextUtils.isEmpty(mSessionMainTag))
+        {
+            if(mSessionMainTag.equals(TOPIC_EVERYWHERE))
+                resId = R.drawable.add_schedule_button_icon_checked_red;
+            else if(mSessionMainTag.equals(TOPIC_DEVELOPMENT))
+                resId = R.drawable.add_schedule_button_icon_checked_blue;
+            else if(mSessionMainTag.equals(TOPIC_UI_UX))
+                resId = R.drawable.add_schedule_button_icon_checked_amber;
+            else if(mSessionMainTag.equals(TOPIC_OTHER))
+                resId = R.drawable.add_schedule_button_icon_checked_indigo;
+        }
+
+
         ImageView iconView = (ImageView) mAddScheduleButton.findViewById(R.id.add_schedule_icon);
         ((BaseActivity) getActivity()).getLPreviewUtils().setOrAnimatePlusCheckIcon(
-                iconView, starred, allowAnimate);
+                iconView, starred, allowAnimate, resId);
         mAddScheduleButton.setContentDescription(getString(starred
                 ? R.string.remove_from_schedule_desc
                 : R.string.add_to_schedule_desc));

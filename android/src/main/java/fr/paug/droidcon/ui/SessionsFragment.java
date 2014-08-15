@@ -261,7 +261,7 @@ public class SessionsFragment extends Fragment implements
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_sessions, container, false);
         mCollectionView = (CollectionView) root.findViewById(R.id.sessions_collection_view);
         mPreloader = new Preloader(ROWS_TO_PRELOAD);
@@ -432,19 +432,19 @@ public class SessionsFragment extends Fragment implements
 
     private final SharedPreferences.OnSharedPreferenceChangeListener mPrefChangeListener =
             new SharedPreferences.OnSharedPreferenceChangeListener() {
-        @Override
-        public void onSharedPreferenceChanged(SharedPreferences sp, String key) {
-            if (isAdded()) {
-                if (PrefUtils.PREF_LOCAL_TIMES.equals(key)) {
-                    updateCollectionView();
-                } else if (PrefUtils.PREF_ATTENDEE_AT_VENUE.equals(key)) {
-                    if (mCursor != null) {
-                        reloadSessionData(true);
+                @Override
+                public void onSharedPreferenceChanged(SharedPreferences sp, String key) {
+                    if (isAdded()) {
+                        if (PrefUtils.PREF_LOCAL_TIMES.equals(key)) {
+                            updateCollectionView();
+                        } else if (PrefUtils.PREF_ATTENDEE_AT_VENUE.equals(key)) {
+                            if (mCursor != null) {
+                                reloadSessionData(true);
+                            }
+                        }
                     }
                 }
-            }
-        }
-    };
+            };
 
     private void updateCollectionView() {
         if (mCursor == null || mTagMetadata == null) {
@@ -691,6 +691,8 @@ public class SessionsFragment extends Fragment implements
         final long sessionStart = mCursor.getLong(SessionsQuery.SESSION_START);
         final long sessionEnd = mCursor.getLong(SessionsQuery.SESSION_END);
         final String roomName = mCursor.getString(SessionsQuery.ROOM_NAME);
+        final String mainTag = mCursor.getString(SessionsQuery.MAIN_TAG);
+
         int sessionColor = mCursor.getInt(SessionsQuery.COLOR);
         sessionColor = sessionColor == 0 ? getResources().getColor(R.color.default_session_color)
                 : sessionColor;
@@ -825,8 +827,24 @@ public class SessionsFragment extends Fragment implements
         }
 
         // show or hide the "in my schedule" indicator
-        view.findViewById(R.id.indicator_in_schedule).setVisibility(starred ? View.VISIBLE
+        ImageView indicatorInSchedule = (ImageView) view.findViewById(R.id.indicator_in_schedule);
+        indicatorInSchedule.setVisibility(starred ? View.VISIBLE
                 : View.INVISIBLE);
+
+        if(starred)
+        {
+            int resId = R.drawable.indicator_in_schedule;
+            if(mainTag.equals(SessionDetailFragment.TOPIC_EVERYWHERE))
+                resId = R.drawable.indicator_in_schedule_red;
+            else if(mainTag.equals(SessionDetailFragment.TOPIC_DEVELOPMENT))
+                resId = R.drawable.indicator_in_schedule_blue;
+            else if(mainTag.equals(SessionDetailFragment.TOPIC_UI_UX))
+                resId = R.drawable.indicator_in_schedule_amber;
+            else if(mainTag.equals(SessionDetailFragment.TOPIC_OTHER))
+                resId = R.drawable.indicator_in_schedule_indigo;
+
+            indicatorInSchedule.setImageResource(resId);
+        }
 
         // if we are in condensed mode and this card is the hero card (big card at the top
         // of the screen), set up the message card if necessary.
@@ -993,6 +1011,7 @@ public class SessionsFragment extends Fragment implements
                 ScheduleContract.Sessions.SESSION_ABSTRACT,
                 ScheduleContract.Sessions.SESSION_COLOR,
                 ScheduleContract.Sessions.SESSION_PHOTO_URL,
+                ScheduleContract.Sessions.SESSION_MAIN_TAG,
         };
 
         String[] SEARCH_PROJECTION = {
@@ -1012,6 +1031,7 @@ public class SessionsFragment extends Fragment implements
                 ScheduleContract.Sessions.SESSION_ABSTRACT,
                 ScheduleContract.Sessions.SESSION_COLOR,
                 ScheduleContract.Sessions.SESSION_PHOTO_URL,
+                ScheduleContract.Sessions.SESSION_MAIN_TAG,
                 ScheduleContract.Sessions.SEARCH_SNIPPET,
         };
 
@@ -1032,7 +1052,9 @@ public class SessionsFragment extends Fragment implements
         int ABSTRACT = 13;
         int COLOR = 14;
         int PHOTO_URL = 15;
-        int SNIPPET = 16;
+        int MAIN_TAG = 16;
+        int SNIPPET = 17;
+
     }
 
     private static final int TAG_METADATA_TOKEN = 0x4;

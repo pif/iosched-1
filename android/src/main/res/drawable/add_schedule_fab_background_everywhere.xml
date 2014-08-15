@@ -25,10 +25,10 @@
     <item android:drawable="@drawable/add_schedule_fab_checked_default"
         android:state_checked="true" />
 
-    <item android:drawable="@drawable/add_schedule_fab_unchecked_pressed"
+    <item android:drawable="@drawable/add_schedule_fab_unchecked_pressed_red"
         android:state_pressed="true" />
-    <item android:drawable="@drawable/add_schedule_fab_unchecked_focused"
+    <item android:drawable="@drawable/add_schedule_fab_unchecked_focused_red"
         android:state_focused="true" />
-    <item android:drawable="@drawable/add_schedule_fab_unchecked_default_everywhere" />
+    <item android:drawable="@drawable/add_schedule_fab_unchecked_default_red" />
 
 </selector>
