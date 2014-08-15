@@ -88,6 +88,7 @@ public class SessionDetailFragment extends Fragment implements
     private String mSessionId;
     private Uri mSessionUri;
 
+    private String mSessionMainTag;
     private long mSessionStart;
     private long mSessionEnd;
     private String mTitleString;
@@ -216,6 +217,7 @@ public class SessionDetailFragment extends Fragment implements
 
         mAddScheduleButton = (CheckableFrameLayout)
                 mRootView.findViewById(R.id.add_schedule_button);
+
         mAddScheduleButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -583,6 +585,8 @@ public class SessionDetailFragment extends Fragment implements
         mSessionEnd = cursor.getLong(SessionsQuery.END);
         mRoomName = cursor.getString(SessionsQuery.ROOM_NAME);
         mSpeakers = cursor.getString(SessionsQuery.SPEAKER_NAMES);
+        mSessionMainTag = cursor.getString(SessionsQuery.MAIN_TAG);
+
         String subtitle = UIUtils.formatSessionSubtitle(
                 mSessionStart, mSessionEnd, mRoomName, mBuffer, getActivity());
         if (mHasLivestream) {
@@ -640,6 +644,16 @@ public class SessionDetailFragment extends Fragment implements
         // from the schedule (it is auto added to schedule on sync)
         mTagsString = cursor.getString(SessionsQuery.TAGS);
         mIsKeynote = mTagsString.contains(Config.Tags.SPECIAL_KEYNOTE);
+
+        if(mSessionMainTag.equals("TOPIC_EVERYWHERE"))
+            mAddScheduleButton.setBackgroundResource(R.drawable.add_schedule_fab_background_everywhere);
+        else if(mSessionMainTag.equals("TOPIC_DEVELOPMENT"))
+            mAddScheduleButton.setBackgroundResource(R.drawable.add_schedule_fab_background_development);
+        else if(mSessionMainTag.equals("TOPIC_UI_UX"))
+            mAddScheduleButton.setBackgroundResource(R.drawable.add_schedule_fab_background_ui_ux);
+        else if(mSessionMainTag.equals("TOPIC_OTHER"))
+            mAddScheduleButton.setBackgroundResource(R.drawable.add_schedule_fab_background_other);
+
         mAddScheduleButton.setVisibility(
                 (AccountUtils.hasActiveAccount(getActivity()) && !mIsKeynote)
                         ? View.VISIBLE : View.INVISIBLE);
@@ -1192,7 +1206,8 @@ public class SessionDetailFragment extends Fragment implements
                 ScheduleContract.Sessions.SESSION_PHOTO_URL,
                 ScheduleContract.Sessions.SESSION_RELATED_CONTENT,
                 ScheduleContract.Sessions.SESSION_TAGS,
-                ScheduleContract.Sessions.SESSION_SPEAKER_NAMES
+                ScheduleContract.Sessions.SESSION_SPEAKER_NAMES,
+                ScheduleContract.Sessions.SESSION_MAIN_TAG
         };
 
         int START = 0;
@@ -1216,6 +1231,7 @@ public class SessionDetailFragment extends Fragment implements
         int RELATED_CONTENT = 18;
         int TAGS = 19;
         int SPEAKER_NAMES = 20;
+        int MAIN_TAG = 21;
 
         int[] LINKS_INDICES = {
                 YOUTUBE_URL,
