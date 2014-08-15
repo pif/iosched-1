@@ -1,148 +1,410 @@
 {
   "speakers": [
     {
-      "bio": "Kirill has been doing professional client-side development over the last decade in a variety of UI toolkits and libraries that spanned Motif, MFC, VB, Ada, Delphi, Swing and SWT. Since 2009 he's been part of the Android team at Google. He has a particular interest in creating polished, responsive and well-behaving, user-facing applications that help the end users achieve their goals quickly and painlessly.",
-      "name": "Kirill Grouchnikov",
+      "bio": "Cyril Mottier is Mobile Software Engineer at Capitaine Train and Android Google Developer Expert. Passionate about technology and design, Cyril is an avid lover of Android and a multi-skilled engineer. He is actively involved in the Android community and shares his passion writing blog posts, creating open source librairies and giving talks. His motto: “Do less, but do it insanely great",
+      "name": "Cyril Mottier",
+      "company": "Capitaine Train",
+      "plusoneUrl": "https://plus.google.com/+CyrilMottier",
+      "thumbnailUrl": "https://lh3.googleusercontent.com/-LWYaRkiLVvM/Ut48DO9cP1I/AAAAAAAAQkU/HvZg4UrVXtI/s500-no/me.jpg",
+      "id": "cyrilmottier"
+    },
+    {
+      "bio": "Xavier Hallade is Developer Evangelist in Intel Software and Service Group in Paris, France. He is helping developers to improve their support for new hardware and technologies backed by Intel, with a focus on the Android NDK, 64-bit and wireless displays.",
+      "name": "Xavier Hallade",
+      "company": "Intel",
+      "plusoneUrl": "https://plus.google.com/+XavierHallade",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Xavier-Hallade.jpg",
+      "id": "xavierhallade"
+    },
+    {
+      "bio": "Jan Chong holds a BS and MS in Computer Science from Stanford University. She has Ph.D from the Management Science & Engineering Department, also from Stanford. She is currently the Engineering Manager for the Twitter Android Team. Prior to joining Twitter, Jan ran client and server software development at OnLive.",
+      "name": "Jan Chong",
+      "company": "Twitter",
+      "plusoneUrl": "https://plus.google.com/107409019686006760010",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Jan-Chong-222x222.png",
+      "id": "janchong"
+    },
+    {
+      "bio": "Taylor is very passionate about User Experience (UX), not so much on the ethnography part, but more on the User Interface execution that can directly influence UX and Usability, particularly on the mobile devices (Android always come first!). He is currently the GDE for UX/Design, and enjoys going around the world to share his experience on UI/UX Design. He is currently crafting pixels at snappymob.com.",
+      "name": "Taylor Ling",
+      "company": "Snappymob",
+      "plusoneUrl": "https://plus.google.com/+TaylorLing",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Taylor-Ling-final-222x222.png",
+      "id": "taylorling"
+    },
+    {
+      "bio": "Stéphane Nicolas is Senior Android Developer at Groupon, specialized in the development of Android applications for smartphones and tablets. With almost 15 years’ experience in Java, he contributed or initiated different Open Source projects for Android (like RoboSpice, RoboDemo, Android Maven Plugin, RoboGuice etc) or commercial applications.  He actively participates to the Android community and contributes to the integration of the Android platform and advanced industrialized programming techniques such as Sonar, Maven, Jenkins etc.",
+      "name": "Stéphane Nicolas",
+      "company": "Groupon",
+      "plusoneUrl": "https://plus.google.com/+StéphaneNICOLAS-OnG",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/st%C3%A9phane-nicolas-222x222.jpg",
+      "id": "stephanenicolas"
+    },
+    {
+      "bio": "Fabien Devos started to work in Paris by developing applications such as Le Monde, AlloCiné, Crédit Agricole and the renowned Dailymotion. Then, he moved to London and joined the startup Lightbox, which has since been bought by Facebook for which he worked for one year in the Framework Android Team in California. He currently works for the Startup Upthere in cloud computing, founded by Bertrand Serlet.",
+      "name": "Fabien Devos",
+      "company": "Upthere",
+      "plusoneUrl": "https://plus.google.com/116057947663114842022",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Fabien-Devos-222x222.jpg",
+      "id": "fabiendevos"
+    },
+    {
+      "bio": "Guillaume Laforge is the project lead of the Open Source Groovy programming language for the Java platform, the most widely used alternative language of the Java platform. Guillaume works for Pivotal, and is the co-author of the best-seller « Groovy in Action » book. He often speaks at conference worldwide about Groovy related matters.",
+      "name": "Guillaume Laforge",
+      "company": "Pivotal",
+      "plusoneUrl": "https://plus.google.com/+GuillaumeLaforge",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Guillaume-Laforge-222x222.png",
+      "id": "guillaumelaforge"
+    },
+    {
+      "bio": "Developer of SnappyDB.com which is a NoSQL database for Android, Nabil works as an Android software engineer at The App Business in London.",
+      "name": "Nabil Hachicha",
+      "company": "The App Business",
+      "plusoneUrl": "https://plus.google.com/110610526826489061446",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Nabil-Hachicha-222x222.jpg",
+      "id": "nabilhachicha"
+    },
+    {
+      "bio": "Geoffrey will be presenting how design impacts our lives while creating products, services or experiences.",
+      "name": "Geoffrey Dorne",
+      "company": "Design & Human",
+      "plusoneUrl": "https://plus.google.com/116718314329691158716",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Geoffrey-Dorne-222x222.jpg",
+      "id": "goeffreydorne"
+    },
+    {
+      "bio": "Archos is a French company and has been a player in the Android arena since Android 1.5. The company was the first one to introduce Android tablets onto the market and a Google certified Android TV (Archos TV Connect). Archos is now a recognized brand for Android based tablets, phones and recently for Android based connected home solutions.",
+      "name": "Marc de Courville",
+      "company": "Archos",
+      "plusoneUrl": "https://plus.google.com/+MarcdeCourville",
+      "thumbnailUrl": "https://lh6.googleusercontent.com/-gW61S7OilRU/Ukrbut8uhqI/AAAAAAAAAMk/tvCi34Iq8JM/w661-h655-no/MarcDeCourville_3.jpg",
+      "id": "marcdecourville"
+    },
+    {
+      "bio": "Jean-Baptiste Kempf is the president of the VideoLAN non-profit organization and one of the main developers of VLC. Jean-Baptiste led some of the ports of VLC on mobile devices, including the Android port, and is the current release manager of VLC.",
+      "name": "Jean-Baptiste Kempf",
+      "company": "VideoLAN",
+      "plusoneUrl": "https://plus.google.com/100674486160360423322",
+      "thumbnailUrl": "https://lh5.googleusercontent.com/-M1Mwx3wQnB0/T6ptwS8gRiI/AAAAAAAAAEQ/eV7RBejAH48/w652-h655-no/JB-IMG_1103_DxO_1-Resize.jpg",
+      "id": "jbkempf"
+    },
+    {
+      "bio": "As a long time mobile and web developer, Tim channels his knowledge and experience as PayPal’s Lead Developer Evangelist in EMEA. He is passionate about startups and serves as mentor at multiple incubators and accelerators.  Prior joining PayPal Tim used to work with Neofonie Mobile and Samsung focussing on several mobile projects. In his spare time, he leads and creates training classes in all sorts of developer-oriented topics, contributes to Open Source projects and is one of the authors of the Mobile Developer’s Guide to the Galaxy, as well as numerous articles published in print magazines.",
+      "name": "Tim Messerschmidt",
+      "company": "PayPal",
+      "plusoneUrl": "https://plus.google.com/+TimMesserschmidt",
+      "thumbnailUrl": "https://lh4.googleusercontent.com/-G0EKTKz1vGI/UW6XHy-ncVI/AAAAAAAALbQ/quBFmBndiD4/w654-h655-no/IMG_0843_web.jpg",
+      "id": "timmesserschmidt"
+    },
+    {
+      "bio": "Hoi is a Senior Developer Advocate at Google for Wearables including both Android Wear and Google Glass. He previously worked on Google Cast where he was part of the launch team for both the Google Cast SDK and Chromecast in Europe. Prior to joining Google, he founded Exahive to disrupt the mobile commerce marketplace with new technology and business models. Hoi was an Equity Research VP at Deutsche Bank and Citigroup between 2007-2012 advising technology CEOs, CFOs on corporate strategy and institutional investors on technology investments. Before banking, he was an enterprise architect at Accenture heading up product management for large client programmes. Hoi holds a Master and Bachelor degree in Space Engineering from the University of Cambridge.",
+      "name": "Hoi Lam",
       "company": "Google",
-      "plusoneUrl": "https://plus.google.com/+KirillGrouchnikov",
-      "thumbnailUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/speakers/__w-200-400-600-800-1000__/b5ca32e2-a5c6-e311-b297-00155d5066d7.jpg",
-      "id": "b5ca32e2-a5c6-e311-b297-00155d5066d7"
+      "plusoneUrl": "https://plus.google.com/+HoiLam",
+      "thumbnailUrl": "https://lh4.googleusercontent.com/-VUBOaPF8tcM/UV3-2sDPqhI/AAAAAAAAU-E/GHTsNmt2__o/w653-h655-no/20090802-DSC_8688.png",
+      "id": "hoilam"
+    },
+    {
+      "bio": "Mario Viviani, Android Developer since 2010, has been nominated Google Developer Expert (GDE) for Android by Google in 2013. Mario has published more than 90 apps on Google Play. In 2011 Mario decided to create the startup Mariux Apps, based in Milan, Italy, focused on Mobile Applications Development. He is member of Talent Garden, a network of co-working spaces focused on digital and innovation. As Mariux Apps his products received 12.000.000+ total downloads and are currently ranked in the Top 100 apps in a lot of Categories in Google Play. At Mariux Apps he is also working with cutting edge technologies like Google Glass and Leap Motion. Mario is really active in the Android community, attending a lot of events worldwide, helping Android developers build new, compelling and well-received apps.",
+      "name": "Mario Viviani",
+      "company": "Mariux Apps",
+      "plusoneUrl": "https://plus.google.com/+MarioViviani",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Mario-Viviani-222x222.jpg",
+      "id": "marioviviani"
+    },
+    {
+      "bio": "Cédric has always been fond of Mobile Development and he has a few years experience in the development of Android applications but he also wanted to try the “freelance experience” by creating video games himself. After that, he joined Meetic and he now is in charge of the development of Android applications, convinced that working in a team is more efficient and fun than on his own!",
+      "name": "Cédric Creusot",
+      "company": "Meetic",
+      "plusoneUrl": "",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/C%C3%A9dric-Creusot-222x222.jpg",
+      "id": "cedriccreusot"
+    },
+    {
+      "bio": "Jean-Loup is fond of new technologies and he has been specializing in Mobile for a few years. He is currently the Head of Development for Mobile Applications at Meetic. Prior to Meetic, he worked as a consultant for many influential companies in the Media and Internet world. He joined Meetic to implement the Mobile Strategy of the group.",
+      "name": "Jean-Loup Yu",
+      "company": "Meetic",
+      "plusoneUrl": "https://plus.google.com/112882583085432640120",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Jean-Loup-Yu-222x222.jpg",
+      "id": "jeanloupyu"
+    },
+    {
+      "bio": "Consultant at Xebia since 2011, Thomas is fond of Android development and enthusiastic of good development practices. He is really interested in continuous deployment on Mobile phones.",
+      "name": "Thomas Guerin",
+      "company": "Xebia",
+      "plusoneUrl": "https://plus.google.com/112041335454373673694",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Thomas-Guerin-222x222.jpg",
+      "id": "thomasguerin"
+    },
+    {
+      "bio": "Benjamin is an aspiring Software Craftsman and Android developer at Novoda. He is convinced that functional programming has a lot to teach us on our everyday work.",
+      "name": "Benjamin Augustin",
+      "company": "Novoda",
+      "plusoneUrl": "https://plus.google.com/113116875847268618115",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Benjamin-Augustin-222x222.jpg",
+      "id": "beanjaminaugustin"
+    },
+    {
+      "bio": "A self-taught and strong OSS believer who loves beautiful and simple UX and UI, where “less is more”, Sebastiano spends a big chunk of his spare time reading and writing about Android development. He also creates and maintains some FOSS apps and libraries, that span from the fun, smaller projects to the more serious (and, perhaps, useful) work.  Sebastiano worked some time in AKQA as a Senior Software Engineer. Before moving to London, he also worked at i’m Spa (an Italian smartwatch startup) for two years, playing with the Android platform and handling their Developer Relations. He’s been toying with the Android SDK since 2010.",
+      "name": "Sebastiano Poggi",
+      "company": "Novoda",
+      "plusoneUrl": "https://plus.google.com/+SebastianoPoggi",
+      "thumbnailUrl": "https://lh3.googleusercontent.com/-uhZ-3UFgzzo/T4XR5D4VHiI/AAAAAAABBp4/PNiNGfhEHUs/w354-h352-no/Face_malga.jpg",
+      "id": "sebastianopoggi"
+    },
+    {
+      "bio": "Mathieu is a Mobile Software Developer at Capitaine Train and GDG leader at Lyon with the GDG Lyon Android. Mathieu is fond of new technologies, and particularly with Android. He loves to create applications that integrate seamlessly with the system and spread his love for Android by giving some talks.",
+      "name": "Mathieu Calba",
+      "company": "Capitaine Train",
+      "plusoneUrl": "https://plus.google.com/+MathieuCalba",
+      "thumbnailUrl": "https://lh4.googleusercontent.com/-8hq7bSTRUjk/U8-lC8_87tI/AAAAAAAASXI/ZCwhRO7DtvI/s655-no/MathieuCalba_Profile.jpg",
+      "id": "mathieucalba"
+    },
+    {
+      "bio": "Pierre-Yves Ricau is Android Software Engineer at Square, an innovative company that creates sleek, reliable instruments of commerce. He contributes to several open source projects, and created the AndroidAnnotations framework in 2010.",
+      "name": "Pierre-Yves Ricau",
+      "company": "Square",
+      "plusoneUrl": "https://plus.google.com/+PierreYvesRicau",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Pierre-Yves-Ricau-222x222.jpg",
+      "id": "pyricau"
+    },
+    {
+      "bio": "Nicolas Klein is an engineer working on Google Play Games as well as working on building services to help make it easy to add awesome features to your games.",
+      "name": "Nicolas Klein",
+      "company": "Google",
+      "plusoneUrl": "https://plus.google.com/+NicolasKlein86",
+      "thumbnailUrl": "https://lh4.googleusercontent.com/-4sigh6so5Xk/UuqYNIa-AXI/AAAAAAAABGo/UYflVH4bQ2w/w654-h655-no/fox_irl2_centered.png",
+      "id": "nicolasklein"
+    },
+    {
+      "bio": "Charles-Henry is a Development & Design Engineer at Genymobile and he is specialized in ROM customization that are destined for professionals.",
+      "name": "Charles-Henry Prunier",
+      "company": "Genymobile",
+      "plusoneUrl": "https://plus.google.com/113947333441309712266",
+      "thumbnailUrl": "https://lh6.googleusercontent.com/-Xku8jvfCRRY/UvJ84ze_BBI/AAAAAAAAAPg/wW1jyNGkaBw/w656-h655-no/Charly.jpg",
+      "id": "chprunier"
+    },
+    {
+      "bio": "Rémy is a Development & Design Engineer at Genymobile and he is specialized in ROM customization that are destined for professionals.",
+      "name": "Rémy Gottschalk",
+      "company": "Genymobile",
+      "plusoneUrl": "https://plus.google.com/115906133301850752077",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/R%C3%A9my-Gottschak-222x222.jpg",
+      "id": "remygottschalk"
+    },
+    {
+      "bio": "Jean has been working at Google for more than 3 years. He is a Mobile Apps Consultant and works with French developers to help them to grow, distribute and monetize their applications.",
+      "name": "Jean Maisonnial",
+      "company": "Google",
+      "plusoneUrl": "https://plus.google.com/102884676049998981590",
+      "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Jean-Maisonnial-222x222.jpg",
+      "id": "jeanmaisonnial"
     }
   ],
   "blocks": [
     {
-      "end": "2014-06-25T16:00:00.000Z",
-      "title": "Breakfast",
+      "end": "2014-09-22T07:15:00.000Z",
+      "title": "Welcome & Breakfast",
       "type": "break",
-      "subtitle": "Cafe, Level 1",
-      "start": "2014-06-25T14:00:00.000Z"
+      "subtitle": "Main Hall, Level 1",
+      "start": "2014-09-22T06:30:00.000Z"
     },
     {
-      "end": "2014-06-25T20:00:00.000Z",
+      "end": "2014-09-22T07:45:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T07:15:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T08:35:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T07:55:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T09:55:00.000Z",
+      "title": "Break",
+      "subtitle": "",
+      "start": "2014-09-22T09:25:00.000Z",
+      "type": "break"
+    },
+    {
+      "end": "2014-09-22T10:45:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T09:55:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T11:05:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T10:45:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T12:20:00.000Z",
       "title": "Lunch",
+      "subtitle": "Main Hall, Level 1",
+      "start": "2014-09-22T11:05:00.000Z",
+      "type": "break"
+    }{
+      "end": "2014-09-22T12:50:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T12:20:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T13:20:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T12:50:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T13:50:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T13:20:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T14:20:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T13:50:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T14:50:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T14:20:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T15:20:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T14:50:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T16:30:00.000Z",
+      "title": "",
+      "subtitle": "",
+      "start": "2014-09-22T15:30:00.000Z",
+      "type": "free"
+    },
+    {
+      "end": "2014-09-22T22:00:00.000Z",
+      "title": "Party",
+      "subtitle": "",
+      "start": "2014-09-22T17:00:00.000Z",
+      "type": "break"
+    },
+    {
+      "end": "2014-09-23T07:00:00.000Z",
+      "title": "Welcome & Breakfast",
       "type": "break",
-      "subtitle": "Cafe, Level 1",
-      "start": "2014-06-25T18:00:00.000Z"
+      "subtitle": "Main Hall, Level 1",
+      "start": "2014-09-23T06:30:00.000Z"
     },
     {
-      "end": "2014-06-25T19:00:00.000Z",
+      "end": "2014-09-23T08:00:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-25T18:00:00.000Z",
+      "start": "2014-09-23T07:00:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-25T20:00:00.000Z",
+      "end": "2014-09-23T08:15:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-25T19:00:00.000Z",
+      "start": "2014-09-23T08:00:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-25T21:00:00.000Z",
+      "end": "2014-09-23T09:05:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-25T20:00:00.000Z",
+      "start": "2014-09-23T08:15:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-25T22:00:00.000Z",
+      "end": "2014-09-23T09:35:00.000Z",
+      "title": "Break",
+      "subtitle": "",
+      "start": "2014-09-23T09:05:00.000Z",
+      "type": "break"
+    },
+    {
+      "end": "2014-09-23T10:25:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-25T21:00:00.000Z",
+      "start": "2014-09-23T09:35:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-25T23:00:00.000Z",
+      "end": "2014-09-23T11:15:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-25T22:00:00.000Z",
+      "start": "2014-09-23T10:25:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-26T00:00:00.000Z",
-      "title": "",
-      "subtitle": "",
-      "start": "2014-06-25T23:00:00.000Z",
-      "type": "free"
-    },
-    {
-      "end": "2014-06-26T05:00:00.000Z",
-      "title": "After hours",
-      "type": "break",
-      "subtitle": "Enjoy craft brews in our beer garden, San Francisco's illustrious food trucks, and local indie bands.",
-      "start": "2014-06-26T01:30:00.000Z"
-    },
-    {
-      "end": "2014-06-26T16:00:00.000Z",
-      "title": "Breakfast",
-      "type": "break",
-      "subtitle": "Cafe, Level 1",
-      "start": "2014-06-26T14:00:00.000Z"
-    },
-    {
-      "end": "2014-06-26T17:00:00.000Z",
-      "title": "",
-      "subtitle": "",
-      "start": "2014-06-26T16:00:00.000Z",
-      "type": "free"
-    },
-    {
-      "end": "2014-06-26T18:00:00.000Z",
-      "title": "",
-      "subtitle": "",
-      "start": "2014-06-26T17:00:00.000Z",
-      "type": "free"
-    },
-    {
-      "end": "2014-06-26T20:00:00.000Z",
+      "end": "2014-09-23T12:15:00.000Z",
       "title": "Lunch",
-      "type": "break",
-      "subtitle": "Cafe, Level 1",
-      "start": "2014-06-26T18:00:00.000Z"
+      "subtitle": "",
+      "start": "2014-09-23T11:15:00.000Z",
+      "type": "break"
     },
     {
-      "end": "2014-06-26T19:00:00.000Z",
+      "end": "2014-09-23T13:05:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-26T18:00:00.000Z",
+      "start": "2014-09-23T12:15:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-26T20:00:00.000Z",
+      "end": "2014-09-23T13:55:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-26T19:00:00.000Z",
+      "start": "2014-09-23T13:05:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-26T21:00:00.000Z",
+      "end": "2014-09-23T14:45:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-26T20:00:00.000Z",
+      "start": "2014-09-23T13:55:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-26T22:00:00.000Z",
+      "end": "2014-09-23T15:15:00.000Z",
+      "title": "Break",
+      "subtitle": "",
+      "start": "2014-09-23T14:45:00.000Z",
+      "type": "break"
+    },
+    {
+      "end": "2014-09-23T16:00:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-26T21:00:00.000Z",
+      "start": "2014-09-23T15:15:00.000Z",
       "type": "free"
     },
     {
-      "end": "2014-06-26T23:00:00.000Z",
+      "end": "2014-09-23T16:30:00.000Z",
       "title": "",
       "subtitle": "",
-      "start": "2014-06-26T22:00:00.000Z",
+      "start": "2014-09-23T16:00:00.000Z",
       "type": "free"
     },
-    {
-      "end": "2014-06-27T00:00:00.000Z",
-      "title": "",
-      "subtitle": "",
-      "start": "2014-06-26T23:00:00.000Z",
-      "type": "free"
-    }
+    
   ],
   "partners": [
     
@@ -155,11 +417,11 @@
       "description": "Droidcon Paris Keynote",
       "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
       "url": "",
-      "startTimestamp": "2014-09-22T08:00:00Z",
+      "startTimestamp": "2014-09-22T07:15:00Z",
       "title": "Keynote",
       "youtubeUrl": "",
       "mainTag": "FLAG_KEYNOTE",
-      "endTimestamp": "2014-09-22T09:00:00Z",
+      "endTimestamp": "2014-09-22T07:45:00Z",
       "color": "#3f51b5",
       "hashtag": "keynote",
       "isLivestream": false,
@@ -167,6 +429,28 @@
       "id": "__keynote__",
       "tags": [
         "FLAG_KEYNOTE"
+      ],
+      "room": "auditorium"
+    },
+    {
+      "speakers": [
+        "cyrilmottier"
+      ],
+      "description": "Cyril will be presenting how Android saves state in general in order to be able to restore an application in the exact same state the process was prior being killed because of a low memory condition or a configuration change. In this talk he will mainly focus on the Parcelable and Parcel objects and how Android uses them to save or restore some important stateful information such as the complete UI state.",
+      "photoUrl": "http://storage.googleapis.com/iosched-updater-dev.appspot.com/images/sessions/__w-200-400-600-800-1000__/__keynote__.jpg",
+      "url": "",
+      "startTimestamp": "2014-09-22T07:55:00Z",
+      "title": "Deep Dive into State restoration",
+      "youtubeUrl": "",
+      "mainTag": "TOPIC_DEVELOPMENT",
+      "endTimestamp": "2014-09-22T08:35:00Z",
+      "color": "#3f51b5",
+      "hashtag": "development",
+      "isLivestream": false,
+      "captionsUrl": "",
+      "id": "39066a0d-99e6-e311-b297-00155d5066d7",
+      "tags": [
+        "TOPIC_DEVELOPMENT"
       ],
       "room": "auditorium"
     }
@@ -374,12 +658,39 @@
   "tags": [
     {
       "category": "TOPIC",
-      "name": "Tools",
+      "name": "Development",
       "color": "#607d8b",
       "abstract": "",
-      "tag": "TOPIC_TOOLS",
+      "tag": "TOPIC_DEVELOPMENT",
       "original_id": "eea54986-3688-e311-84db-00155d5066d7",
-      "order_in_category": 13
+      "order_in_category": 1
+    },
+    {
+      "category": "TOPIC",
+      "name": "Android Everywhere",
+      "color": "#607d8b",
+      "abstract": "",
+      "tag": "TOPIC_EVERYWHERE",
+      "original_id": "eea54986-3688-e311-84db-00155d5066d8",
+      "order_in_category": 2
+    },
+    {
+      "category": "TOPIC",
+      "name": "UI/UX",
+      "color": "#607d8b",
+      "abstract": "",
+      "tag": "TOPIC_UI_UX",
+      "original_id": "eea54986-3688-e311-84db-00155d5066d9",
+      "order_in_category": 3
+    },
+    {
+      "category": "TOPIC",
+      "name": "Other",
+      "color": "#607d8b",
+      "abstract": "",
+      "tag": "TOPIC_OTHER",
+      "original_id": "eea54986-3688-e311-84db-00155d5066e0",
+      "order_in_category": 4
     }
   ]
 }
