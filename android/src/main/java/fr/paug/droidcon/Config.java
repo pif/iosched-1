@@ -35,7 +35,8 @@ public class Config {
     public static final String DOGFOOD_BUILD_WARNING_TEXT = "This is a test build.";
 
     // Public data manifest URL
-    public static final String PROD_CONFERENCE_DATA_MANIFEST_URL = "";
+    public static final String PROD_CONFERENCE_DATA_MANIFEST_URL = "http://droidcon.parseapp.com/manifest.json";
+    public static final String PREPROD_CONFERENCE_DATA_MANIFEST_URL = "http://droidconpreprod.parseapp.com/manifest.json";
 
     // Manifest URL override for Debug (staging) builds:
     public static final String MANIFEST_URL = PROD_CONFERENCE_DATA_MANIFEST_URL;
