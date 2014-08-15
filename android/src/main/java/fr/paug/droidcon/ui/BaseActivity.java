@@ -383,25 +383,25 @@ public abstract class BaseActivity extends Activity implements
         mNavDrawerItems.add(NAVDRAWER_ITEM_EXPLORE);
 
         // If the attendee is on-site, show Map on the nav drawer
-        if (attendeeAtVenue) {
-            mNavDrawerItems.add(NAVDRAWER_ITEM_MAP);
-        }
+//        if (attendeeAtVenue) {
+//            mNavDrawerItems.add(NAVDRAWER_ITEM_MAP);
+//        }
         mNavDrawerItems.add(NAVDRAWER_ITEM_SEPARATOR);
 
         // If attendee is on-site, show the People I've Met item
-        if (attendeeAtVenue) {
-            mNavDrawerItems.add(NAVDRAWER_ITEM_PEOPLE_IVE_MET);
-        }
+//        if (attendeeAtVenue) {
+//            mNavDrawerItems.add(NAVDRAWER_ITEM_PEOPLE_IVE_MET);
+//        }
 
         // If the experts directory hasn't expired, show it
-        if (!Config.hasExpertsDirectoryExpired()) {
-            mNavDrawerItems.add(NAVDRAWER_ITEM_EXPERTS_DIRECTORY);
-        }
+//        if (!Config.hasExpertsDirectoryExpired()) {
+//            mNavDrawerItems.add(NAVDRAWER_ITEM_EXPERTS_DIRECTORY);
+//        }
 
         // Other items that are always in the nav drawer irrespective of whether the
         // attendee is on-site or remote:
         mNavDrawerItems.add(NAVDRAWER_ITEM_SOCIAL);
-        mNavDrawerItems.add(NAVDRAWER_ITEM_VIDEO_LIBRARY);
+//        mNavDrawerItems.add(NAVDRAWER_ITEM_VIDEO_LIBRARY);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SEPARATOR_SPECIAL);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SETTINGS);
 
