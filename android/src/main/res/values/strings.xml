@@ -70,7 +70,7 @@
     <!-- Shown in a drop-down list on the main screen, indicating that all conference themes
     are being displayed. Themes are major categories for sessions (the themes are Design,
     Develop and Distribute). -->
-    <string name="all_themes">All Themes</string>
+    <string name="all_themes">All Levels</string>
 
     <!-- Shown in a drop-down list on the main screen, indicating that all conference topics
     are being displayed. Topics are major categories for sessions (example topics are: Android,
@@ -730,7 +730,7 @@
     <string name="speaker_googleplus_profile">Google+ profile: <xliff:g id="speakername">%1$s</xliff:g></string>
 
     <!-- Short text label indicating a grouping of themes -->
-    <string name="themes">Themes</string>
+    <string name="themes">Levels</string>
 
     <!-- Text indicating the session is going to start in some number of minutes -->
     <string name="time_hint_about_to_start_min">This session will start in <xliff:g id="minutes">%1$d</xliff:g> min.</string>

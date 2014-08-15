@@ -72,7 +72,7 @@
     <!-- Shown in a drop-down list on the main screen, indicating that all conference themes
     are being displayed. Themes are major categories for sessions (the themes are Design,
     Develop and Distribute). -->
-    <string name="all_themes">Tous les thèmes</string>
+    <string name="all_themes">Tous les niveaux</string>
 
     <!-- Shown in a drop-down list on the main screen, indicating that all conference topics
     are being displayed. Topics are major categories for sessions (example topics are: Android,
@@ -646,7 +646,7 @@
   </string>
 
     <!-- Short text label indicating a grouping of themes -->
-    <string name="themes">Thèmes</string>
+    <string name="themes">Niveaux</string>
 
     <!-- Text indicating the session is going to start in some number of minutes -->
     <string name="time_hint_about_to_start_min">Cette session va commencer dans <xliff:g id="minutes">%1$d</xliff:g> min(s).</string>
