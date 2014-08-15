@@ -292,7 +292,7 @@ public class VideoLibraryActivity extends BaseActivity implements VideoLibraryFr
     private void populateSpinner(Spinner spinner, ArrayList<String> items) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.explore_spinner_item,
                 android.R.id.text1, items);
-        adapter.setDropDownViewResource(R.layout.explore_spinner_item_dropdown);
+        adapter.setDropDownViewResource(R.layout.videos_spinner_item_dropdown);
         spinner.setAdapter(adapter);
     }
 }
