@@ -70,7 +70,6 @@ public class ConferenceDataHandler {
     private static final String DATA_KEY_SPEAKERS = "speakers";
     private static final String DATA_KEY_SESSIONS = "sessions";
     private static final String DATA_KEY_SEARCH_SUGGESTIONS = "search_suggestions";
-    private static final String DATA_KEY_MAP = "map";
     private static final String DATA_KEY_HASHTAGS = "hashtags";
     private static final String DATA_KEY_EXPERTS = "experts";
     private static final String DATA_KEY_VIDEOS = "video_library";
@@ -83,7 +82,6 @@ public class ConferenceDataHandler {
             DATA_KEY_SPEAKERS,
             DATA_KEY_SESSIONS,
             DATA_KEY_SEARCH_SUGGESTIONS,
-            DATA_KEY_MAP,
             DATA_KEY_HASHTAGS,
             DATA_KEY_EXPERTS,
             DATA_KEY_VIDEOS,
