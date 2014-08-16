@@ -16,13 +16,11 @@
 
 package fr.paug.droidcon;
 
-import android.net.Uri;
-
-import fr.paug.droidcon.util.ParserUtils;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TimeZone;
+
+import fr.paug.droidcon.util.ParserUtils;
 
 public class Config {
     // General configuration
