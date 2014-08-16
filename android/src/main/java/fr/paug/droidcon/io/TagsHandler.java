@@ -20,6 +20,7 @@ import android.content.ContentProviderOperation;
 import android.content.Context;
 import android.graphics.Color;
 import android.net.Uri;
+import android.text.TextUtils;
 
 import fr.paug.droidcon.io.model.Tag;
 import fr.paug.droidcon.provider.ScheduleContract;
@@ -61,7 +62,7 @@ public class TagsHandler extends JSONHandler {
             builder.withValue(ScheduleContract.Tags.TAG_NAME, tag.name);
             builder.withValue(ScheduleContract.Tags.TAG_ORDER_IN_CATEGORY, tag.order_in_category);
             builder.withValue(ScheduleContract.Tags.TAG_ABSTRACT, tag._abstract);
-            builder.withValue(ScheduleContract.Tags.TAG_COLOR, tag.color==null ?
+            builder.withValue(ScheduleContract.Tags.TAG_COLOR, TextUtils.isEmpty(tag.color) ?
                     Color.LTGRAY : Color.parseColor(tag.color));
             list.add(builder.build());
         }
