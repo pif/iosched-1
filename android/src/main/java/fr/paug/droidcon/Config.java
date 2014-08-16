@@ -195,14 +195,6 @@ public class Config {
         Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_TYPE, 2);
     }
 
-    // URL prefix for web links to session pages
-    public static final Uri SESSION_DETAIL_WEB_URL_PREFIX
-            = Uri.parse("https://www.google.com/events/io/schedule/session/"); //TODO
-
-
-    // Profile URLs for simulated badge reads for the debug feature.
-    public static final String[] DEBUG_SIMULATED_BADGE_URLS = new String[] {};
-
     private static String piece(String s, char start, char end) {
         int startIndex = s.indexOf(start), endIndex = s.indexOf(end);
         return s.substring(startIndex + 1, endIndex);

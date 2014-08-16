@@ -391,34 +391,6 @@ public class UIUtils {
         }
     }
 
-    /**
-     * If an activity's intent is for a Google I/O web URL that the app can handle
-     * natively, this method translates the intent to the equivalent native intent.
-     */
-    public static void tryTranslateHttpIntent(Activity activity) {
-        Intent intent = activity.getIntent();
-        if (intent == null) {
-            return;
-        }
-
-        Uri uri = intent.getData();
-        if (uri == null || TextUtils.isEmpty(uri.getPath())) {
-            return;
-        }
-
-        String prefixPath = Config.SESSION_DETAIL_WEB_URL_PREFIX.getPath();
-        String path = uri.getPath();
-
-        if (Config.SESSION_DETAIL_WEB_URL_PREFIX.getScheme().equals(uri.getScheme()) &&
-                Config.SESSION_DETAIL_WEB_URL_PREFIX.getHost().equals(uri.getHost()) &&
-                path.startsWith(prefixPath)) {
-            String sessionId = path.substring(prefixPath.length());
-            activity.setIntent(new Intent(
-                    Intent.ACTION_VIEW,
-                    ScheduleContract.Sessions.buildSessionUri(sessionId)));
-        }
-    }
-
     private static final int[] RES_IDS_ACTION_BAR_SIZE = { android.R.attr.actionBarSize };
 
     /** Calculates the Action Bar height in pixels. */

@@ -33,7 +33,6 @@ import fr.paug.droidcon.util.UIUtils;
 public class SessionDetailActivity extends SimpleSinglePaneActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        UIUtils.tryTranslateHttpIntent(this);
         BeamUtils.tryUpdateIntentFromBeam(this);
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         if (shouldBeFloatingWindow()) {
