@@ -111,6 +111,7 @@ public abstract class BaseActivity extends Activity implements
     protected static final int NAVDRAWER_ITEM_SIGN_IN = 5;
     protected static final int NAVDRAWER_ITEM_SETTINGS = 6;
     protected static final int NAVDRAWER_ITEM_PEOPLE_IVE_MET = 8;
+    protected static final int NAVDRAWER_ITEM_SPONSORS = 9;
     protected static final int NAVDRAWER_ITEM_INVALID = -1;
     protected static final int NAVDRAWER_ITEM_SEPARATOR = -2;
     protected static final int NAVDRAWER_ITEM_SEPARATOR_SPECIAL = -3;
@@ -125,7 +126,8 @@ public abstract class BaseActivity extends Activity implements
             R.string.navdrawer_item_sign_in,
             R.string.navdrawer_item_settings,
             R.string.navdrawer_item_experts_directory,
-            R.string.navdrawer_item_people_ive_met
+            R.string.navdrawer_item_people_ive_met,
+            R.string.navdrawer_item_sponsors
     };
 
     // icons for navdrawer items (indices must correspond to above array)
@@ -136,6 +138,9 @@ public abstract class BaseActivity extends Activity implements
             R.drawable.ic_drawer_video_library, // Video Library
             0, // Sign in
             R.drawable.ic_drawer_settings,
+            0,
+            0,
+            R.drawable.ic_drawer_social, //Sponsors
     };
 
     // delay to launch nav drawer item, to allow close animation to play
@@ -398,6 +403,7 @@ public abstract class BaseActivity extends Activity implements
         // attendee is on-site or remote:
 //        mNavDrawerItems.add(NAVDRAWER_ITEM_SOCIAL);
         mNavDrawerItems.add(NAVDRAWER_ITEM_VIDEO_LIBRARY);
+        mNavDrawerItems.add(NAVDRAWER_ITEM_SPONSORS);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SEPARATOR_SPECIAL);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SETTINGS);
 
@@ -750,6 +756,11 @@ public abstract class BaseActivity extends Activity implements
                 break;
             case NAVDRAWER_ITEM_VIDEO_LIBRARY:
                 intent = new Intent(this, VideoLibraryActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case NAVDRAWER_ITEM_SPONSORS:
+                intent = new Intent(this, SponsorsActivity.class);
                 startActivity(intent);
                 finish();
                 break;

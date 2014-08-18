@@ -73,6 +73,8 @@ public class PartnersHandler extends JSONHandler {
                 .withValue(ScheduleContract.Partners.PARTNER_DESC, partner.desc)
                 .withValue(ScheduleContract.Partners.PARTNER_WEBSITE_URL, partner.website)
                 .withValue(ScheduleContract.Partners.PARTNER_LOGO_URL, partner.logo)
+                .withValue(ScheduleContract.Partners.PARTNER_LEVEL, partner.level)
+                .withValue(ScheduleContract.Partners.PARTNER_LEVEL_LABEL, partner.levelLabel)
                 .build();
     }
 }

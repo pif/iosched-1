@@ -267,6 +267,10 @@ public class ScheduleContract {
         String PARTNER_WEBSITE_URL = "partner_website_url";
         /** Logo URL for this partner. */
         String PARTNER_LOGO_URL = "partner_logo_url";
+
+        String PARTNER_LEVEL = "partner_level";
+
+        String PARTNER_LEVEL_LABEL = "partner_level_label";
     }
 
     interface HashtagColumns {

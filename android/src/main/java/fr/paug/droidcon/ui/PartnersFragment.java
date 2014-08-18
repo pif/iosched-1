@@ -26,6 +26,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,8 @@ import fr.paug.droidcon.ui.widget.CollectionViewCallbacks;
 import fr.paug.droidcon.util.ImageLoader;
 import fr.paug.droidcon.util.UIUtils;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.regex.Pattern;
 
 import static fr.paug.droidcon.util.LogUtils.makeLogTag;
@@ -71,7 +74,7 @@ public class PartnersFragment extends Fragment implements
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_partners, container, false);
         if (getArguments() != null && !getArguments().getBoolean(ARG_HAS_HEADER, true)) {
             rootView.findViewById(R.id.headerbar).setVisibility(View.GONE);
@@ -111,10 +114,12 @@ public class PartnersFragment extends Fragment implements
         return loader;
     }
 
+
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
         if (loader.getId() == PartnersQuery._TOKEN) {
             mPartnersAdapter = new PartnersAdapter(cursor);
+
             mCollectionView.setCollectionAdapter(mPartnersAdapter);
             mCollectionView.updateInventory(mPartnersAdapter.getInventory());
         } else {
@@ -146,13 +151,47 @@ public class PartnersFragment extends Fragment implements
          * @return A new instance of {@link CollectionView.Inventory}
          */
         public CollectionView.Inventory getInventory() {
+            SparseIntArray levelsCount = new SparseIntArray();
+            ArrayList<String> levelNames = new ArrayList<String>();
+            while (mCursor.moveToNext())
+            {
+                int level = mCursor.getInt(PartnersQuery.LEVEL);
+
+                int integer = levelsCount.get(level, -1);
+                if(integer != -1)
+                {
+                    levelsCount.put(level, ++integer);
+                }
+                else
+                {
+                    levelsCount.put(level, 1);
+                    String levelName = mCursor.getString(PartnersQuery.LEVEL_LABEL);
+                    levelNames.add(levelName);
+                }
+            }
+            mCursor.moveToFirst();
+
             CollectionView.Inventory inventory = new CollectionView.Inventory();
-            inventory.addGroup(new CollectionView.InventoryGroup(PartnersQuery._TOKEN)
-                    .setDisplayCols(mDisplayCols)
-                    .setItemCount(mCursor.getCount())
-                    .setDataIndexStart(0)
-                    .setShowHeader(false)
-                    .setHeaderLabel(getString(R.string.title_experts_directory)));
+
+            int id = 0;
+            int count = 0;
+            int key;
+            for(int i = 0; i < levelsCount.size(); i++) {
+                key = levelsCount.keyAt(i);
+                int number = levelsCount.get(key);
+                String levelName = levelNames.get(i);
+                int nbColumns = Math.min(3, number); //Cannot be more than 3
+                inventory.addGroup(new CollectionView.InventoryGroup(id)
+                        .setDisplayCols(nbColumns)
+                        .setItemCount(number)
+                        .setDataIndexStart(count)
+                        .setShowHeader(true)
+                        .setHeaderLabel(levelName));
+                id++;
+                count += number;
+
+            }
+
             return inventory;
         }
 
@@ -187,11 +226,12 @@ public class PartnersFragment extends Fragment implements
 
         @Override
         public View newCollectionHeaderView(Context context, ViewGroup parent) {
-            return null;
+            return LayoutInflater.from(context).inflate(R.layout.list_item_sponsor_type, parent, false);
         }
 
         @Override
         public void bindCollectionHeaderView(Context context, View view, int groupId, String headerLabel) {
+            ((TextView)view.findViewById(R.id.name)).setText(headerLabel);
         }
 
         @Override
@@ -201,8 +241,8 @@ public class PartnersFragment extends Fragment implements
 
         @Override
         public void bindCollectionItemView(Context context, View view, int groupId, int indexInGroup,
-                int dataIndex, Object tag) {
-            setCursorPosition(indexInGroup);
+                                           int dataIndex, Object tag) {
+            setCursorPosition(dataIndex);
             bindView(view, context, mCursor);
         }
 
@@ -222,14 +262,19 @@ public class PartnersFragment extends Fragment implements
                 ScheduleContract.Partners.PARTNER_LOGO_URL,
                 ScheduleContract.Partners.PARTNER_DESC,
                 ScheduleContract.Partners.PARTNER_WEBSITE_URL,
+                ScheduleContract.Partners.PARTNER_LEVEL,
+                ScheduleContract.Partners.PARTNER_LEVEL_LABEL,
         };
 
-        static final String SORT = ScheduleContract.Partners.PARTNER_NAME + " ASC";
+        static final String SORT = ScheduleContract.Partners.PARTNER_LEVEL + " ASC";
 
         static final int ID = 1;
         static final int NAME = 2;
         static final int LOGO_URL = 3;
         static final int DESC = 4;
         static final int WEBSITE_URL = 5;
+        static final int LEVEL = 6;
+        static final int LEVEL_LABEL = 7;
     }
+
 }

@@ -384,6 +384,8 @@
     <!-- Menu item to start the Sign In flow [CHAR_LIMIT=20] -->
     <string name="navdrawer_item_sign_in">Sign in</string>
 
+    <string name="navdrawer_item_sponsors">Sponsors</string>
+
     <!-- Menu item to open a screen that lists I/O related hashtags. Each hashtag, when clicked, will
     open Google+ stream of posts that uses the hashtag [CHAR_LIMIT=20] -->
     <string name="navdrawer_item_social">Social</string>

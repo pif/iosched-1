@@ -30,12 +30,11 @@
         android:gravity="center_horizontal"
         android:padding="16dp">
 
-        <fr.paug.droidcon.ui.widget.BezelImageView
+        <ImageView
             android:id="@+id/image"
-            app:maskDrawable="@drawable/circle_mask"
-            android:layout_width="@dimen/partner_icon_size"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/partner_icon_size"
-            android:scaleType="centerCrop"
+            android:scaleType="centerInside"
             android:layout_marginBottom="8dp" />
 
         <TextView
@@ -65,7 +64,7 @@
         <TextView
             android:id="@+id/desc"
             android:layout_width="wrap_content"
-            android:layout_height="80sp"
+            android:layout_height="0dip"
             android:maxLines="5"
             android:ellipsize="end"
             android:textColor="@color/body_text_2"

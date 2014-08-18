@@ -111,6 +111,11 @@
             android:label="@string/navdrawer_item_social"
             android:theme="@style/Theme.IOSched.Social" />
 
+        <activity
+            android:name=".ui.SponsorsActivity"
+            android:label="@string/navdrawer_item_sponsors"
+            android:theme="@style/Theme.IOSched.Social" />
+
         <activity android:name=".ui.SessionLivestreamActivity"
             android:label="@string/session_livestream_title"
             android:configChanges="orientation|screenSize"

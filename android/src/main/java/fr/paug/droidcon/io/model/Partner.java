@@ -25,4 +25,6 @@ public class Partner {
     public String desc;
     public String website;
     public String logo;
+    public int level;
+    public String levelLabel;
 }

@@ -43,7 +43,7 @@ public class ScheduleDatabase extends SQLiteOpenHelper {
     // NOTE: carefully update onUpgrade() when bumping database versions to make
     // sure user data is saved.
 
-    private static final int CUR_DATABASE_VERSION = 1;
+    private static final int CUR_DATABASE_VERSION = 2;
 
     private final Context mContext;
 
@@ -407,6 +407,8 @@ public class ScheduleDatabase extends SQLiteOpenHelper {
                 + PartnersColumns.PARTNER_DESC + " TEXT NOT NULL,"
                 + PartnersColumns.PARTNER_WEBSITE_URL + " TEXT NOT NULL,"
                 + PartnersColumns.PARTNER_LOGO_URL + " TEXT NOT NULL,"
+                + PartnersColumns.PARTNER_LEVEL + " INTEGER,"
+                + PartnersColumns.PARTNER_LEVEL_LABEL + " TEXT NOT NULL,"
                 + "UNIQUE (" + PartnersColumns.PARTNER_ID + ") ON CONFLICT REPLACE)");
     }
 

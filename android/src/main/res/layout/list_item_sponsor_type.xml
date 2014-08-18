@@ -1,0 +1,14 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dip"
+    android:gravity="center"
+    android:singleLine="true"
+    android:maxLines="1"
+    android:textColor="@color/body_text_1"
+    android:textSize="@dimen/text_size_xlarge"
+    android:textStyle="@integer/font_textStyle_medium"
+    android:fontFamily="@string/font_fontFamily_medium" />
