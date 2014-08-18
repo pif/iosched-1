@@ -249,218 +249,46 @@
             "website": "",
             "twitter": "",
             "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Jean-Maisonnial-222x222.jpg"
-        }
-    ],
-    "blocks": [
-        {
-            "start": "2014-09-22T06:30:00.000Z",
-            "end": "2014-09-22T07:15:00.000Z",
-            "title": "Welcome & Breakfast",
-            "type": "break",
-            "subtitle": "Main Hall, Level 1"
         },
         {
-            "start": "2014-09-22T07:15:00.000Z",
-            "end": "2014-09-22T07:45:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
+            "id": "simonstewart",
+            "bio": "Often described as a “fire hazard” and sporting more hair than most primates, Simon is a Software Engineer on Facebook's internal tools team. He has best known for having turned his hairy hands to the invention of WebDriver, the open source web application testing tool, as well as leading the Selenium project. When he is not saving kittens from fires, or rescuing Granny’s from micro perms, he enjoys talking incessantly about Facebook's commitment to OSS and how we organize our git repo. Please ask him what makes for a truly pleasurable London bus experience.",
+            "name": "Simon Stewart",
+            "company": "Facebook",
+            "plusoneUrl": "https://plus.google.com/104565969450039850531",
+            "website": "",
+            "twitter": "https://twitter.com/shs96c",
+            "thumbnailUrl": "https://lh6.googleusercontent.com/-N47hWFi5frI/TW9OX3t6YFI/AAAAAAAACh4/FbryZVBQ278/w500-h499-no/headshot.jpeg"
         },
         {
-            "start": "2014-09-22T07:55:00.000Z",
-            "end": "2014-09-22T08:35:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
+            "id": "amritsanjeev",
+            "bio": "Google Developer Expert - Android\nOrganizer of GDG Blrdroid\nIntel Influencer - Android \nWorks at Digital Insight as Mobile Staff Engineer. \nPreviously worked as a Research engineer at Philips and Architect at IBM ",
+            "name": "Amrit Sanjeev",
+            "company": "Digital Insight",
+            "plusoneUrl": "https://plus.google.com/+AmritSanjeev",
+            "website": "http://amsanjeev.wordpress.com/",
+            "twitter": "https://twitter.com/amsanjeev",
+            "thumbnailUrl": "https://lh5.googleusercontent.com/-hsv3-3ocI5c/U3miCl0UcTI/AAAAAAAADrU/6lqih6PX7wk/s348-no/045A1927.JPG"
         },
         {
-            "start": "2014-09-22T08:35:00.000Z",
-            "end": "2014-09-22T09:25:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
+            "id": "quentinsallat",
+            "bio": "Android Developer for more than three years, I'm a huge fan of mobile and web development. I've been blogging for years about .NET, HTML5 and Java development, and I'm now a Professional Android developer.\n\nI'm especially interested in app design, and with more than fifteen apps published under my personal account, Aerilys, I've some things I'd like to share with my fellow developers!",
+            "name": "Quentin Sallat",
+            "company": "iD.apps",
+            "plusoneUrl": "https://plus.google.com/u/0/114162543563319129793",
+            "website": "http://blog.aerilys.fr/",
+            "twitter": "https://twitter.com/aerilys",
+            "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Quentin-Sallat-222x222.jpg"
         },
         {
-            "start": "2014-09-22T09:25:00.000Z",
-            "end": "2014-09-22T09:55:00.000Z",
-            "title": "Break",
-            "type": "break",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T09:55:00.000Z",
-            "end": "2014-09-22T10:45:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T10:45:00.000Z",
-            "end": "2014-09-22T11:05:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T11:05:00.000Z",
-            "end": "2014-09-22T12:20:00.000Z",
-            "title": "Lunch",
-            "type": "break",
-            "subtitle": "Main Hall, Level 1"
-        },
-        {
-            "start": "2014-09-22T12:20:00.000Z",
-            "end": "2014-09-22T12:50:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T12:50:00.000Z",
-            "end": "2014-09-22T13:20:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T13:20:00.000Z",
-            "end": "2014-09-22T13:50:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T13:50:00.000Z",
-            "end": "2014-09-22T14:20:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T14:20:00.000Z",
-            "end": "2014-09-22T14:50:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T14:50:00.000Z",
-            "end": "2014-09-22T15:20:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T15:30:00.000Z",
-            "end": "2014-09-22T16:30:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-22T17:00:00.000Z",
-            "end": "2014-09-22T22:00:00.000Z",
-            "title": "Party",
-            "type": "break",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T06:30:00.000Z",
-            "end": "2014-09-23T07:00:00.000Z",
-            "title": "Welcome & Breakfast",
-            "type": "break",
-            "subtitle": "Main Hall, Level 1"
-        },
-        {
-            "start": "2014-09-23T07:00:00.000Z",
-            "end": "2014-09-23T08:00:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T08:00:00.000Z",
-            "end": "2014-09-23T08:15:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T08:15:00.000Z",
-            "end": "2014-09-23T09:05:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T09:05:00.000Z",
-            "end": "2014-09-23T09:35:00.000Z",
-            "title": "Break",
-            "type": "break",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T09:35:00.000Z",
-            "end": "2014-09-23T10:25:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T10:25:00.000Z",
-            "end": "2014-09-23T11:15:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T11:15:00.000Z",
-            "end": "2014-09-23T12:15:00.000Z",
-            "title": "Lunch",
-            "type": "break",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T12:15:00.000Z",
-            "end": "2014-09-23T13:05:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T13:05:00.000Z",
-            "end": "2014-09-23T13:55:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T13:55:00.000Z",
-            "end": "2014-09-23T14:45:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T14:45:00.000Z",
-            "end": "2014-09-23T15:15:00.000Z",
-            "title": "Break",
-            "type": "break",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T15:15:00.000Z",
-            "end": "2014-09-23T16:00:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
-        },
-        {
-            "start": "2014-09-23T16:00:00.000Z",
-            "end": "2014-09-23T16:30:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
+            "id": "luwenhui",
+            "bio": "Wenhui Lu has 12 years’ experience in software development on mobile devices. He has been in different positions at Nokia and Microsoft for various projects ranging from product development to research oriented.\n\nCurrently working as a Technology Wizard, Wenhui promotes the developer ecosystem of Microsoft mobile platforms (Nokia X and Windows Phone) by providing developers with technical consultancy, training, evangelism, and other facilities to help them to succeed with Microsoft.",
+            "name": "Lu Wenhui",
+            "company": "Microsoft",
+            "plusoneUrl": "",
+            "website": "",
+            "twitter": "https://twitter.com/ui_lu",
+            "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Wenhui-Lu-222x222.png"
         }
     ],
     "sessions": [
@@ -674,6 +502,27 @@
                 "TOPIC_DEVELOPMENT",
                 "THEME_FR",
                 "THEME_BEGINNER"
+            ]
+        },
+        {
+            "id": "__barcamp__",
+            "description": "",
+            "photoUrl": "",
+            "url": "",
+            "startTimestamp": "2014-09-22T10:45:00Z",
+            "title": "Barcamp start",
+            "youtubeUrl": "",
+            "mainTag": "FLAG_KEYNOTE",
+            "endTimestamp": "2014-09-22T11:05:00Z",
+            "color": "",
+            "hashtag": "barcamp",
+            "isLivestream": false,
+            "captionsUrl": "",
+            "room": "auditorium",
+            "speakers": [],
+            "tags": [
+                "FLAG_KEYNOTE",
+                "THEME_EN"
             ]
         },
         {
@@ -1037,6 +886,290 @@
                 "THEME_EN",
                 "THEME_BEGINNER"
             ]
+        },
+        {
+            "id": "session_simonstewart_1",
+            "description": "There are hundreds of software engineers working on Facebook’s Android application. The codebase is large, and the pace of change is unrelenting. Despite the complexity of size and rapid development, a new alpha release that’s known to be solid is shipped three times a week. We’d not be able to go this fast, or scale our development team this effectively, without using large amounts of OSS.\n\nIn this talk, I’ll discuss the Open Source tools that help us build Facebook for Android, how we contribute technology to OSS, and how we do our best to be good citizens in the broader OSS world. I’ll do this by looking at the full life cycle of a release, going from how we organize our source, do code reviews in phabricator, through building using tools such as Buck, to how we’ve improved the quality of our releases using OSS testing tools such as Selendroid.",
+            "photoUrl": "https://i.ytimg.com/vi/5o6Rb8W9_Do/maxresdefault.jpg",
+            "url": "",
+            "startTimestamp": "2014-09-22T08:35:00Z",
+            "title": "How Open Source Powers Facebook on Android",
+            "youtubeUrl": "",
+            "mainTag": "TOPIC_EVERYWHERE",
+            "endTimestamp": "2014-09-22T09:25:00Z",
+            "color": "",
+            "hashtag": "",
+            "isLivestream": false,
+            "captionsUrl": "",
+            "room": "leparisien",
+            "speakers": [
+                "simonstewart"
+            ],
+            "tags": [
+                "TOPIC_EVERYWHERE",
+                "THEME_EN",
+                "THEME_EXPERT"
+            ]
+        },
+        {
+            "id": "session_amrit_sanjeev_1",
+            "description": "Talk will do a deep dive into the following \n- general architecture of event bus\n- when, how and why to use event bus\n- advantages and disadvantages of using it\n- comparison of different event bus libraries and features",
+            "photoUrl": "https://lh5.googleusercontent.com/-VBGIXC3BUXo/UsaCSuP135I/AAAAAAAABds/YpDDYsUV9Z8/w877-h655-no/IMG_20140103_145231.jpg",
+            "url": "",
+            "startTimestamp": "2014-09-23T13:55:00Z",
+            "title": "Architecting applications using Event Bus ",
+            "youtubeUrl": "",
+            "mainTag": "TOPIC_DEVELOPMENT",
+            "endTimestamp": "2014-09-23T14:45:00Z",
+            "color": "",
+            "hashtag": "",
+            "isLivestream": false,
+            "captionsUrl": "",
+            "room": "auditorium",
+            "speakers": [
+                "amritsanjeev"
+            ],
+            "tags": [
+                "TOPIC_DEVELOPMENT",
+                "THEME_EN",
+                "THEME_INTERMEDIATE"
+            ]
+        },
+        {
+            "id": "session_quentin_sallat_1",
+            "description": "Avec l'arrivée d'Android L, Google a décidé d'apporter à son OS mobile un nouvel ensemble de règles visuelles nommé Material Design. Mais il n'est pour autant pas nécessaire de changer intégralement le design de son application pour respecter ces nouvelles guidelines. \n\nCette conférence vous montrera en direct comment passer de Holo à Material au travers d'une application. Du floating button aux cartes à la Google Now, en passant par les nouvelles APIs d'animation, vous saurez tout ce qui est nécessaire pour effectuer une transition en douceur.",
+            "photoUrl": "",
+            "url": "",
+            "startTimestamp": "2014-09-23T13:55:00Z",
+            "title": "Holo -> Material Design\ntransition",
+            "youtubeUrl": "",
+            "mainTag": "TOPIC_UI_UX",
+            "endTimestamp": "2014-09-23T14:45:00Z",
+            "color": "",
+            "hashtag": "",
+            "isLivestream": false,
+            "captionsUrl": "",
+            "room": "salon",
+            "speakers": [
+                "quentinsallat"
+            ],
+            "tags": [
+                "TOPIC_UI_UX",
+                "THEME_FR",
+                "THEME_INTERMEDIATE"
+            ]
+        }
+    ],
+    "blocks": [
+        {
+            "start": "2014-09-22T06:30:00.000Z",
+            "end": "2014-09-22T07:15:00.000Z",
+            "title": "Welcome & Breakfast",
+            "type": "break",
+            "subtitle": "Main Hall, Level 1"
+        },
+        {
+            "start": "2014-09-22T07:15:00.000Z",
+            "end": "2014-09-22T07:45:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T07:55:00.000Z",
+            "end": "2014-09-22T08:35:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T08:35:00.000Z",
+            "end": "2014-09-22T09:25:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T09:25:00.000Z",
+            "end": "2014-09-22T09:55:00.000Z",
+            "title": "Break",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T09:55:00.000Z",
+            "end": "2014-09-22T10:45:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T10:45:00.000Z",
+            "end": "2014-09-22T11:05:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T11:05:00.000Z",
+            "end": "2014-09-22T12:20:00.000Z",
+            "title": "Lunch",
+            "type": "break",
+            "subtitle": "Main Hall, Level 1"
+        },
+        {
+            "start": "2014-09-22T12:20:00.000Z",
+            "end": "2014-09-22T12:50:00.000Z",
+            "title": "Barcamp session",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T12:50:00.000Z",
+            "end": "2014-09-22T13:20:00.000Z",
+            "title": "Barcamp session",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T13:20:00.000Z",
+            "end": "2014-09-22T13:50:00.000Z",
+            "title": "Barcamp session",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T13:50:00.000Z",
+            "end": "2014-09-22T14:20:00.000Z",
+            "title": "Barcamp session",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T14:20:00.000Z",
+            "end": "2014-09-22T14:50:00.000Z",
+            "title": "Barcamp session",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T14:50:00.000Z",
+            "end": "2014-09-22T15:20:00.000Z",
+            "title": "Barcamp session",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T15:30:00.000Z",
+            "end": "2014-09-22T16:30:00.000Z",
+            "title": "Barcamp session",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-22T17:00:00.000Z",
+            "end": "2014-09-22T22:00:00.000Z",
+            "title": "Party",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T06:30:00.000Z",
+            "end": "2014-09-23T07:00:00.000Z",
+            "title": "Welcome & Breakfast",
+            "type": "break",
+            "subtitle": "Main Hall, Level 1"
+        },
+        {
+            "start": "2014-09-23T07:00:00.000Z",
+            "end": "2014-09-23T08:00:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T08:00:00.000Z",
+            "end": "2014-09-23T08:15:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T08:15:00.000Z",
+            "end": "2014-09-23T09:05:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T09:05:00.000Z",
+            "end": "2014-09-23T09:35:00.000Z",
+            "title": "Break",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T09:35:00.000Z",
+            "end": "2014-09-23T10:25:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T10:25:00.000Z",
+            "end": "2014-09-23T11:15:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T11:15:00.000Z",
+            "end": "2014-09-23T12:15:00.000Z",
+            "title": "Lunch",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T12:15:00.000Z",
+            "end": "2014-09-23T13:05:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T13:05:00.000Z",
+            "end": "2014-09-23T13:55:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T13:55:00.000Z",
+            "end": "2014-09-23T14:45:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T14:45:00.000Z",
+            "end": "2014-09-23T15:15:00.000Z",
+            "title": "Break",
+            "type": "break",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T15:15:00.000Z",
+            "end": "2014-09-23T16:00:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
+            "start": "2014-09-23T16:00:00.000Z",
+            "end": "2014-09-23T16:30:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
         }
     ],
     "video_library": [
@@ -1335,6 +1468,116 @@
             "tag": "THEME_EXPERT",
             "originalid": "expert",
             "orderincategory": 3
+        }
+    ],
+    "partners": [
+        {
+            "id": "nokia",
+            "name": "Nokia Developer",
+            "desc": "",
+            "website": "http://developer.nokia.com/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Nokia-Developer.png",
+            "level": 1,
+            "levelLabel": "Platinum"
+        },
+        {
+            "id": "intel",
+            "name": "Intel",
+            "desc": "",
+            "website": "https://software.intel.com/fr-fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Intel1-e1406737628760.png",
+            "level": 2,
+            "levelLabel": "Gold"
+        },
+        {
+            "id": "alcatel",
+            "name": "Alcatel One Touch",
+            "desc": "",
+            "website": "http://www.alcatelonetouch.com/fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Alcatel-one-Touch-e1407320479604.png",
+            "level": 3,
+            "levelLabel": "Silver"
+        },
+        {
+            "id": "idapps",
+            "name": "iD.apps",
+            "desc": "",
+            "website": "http://www.id-apps.fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/ID-APPS2-e1406736367296.jpg",
+            "level": 3,
+            "levelLabel": "Silver"
+        },
+        {
+            "id": "paypal",
+            "name": "PayPal",
+            "desc": "",
+            "website": "https://developer.paypal.com/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Paypal-e1406736433110.jpg",
+            "level": 3,
+            "levelLabel": "Silver"
+        },
+        {
+            "id": "begeek",
+            "name": "BeGeek",
+            "desc": "",
+            "website": "http://www.begeek.fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/begeek-e1407148264929.png",
+            "level": 4,
+            "levelLabel": "Media Partners"
+        },
+        {
+            "id": "frandroid",
+            "name": "FrAndroid",
+            "desc": "",
+            "website": "http://www.frandroid.com/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/FrAndroid-e1407147698739.png",
+            "level": 4,
+            "levelLabel": "Media Partners"
+        },
+        {
+            "id": "developpez",
+            "name": "Developpez.com",
+            "desc": "",
+            "website": "http://www.developpez.com/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/logo-dvp-200x82-fond-blanc.png",
+            "level": 4,
+            "levelLabel": "Media Partners"
+        },
+        {
+            "id": "jbmm",
+            "name": "JBMM",
+            "desc": "",
+            "website": "http://www.jbmm.fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/jbmm1-e1407515996871.jpg",
+            "level": 5,
+            "levelLabel": "Other Partners"
+        },
+        {
+            "id": "korben",
+            "name": "Korben",
+            "desc": "",
+            "website": "http://korben.info/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/korben-e1407515682613.png",
+            "level": 5,
+            "levelLabel": "Other Partners"
+        },
+        {
+            "id": "paug",
+            "name": "Paris Android User Group",
+            "desc": "",
+            "website": "http://www.paug.fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Logo-PAUG-e1405428862647.png",
+            "level": 6,
+            "levelLabel": "Organizers"
+        },
+        {
+            "id": "bemyapp",
+            "name": "BeMyApp",
+            "desc": "",
+            "website": "http://events.bemyapp.com/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/bemyapp1-e1405428927648.png",
+            "level": 6,
+            "levelLabel": "Organizers"
         }
     ]
 }
