@@ -1245,7 +1245,7 @@ public abstract class BaseActivity extends Activity implements
     }
 
     private boolean isSpecialItem(int itemId) {
-        return itemId == NAVDRAWER_ITEM_SETTINGS;
+        return itemId == NAVDRAWER_ITEM_SETTINGS || itemId == NAVDRAWER_ITEM_DIRECTIONS;
     }
 
     private boolean isSeparator(int itemId) {
