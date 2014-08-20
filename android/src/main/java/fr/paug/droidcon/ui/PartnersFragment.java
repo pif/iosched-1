@@ -180,7 +180,21 @@ public class PartnersFragment extends Fragment implements
                 key = levelsCount.keyAt(i);
                 int number = levelsCount.get(key);
                 String levelName = levelNames.get(i);
-                int nbColumns = Math.min(3, number); //Cannot be more than 3
+                int nbColumns;
+                if(number <= 3)
+                {
+                    nbColumns = number;
+                }
+                else
+                {
+                   if(number % 2 == 0)
+                   {
+                       nbColumns = 2; //If number can be divided by 2 we set 2 columns
+                   }
+                   else
+                       nbColumns = 3;
+                }
+
                 inventory.addGroup(new CollectionView.InventoryGroup(id)
                         .setDisplayCols(nbColumns)
                         .setItemCount(number)
