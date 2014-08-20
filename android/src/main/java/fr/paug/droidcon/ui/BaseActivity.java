@@ -112,6 +112,7 @@ public abstract class BaseActivity extends Activity implements
     protected static final int NAVDRAWER_ITEM_SETTINGS = 6;
     protected static final int NAVDRAWER_ITEM_PEOPLE_IVE_MET = 8;
     protected static final int NAVDRAWER_ITEM_SPONSORS = 9;
+    protected static final int NAVDRAWER_ITEM_DIRECTIONS = 10;
     protected static final int NAVDRAWER_ITEM_INVALID = -1;
     protected static final int NAVDRAWER_ITEM_SEPARATOR = -2;
     protected static final int NAVDRAWER_ITEM_SEPARATOR_SPECIAL = -3;
@@ -127,20 +128,23 @@ public abstract class BaseActivity extends Activity implements
             R.string.navdrawer_item_settings,
             R.string.navdrawer_item_experts_directory,
             R.string.navdrawer_item_people_ive_met,
-            R.string.navdrawer_item_sponsors
+            R.string.navdrawer_item_sponsors,
+            R.string.navdrawer_item_directions
     };
 
     // icons for navdrawer items (indices must correspond to above array)
     private static final int[] NAVDRAWER_ICON_RES_ID = new int[] {
             R.drawable.ic_drawer_my_schedule,  // My Schedule
             R.drawable.ic_drawer_explore,  // Explore
+            0, //MAP
             R.drawable.ic_drawer_social, // Social
             R.drawable.ic_drawer_video_library, // Video Library
             0, // Sign in
             R.drawable.ic_drawer_settings,
-            0,
-            0,
+            0,//experts
+            0,//people
             R.drawable.ic_drawer_social, //Sponsors
+            R.drawable.ic_drawer_map //Directions
     };
 
     // delay to launch nav drawer item, to allow close animation to play
@@ -404,6 +408,8 @@ public abstract class BaseActivity extends Activity implements
 //        mNavDrawerItems.add(NAVDRAWER_ITEM_SOCIAL);
         mNavDrawerItems.add(NAVDRAWER_ITEM_VIDEO_LIBRARY);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SPONSORS);
+        mNavDrawerItems.add(NAVDRAWER_ITEM_DIRECTIONS);
+
         mNavDrawerItems.add(NAVDRAWER_ITEM_SEPARATOR_SPECIAL);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SETTINGS);
 
@@ -762,6 +768,11 @@ public abstract class BaseActivity extends Activity implements
             case NAVDRAWER_ITEM_SPONSORS:
                 intent = new Intent(this, SponsorsActivity.class);
                 startActivity(intent);
+                finish();
+                break;
+            case NAVDRAWER_ITEM_DIRECTIONS:
+                String uri = "geo:48.8719444,2.3572243?q=67+Rue+du+Faubourg+Saint-Martin,+75010+Paris";
+                startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
                 finish();
                 break;
         }
