@@ -289,13 +289,33 @@
             "website": "",
             "twitter": "https://twitter.com/ui_lu",
             "thumbnailUrl": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/Wenhui-Lu-222x222.png"
+        },
+        {
+            "id": "damienmehers",
+            "bio": "Damian is a Senior Software Engineer at Evernote, based out of Geneva, Switzerland.  He created the original Evernote Windows Phone client, and worked on Evernote Food for Android, and is now focused on Evernote and wearable technology, having created Evernote for the Samsung Galaxy Gear, the Pebble Smartwatch, and Android Wear.\n\nPrior to joining Evernote, Damian released an app he’d created in his spare time, which used Evernote’s open API.  Evernote noticed, and he got a call from the CEO asking if he’d join the company to help build Evernote’s next generation of products.  It wasn’t a hard decision.\nHe has founded several successful software product companies, and loves the magic that is programming: turning something imagined into something real.",
+            "name": "Damien Mehers",
+            "company": "Evernote",
+            "plusoneUrl": "https://plus.google.com/+DamianMehers0",
+            "website": "http://damianblog.com/",
+            "twitter": "https://twitter.com/DamianMehers",
+            "thumbnailUrl": "https://lh3.googleusercontent.com/-q6WOniTjhcc/UmMYwC0a_6I/AAAAAAAFFIU/OnvdujXUHd0/w487-h486-no/DamianPortait25%25.JPG"
+        },
+        {
+            "id": "alexdanvy",
+            "bio": "Devloper Evangelist at Microsoft",
+            "name": "Alex Danvy",
+            "company": "Microsoft",
+            "plusoneUrl": "https://plus.google.com/u/0/107150265059028646442",
+            "website": "http://danvy.tv/",
+            "twitter": "https://twitter.com/danvy",
+            "thumbnailUrl": "https://lh3.googleusercontent.com/-2aSmCUqOIc8/TXNd9hoSjsI/AAAAAAAAAyE/yUzxsbHRPrk/s399-no/Alex.jpg"
         }
     ],
     "sessions": [
         {
             "id": "__keynote__",
             "description": "Droidcon Paris Keynote",
-            "photoUrl": "https://pbs.twimg.com/profile_images/2345737623/Yannick_pres.jpg",
+            "photoUrl": "http://danvy.tv/wp/wp-content/header-images/header07.jpg",
             "url": "",
             "startTimestamp": "2014-09-22T07:15:00Z",
             "title": "Keynote",
@@ -307,7 +327,9 @@
             "isLivestream": false,
             "captionsUrl": "",
             "room": "auditorium",
-            "speakers": [],
+            "speakers": [
+                "alexdanvy"
+            ],
             "tags": [
                 "FLAG_KEYNOTE",
                 "THEME_EN"
@@ -1018,6 +1040,13 @@
             "subtitle": "Main Hall, Level 1"
         },
         {
+            "start": "2014-09-22T11:20:00.000Z",
+            "end": "2014-09-22T12:20:00.000Z",
+            "title": "",
+            "type": "free",
+            "subtitle": ""
+        },
+        {
             "start": "2014-09-22T12:20:00.000Z",
             "end": "2014-09-22T12:50:00.000Z",
             "title": "Barcamp session",
@@ -1071,7 +1100,7 @@
             "end": "2014-09-22T22:00:00.000Z",
             "title": "Party",
             "type": "break",
-            "subtitle": ""
+            "subtitle": "La Petite Louise"
         },
         {
             "start": "2014-09-23T06:30:00.000Z",
@@ -1472,11 +1501,11 @@
     ],
     "partners": [
         {
-            "id": "nokia",
-            "name": "Nokia Developer",
+            "id": "microsoft",
+            "name": "Microsoft",
             "desc": "",
-            "website": "http://developer.nokia.com/",
-            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Nokia-Developer.png",
+            "website": "http://msdn.microsoft.com/fr-fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/microsoft-logo-e1409750592884.png",
             "level": 1,
             "levelLabel": "Platinum"
         },
@@ -1488,6 +1517,33 @@
             "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Intel1-e1406737628760.png",
             "level": 2,
             "levelLabel": "Gold"
+        },
+        {
+            "id": "evernote",
+            "name": "Evernote",
+            "desc": "",
+            "website": "https://evernote.com/intl/fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/09/logo-evernote-e1409750304612.png",
+            "level": 2,
+            "levelLabel": "Gold"
+        },
+        {
+            "id": "octo",
+            "name": "Octo",
+            "desc": "",
+            "website": "http://www.octo.com/fr",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/octo-e1408631768123.png",
+            "level": 3,
+            "levelLabel": "Silver"
+        },
+        {
+            "id": "xebia",
+            "name": "Xebia",
+            "desc": "",
+            "website": "http://www.xebia.fr/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/xebia-e1408435445873.png",
+            "level": 3,
+            "levelLabel": "Silver"
         },
         {
             "id": "alcatel",
@@ -1512,9 +1568,45 @@
             "name": "PayPal",
             "desc": "",
             "website": "https://developer.paypal.com/",
-            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/Paypal-e1406736433110.jpg",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/07/paypal2-e1408631882653.png",
             "level": 3,
             "levelLabel": "Silver"
+        },
+        {
+            "id": "amazon",
+            "name": "Amazon",
+            "desc": "",
+            "website": "https://developer.amazon.com/appsandservices/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/amazon-logo1-e1409071753101.png",
+            "level": 3,
+            "levelLabel": "Silver"
+        },
+        {
+            "id": "parse",
+            "name": "Parse",
+            "desc": "",
+            "website": "https://parse.com/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/09/Parse-logo1-e1409837171359.png",
+            "level": 3,
+            "levelLabel": "Silver"
+        },
+        {
+            "id": "genymobile",
+            "name": "Genymobile",
+            "desc": "",
+            "website": "http://www.genymobile.com/en/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/09/a-e1409847200106.png",
+            "level": 3,
+            "levelLabel": "Silver"
+        },
+        {
+            "id": "meilleurmobile",
+            "name": "MeilleurMobile",
+            "desc": "",
+            "website": "http://www.meilleurmobile.com/",
+            "logo": "http://fr.droidcon.com/2014/wp-content/uploads/2014/08/MeilleurMobile-e1408610813256.jpg",
+            "level": 4,
+            "levelLabel": "Media Partners"
         },
         {
             "id": "begeek",
