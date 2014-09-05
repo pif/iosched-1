@@ -313,6 +313,7 @@
                 <action android:name="fr.paug.droidcon.ACTION_NOTIFICATION_DISMISSAL"/>
             </intent-filter>
         </service>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="5e88e82cffd6811dda2781377781cac493200287"/>
 
     </application>
 </manifest>

@@ -29,6 +29,7 @@ import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.crashlytics.android.Crashlytics;
 import fr.paug.droidcon.Config;
 import fr.paug.droidcon.R;
 import fr.paug.droidcon.model.TagMetadata;
@@ -82,6 +83,7 @@ public class BrowseSessionsActivity extends BaseActivity implements SessionsFrag
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Crashlytics.start(this);
 
         setContentView(R.layout.activity_browse_sessions);
         getLPreviewUtils().trySetActionBar();
