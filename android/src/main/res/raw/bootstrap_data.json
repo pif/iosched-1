@@ -325,7 +325,7 @@
             "bio": "Mathieu Hausherr est développeur d’applications mobiles chez Octo Technology. Il réalise des applications iOS et Android. Il croit en l’industrialisation des devs mobiles, aux tests unitaires et à l’intégration continue. Il teste de nouveaux terminaux, de la lunette à la montre connectée.",
             "name": "Mathieu Hausherr",
             "company": "Octo Technology",
-            "plusoneUrl": "https://plus.google.com/114611666547929166252",
+            "plusoneUrl": "https://plus.google.com/111393145937875554935",
             "website": "",
             "twitter": "https://twitter.com/mhausherr",
             "thumbnailUrl": "https://lh3.googleusercontent.com/-QqtML0wa6pA/Tqaipgj0lqI/AAAAAAAABWA/MQjejWlP_x8/w905-h902-no/MHA.jpg"
@@ -334,11 +334,11 @@
     "sessions": [
         {
             "id": "__keynote__",
-            "description": "Droidcon Paris Keynote",
+            "description": "Droidcon Paris Keynote Day 1",
             "photoUrl": "http://danvy.tv/wp/wp-content/header-images/header07.jpg",
             "url": "",
             "startTimestamp": "2014-09-22T07:15:00Z",
-            "title": "Keynote",
+            "title": "Keynote Day 1",
             "youtubeUrl": "",
             "mainTag": "FLAG_KEYNOTE",
             "endTimestamp": "2014-09-22T07:45:00Z",
@@ -357,11 +357,11 @@
         },
         {
             "id": "__keynote2__",
-            "description": "Droidcon Paris Keynote",
+            "description": "Droidcon Paris Keynote Day 2",
             "photoUrl": "",
             "url": "",
             "startTimestamp": "2014-09-23T07:00:00Z",
-            "title": "Keynote",
+            "title": "Keynote Day 2",
             "youtubeUrl": "",
             "mainTag": "FLAG_KEYNOTE",
             "endTimestamp": "2014-09-23T08:00:00Z",
@@ -396,7 +396,8 @@
             ],
             "tags": [
                 "TOPIC_DEVELOPMENT",
-                "THEME_EN"
+                "THEME_EN",
+                "THEME_INTERMEDIATE"
             ]
         },
         {
@@ -516,7 +517,7 @@
             "tags": [
                 "TOPIC_OTHER",
                 "THEME_EN",
-                "THEME_EXPERT"
+                "THEME_INTERMEDIATE"
             ]
         },
         {
@@ -565,27 +566,6 @@
                 "TOPIC_DEVELOPMENT",
                 "THEME_FR",
                 "THEME_BEGINNER"
-            ]
-        },
-        {
-            "id": "__barcamp__",
-            "description": "",
-            "photoUrl": "",
-            "url": "",
-            "startTimestamp": "2014-09-22T10:45:00Z",
-            "title": "Barcamp start",
-            "youtubeUrl": "",
-            "mainTag": "FLAG_KEYNOTE",
-            "endTimestamp": "2014-09-22T11:05:00Z",
-            "color": "",
-            "hashtag": "barcamp",
-            "isLivestream": false,
-            "captionsUrl": "",
-            "room": "auditorium",
-            "speakers": [],
-            "tags": [
-                "FLAG_KEYNOTE",
-                "THEME_EN"
             ]
         },
         {
@@ -971,7 +951,7 @@
             "tags": [
                 "TOPIC_EVERYWHERE",
                 "THEME_EN",
-                "THEME_EXPERT"
+                "THEME_INTERMEDIATE"
             ]
         },
         {
@@ -1019,7 +999,7 @@
             "tags": [
                 "TOPIC_UI_UX",
                 "THEME_FR",
-                "THEME_INTERMEDIATE"
+                "THEME_BEGINNER"
             ]
         },
         {
@@ -1118,9 +1098,9 @@
         {
             "start": "2014-09-22T10:45:00.000Z",
             "end": "2014-09-22T11:05:00.000Z",
-            "title": "",
-            "type": "free",
-            "subtitle": ""
+            "title": "Barcamp start",
+            "type": "break",
+            "subtitle": "Auditorium"
         },
         {
             "start": "2014-09-22T11:05:00.000Z",
