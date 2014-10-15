@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package fr.paug.droidcon.util;
+package ua.org.gdg.devfest.app.util;
 
 import android.app.Activity;
 
