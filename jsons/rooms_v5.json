@@ -1,0 +1,19 @@
+{
+    "rooms": [
+        {
+            "originalid": "auditorium",
+            "id": "auditorium",
+            "name": "Auditorium"
+        },
+        {
+            "originalid": "leparisien",
+            "id": "leparisien",
+            "name": "Le Parisien"
+        },
+        {
+            "originalid": "salon",
+            "id": "salon",
+            "name": "L'Européen"
+        }
+    ]
+}

@@ -18,12 +18,21 @@ package ua.org.gdg.devfest.app.ui;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.animation.*;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
+import android.animation.TypeEvaluator;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.*;
-import android.content.pm.PackageManager;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SyncStatusObserver;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -36,12 +45,28 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.widget.DrawerLayout;
 import android.text.TextUtils;
-import android.view.*;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.*;
+import android.widget.AbsListView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gcm.GCMRegistrar;
 import com.google.android.gms.auth.GoogleAuthUtil;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import ua.org.gdg.devfest.app.BuildConfig;
 import ua.org.gdg.devfest.app.Config;
 import ua.org.gdg.devfest.app.R;
@@ -53,14 +78,23 @@ import ua.org.gdg.devfest.app.sync.SyncHelper;
 import ua.org.gdg.devfest.app.ui.debug.DebugActionRunnerActivity;
 import ua.org.gdg.devfest.app.ui.widget.MultiSwipeRefreshLayout;
 import ua.org.gdg.devfest.app.ui.widget.SwipeRefreshLayout;
-import ua.org.gdg.devfest.app.util.*;
+import ua.org.gdg.devfest.app.util.AccountUtils;
+import ua.org.gdg.devfest.app.util.AnalyticsManager;
+import ua.org.gdg.devfest.app.util.HelpUtils;
+import ua.org.gdg.devfest.app.util.ImageLoader;
+import ua.org.gdg.devfest.app.util.LPreviewUtils;
+import ua.org.gdg.devfest.app.util.LPreviewUtilsBase;
+import ua.org.gdg.devfest.app.util.LoginAndAuthHelper;
+import ua.org.gdg.devfest.app.util.PlayServicesUtils;
+import ua.org.gdg.devfest.app.util.PrefUtils;
+import ua.org.gdg.devfest.app.util.UIUtils;
+import ua.org.gdg.devfest.app.util.WiFiUtils;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import static ua.org.gdg.devfest.app.util.LogUtils.*;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGD;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGE;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGI;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGW;
+import static ua.org.gdg.devfest.app.util.LogUtils.makeLogTag;
 
 /**
  * A base activity that handles common functionality in the app. This includes the

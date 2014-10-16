@@ -18,8 +18,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="ua.org.gdg.devfest.app"
-    android:versionCode="7"
-    android:versionName="1.0.6"
+    android:versionCode="1"
+    android:versionName="1.0.0"
     android:installLocation="auto">
 
     <!-- targetSdkVersion set to 19 from build.gradle on non-L-preview builds -->
@@ -141,7 +141,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.dir/vnd.droidconparis2014.session" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.devfestua2014.session" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -174,13 +174,13 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.droidconparis2014.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.devfestua2014.session" />
             </intent-filter>
             <!-- Android Beam for session details -->
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.droidconparis2014.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.devfestua2014.session" />
             </intent-filter>
         </activity>
 
@@ -313,7 +313,7 @@
                 <action android:name="ua.org.gdg.devfest.app.ACTION_NOTIFICATION_DISMISSAL"/>
             </intent-filter>
         </service>
-        <meta-data android:name="com.crashlytics.ApiKey" android:value="5e88e82cffd6811dda2781377781cac493200287"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="2f88448e9b51fd836549cd8c2dc71a63e563e41e"/>
 
     </application>
 </manifest>

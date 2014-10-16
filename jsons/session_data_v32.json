@@ -1,0 +1,75 @@
+{
+    "sessions": [
+        {
+            "id": "__keynote2__",
+            "description": "Today's mobile ecosystem is silo-ed. It's often hard to build for each complex platform, which are each important in their own right, but if we take a step back, the value of going cross-platform is the seamless experience you can build for your customers across the many devices they use throughout the day.  Learn how Ali Parr, head of Partner Engineering at Facebook & Parse, has been working with the most disruptive tech companies for the last couple of years, helping them build cross-platform Mobile Apps that scale to millions of users and becoming highly profitable businesses.",
+            "photoUrl": "http://app2top.nevomedia.ru/wp-content/uploads/2014/07/Ali-Parr-374x200.png",
+            "url": "http://fr.droidcon.com/2014/agenda/detail?title=+The+secret+to+building+cross+platform+Mobile+Apps%3A+How+the+big+guys+do+it",
+            "startTimestamp": "2014-10-24T07:00:00Z",
+            "title": "Keynote: The secret to building cross platform Mobile Apps: How the big guys do it",
+            "youtubeUrl": "",
+            "mainTag": "FLAG_KEYNOTE",
+            "endTimestamp": "2014-10-24T08:00:00Z",
+            "color": "",
+            "hashtag": "keynote",
+            "isLivestream": false,
+            "captionsUrl": "",
+            "room": "auditorium",
+            "speakers": [
+                "aliparr"
+            ],
+            "tags": [
+                "FLAG_KEYNOTE",
+                "THEME_EN"
+            ]
+        },
+        {
+            "id": "session_jan_chong_1",
+            "description": "In January 2012, nearly all Twitter for Android code was written by three engineers. As of January 2014, Twitter for Android has several dozens unique contributors from over ten different teams. In this talk, Jan will be presenting how Twitter moved to develop at scale from a single team-based development model to a project based development model that welcomes contributions from across the company and highlight some of the challenges that they ran into on the way.",
+            "photoUrl": "",
+            "url": "http://fr.droidcon.com/2014/agenda/detail?title=Scaling+Android+Development+at+Twitter",
+            "startTimestamp": "2014-10-24T07:55:00Z",
+            "title": "Scaling Android Development at Twitter",
+            "youtubeUrl": "",
+            "mainTag": "TOPIC_DEVELOPMENT",
+            "endTimestamp": "2014-10-24T08:35:00Z",
+            "color": "",
+            "hashtag": "",
+            "isLivestream": false,
+            "captionsUrl": "",
+            "room": "leparisien",
+            "speakers": [
+                "janchong"
+            ],
+            "tags": [
+                "TOPIC_DEVELOPMENT",
+                "THEME_EN",
+                "THEME_INTERMEDIATE"
+            ]
+        },
+        {
+            "id": "maleev_chrome",
+            "description": "During our talk we will discuss how to develop on Chrome OS, what technologies can we use, and do we really need this?",
+            "photoUrl": "",
+            "url": "http://devfest.gdg.org.ua/schedule/",
+            "startTimestamp": "2014-10-25T08:00:00Z",
+            "title": "Development for Chrome OS",
+            "youtubeUrl": "",
+            "mainTag": "TOPIC_DEVELOPMENT",
+            "endTimestamp": "2014-10-25T09:00:00Z",
+            "color": "",
+            "hashtag": "",
+            "isLivestream": false,
+            "captionsUrl": "",
+            "room": "salon",
+            "speakers": [
+                "maleev"
+            ],
+            "tags": [
+                "TOPIC_DEVELOPMENT",
+                "THEME_RU",
+                "THEME_INTERMEDIATE"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "partners": [
+        {
+            "id": "sponsor0",
+            "name": "Google",
+            "desc": "Google",
+            "website": "http://google.com",
+            "logo": "http://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png",
+            "level": 1,
+            "levelLabel": "General"
+        },
+        {
+            "id": "sponsor1",
+            "name": "Eleks",
+            "desc": "Software development, Localization, Internationalization, QA and Testing Services",
+            "website": "http://eleks.com/",
+            "logo": "http://hi-tech.org.ua/wp-content/uploads/2012/01/Eleks-logo-blue.png",
+            "level": 2,
+            "levelLabel": "Diamond"
+        },
+        {
+            "id": "sponsor2",
+            "name": "SoftServe",
+            "desc": "SoftServe – Best IT Employer",
+            "website": "https://softserve.ua/en/",
+            "logo": "http://upload.wikimedia.org/wikipedia/en/d/da/SoftServe_logo_new.png",
+            "level": 2,
+            "levelLabel": "Diamond"
+        },
+        {
+            "id": "sponsor3",
+            "name": "DataArt",
+            "desc": "DataArt is a custom software development company that builds advanced solutions for the financial services, healthcare, hospitality, logistics and other industries.",
+            "website": "http://www.dataart.com/",
+            "logo": "https://www.openfin.co/images/dataart-logo.png",
+            "level": 3,
+            "levelLabel": "Platinum"
+        },
+        {
+            "id": "sponsor4",
+            "name": "GlobalLogic",
+            "desc": "GlobalLogic is a full product lifecycle services provider that helps customers make amazing products, discover new revenue opportunities, and accelerate time-to-market.",
+            "website": "http://www.globallogic.com/",
+            "logo": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Logo_800px.png/220px-Logo_800px.png",
+            "level": 3,
+            "levelLabel": "Platinum"
+        },
+        {
+            "id": "sponsor5",
+            "name": "Lemberg",
+            "desc": "Lemberg Solutions - Web and Mobile App Development Company",
+            "website": "http://lemberg.co.uk/",
+            "logo": "https://s3.amazonaws.com/sortfolio.production/listings/logos/15915_1369323987.large.png?1369323987",
+            "level": 4,
+            "levelLabel": "Gold"
+        },
+        {
+            "id": "sponsor6",
+            "name": "coMMuna",
+            "desc": "coMMuna- це простір для втілення твоїх можливостей, правильно організований для роботи, навчання та відпочинку.",
+            "website": "http://communa.net.ua/en/",
+            "logo": "http://devfest.gdg.org.ua/img/partners/communa.png",
+            "level": 4,
+            "levelLabel": "Gold"
+        },
+        {
+            "id": "sponsor7",
+            "name": "Lohika",
+            "desc": "A trusted partner in software development",
+            "website": "http://www.lohika.com/",
+            "logo": "https://d16cvnquvjw7pr.cloudfront.net/images/blog-photos-new/Letterheadlogo.jpg",
+            "level": 5,
+            "levelLabel": "Hackaton"
+        },
+        {
+            "id": "sponsor8",
+            "name": "GitHub",
+            "desc": "GitHub is the best place to build software together. Over 4 million people use GitHub to share code.",
+            "website": "https://github.com/",
+            "logo": "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png",
+            "level": 5,
+            "levelLabel": "Hackaton"
+        },
+        {
+            "id": "sponsor9",
+            "name": "Come In",
+            "desc": "Ми – новий формат!Ми – нова концепція кафе!Ми – соціальна мережа у реальному світі.",
+            "website": "http://www.comein.lviv.ua/",
+            "logo": "http://devfest.gdg.org.ua/img/partners/comein.png",
+            "level": 5,
+            "levelLabel": "Hackaton"
+        },
+        {
+            "id": "support01",
+            "name": "IT-BPO",
+            "desc": "IT-BPO Lviv Cluster",
+            "website": "http://it-bpo.lviv.ua/",
+            "logo": "http://devfest.gdg.org.ua/img/partners/it-bpo.png",
+            "level": 6,
+            "levelLabel": "Support"
+        },
+        {
+            "id": "support02",
+            "name": "Lviv Convention Bureau",
+            "desc": "Lviv Convention Bureau - Business tourism in Lviv, Ukraine",
+            "website": "http://lvivconvention.com.ua/",
+            "logo": "http://devfest.gdg.org.ua/img/partners/lvivconventionbureau.svg",
+            "level": 6,
+            "levelLabel": "Support"
+        },
+        {
+            "id": "info01",
+            "name": "DOU",
+            "desc": "DOU - Сообщество программистов",
+            "website": "http://dou.ua/",
+            "logo": "http://devfest.gdg.org.ua/img/partners/dou.svg",
+            "level": 7,
+            "levelLabel": "General Media"
+        },
+        {
+            "id": "info02",
+            "name": "career4it",
+            "desc": "career4it - employment fair for it talents",
+            "website": "http://career4it.com/en/",
+            "logo": "http://devfest.gdg.org.ua/img/partners/career4it.png",
+            "level": 8,
+            "levelLabel": "Information"
+        },
+        {
+            "id": "org01",
+            "name": "GDG Lviv",
+            "desc": "Google Developers Group Lviv",
+            "website": "http://lviv.gdg.org.ua/",
+            "logo": "https://lh5.googleusercontent.com/-WNRy8loYe7Q/AAAAAAAAAAI/AAAAAAAAGls/ccXi8f3texs/photo.jpg",
+            "level": 9,
+            "levelLabel": "Organizer"
+        }
+    ]
+}

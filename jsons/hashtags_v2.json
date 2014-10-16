@@ -1,0 +1,28 @@
+{
+    "hashtags": [
+        {
+            "color": "#303f9f",
+            "order": 1,
+            "name": "#droidconparis",
+            "description": "Follow the general Google+ social conversation happening around Droidcon Paris"
+        },
+        {
+            "color": "#303f9f",
+            "order": 2,
+            "name": "#droidcon",
+            "description": "Follow the general Google+ social conversation happening around Droidcon"
+        },
+        {
+            "color": "#303f9f",
+            "order": 3,
+            "name": "#paug",
+            "description": "Follow the general Google+ social conversation happening around Paris Android User Group"
+        },
+        {
+            "color": "#303f9f",
+            "order": 4,
+            "name": "#bemyapp",
+            "description": "Follow the general Google+ social conversation happening around BeMyApp"
+        }
+    ]
+}

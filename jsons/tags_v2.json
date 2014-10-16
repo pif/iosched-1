@@ -1,0 +1,94 @@
+{
+    "tags": [
+        {
+            "category": "TOPIC",
+            "name": "Development",
+            "color": "#A4C739",
+            "abstract": "",
+            "tag": "TOPIC_DEVELOPMENT",
+            "originalid": "development",
+            "orderincategory": 1
+        },
+        {
+            "category": "TOPIC",
+            "name": "Android Everywhere",
+            "color": "#03A9F4",
+            "abstract": "",
+            "tag": "TOPIC_EVERYWHERE",
+            "originalid": "everywhere",
+            "orderincategory": 2
+        },
+        {
+            "category": "TOPIC",
+            "name": "UI/UX",
+            "color": "#E91E63",
+            "abstract": "",
+            "tag": "TOPIC_UI_UX",
+            "originalid": "uiux",
+            "orderincategory": 3
+        },
+        {
+            "category": "TOPIC",
+            "name": "Other",
+            "color": "#FFC107",
+            "abstract": "",
+            "tag": "TOPIC_OTHER",
+            "originalid": "other",
+            "orderincategory": 4
+        },
+        {
+            "category": "TYPE",
+            "name": "Ukrainian",
+            "color": "",
+            "abstract": "",
+            "tag": "THEME_UK",
+            "originalid": "ukrainian",
+            "orderincategory": 2
+        },
+        {
+            "category": "TYPE",
+            "name": "Russian",
+            "color": "",
+            "abstract": "",
+            "tag": "THEME_RU",
+            "originalid": "russian",
+            "orderincategory": 2
+        },
+        {
+            "category": "TYPE",
+            "name": "English",
+            "color": "",
+            "abstract": "",
+            "tag": "THEME_EN",
+            "originalid": "english",
+            "orderincategory": 2
+        },
+        {
+            "category": "THEME",
+            "name": "Beginner",
+            "color": "",
+            "abstract": "",
+            "tag": "THEME_BEGINNER",
+            "originalid": "beginner",
+            "orderincategory": 1
+        },
+        {
+            "category": "THEME",
+            "name": "Intermediate",
+            "color": "",
+            "abstract": "",
+            "tag": "THEME_INTERMEDIATE",
+            "originalid": "intermediate",
+            "orderincategory": 2
+        },
+        {
+            "category": "THEME",
+            "name": "Expert",
+            "color": "",
+            "abstract": "",
+            "tag": "THEME_EXPERT",
+            "originalid": "expert",
+            "orderincategory": 3
+        }
+    ]
+}

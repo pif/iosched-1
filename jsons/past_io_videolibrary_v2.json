@@ -1,0 +1,174 @@
+{
+    "video_library": [
+        {
+            "id": "VFje117Ck7g",
+            "speakers": "Oriol Jiménez",
+            "vid": "VFje117Ck7g",
+            "title": "Thinking of CPU & Memory (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/VFje117Ck7g/hqdefault.jpg",
+            "desc": "Thinking of CPU & Memory by Oriol Jiménez (Antena Produccions SL)"
+        },
+        {
+            "id": "sltjT72PoTk",
+            "speakers": "Alexis Moussine-Pouchkine",
+            "vid": "sltjT72PoTk",
+            "title": "Mobile Backend Starter (FR)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/sltjT72PoTk/hqdefault.jpg",
+            "desc": "Mobile Backend Starter by Alexis Moussine-Pouchkine (Google)"
+        },
+        {
+            "id": "PzwhZrTvHVA",
+            "speakers": "Dominique Guinard",
+            "vid": "PzwhZrTvHVA",
+            "title": "Internet of things Barcodes, QRs, NFC, EPC & Arduino (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/PzwhZrTvHVA/hqdefault.jpg",
+            "desc": "Internet of things Barcodes, QRs, NFC, EPC & Arduino by Dominique Guinard (EVRYTHNG)"
+        },
+        {
+            "id": "EEUyO7hqJLU",
+            "speakers": "Sylvain Galand",
+            "vid": "EEUyO7hqJLU",
+            "title": "Hack and protect your app (FR)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/EEUyO7hqJLU/hqdefault.jpg",
+            "desc": "Développeurs, hackez et protégez vos applications par Sylvain Galand (Genymobile)"
+        },
+        {
+            "id": "BgP-QjjWCfA",
+            "speakers": "Cédric Cabessa",
+            "vid": "BgP-QjjWCfA",
+            "title": "Discover embeded Linux with Android (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/BgP-QjjWCfA/hqdefault.jpg",
+            "desc": "Discover embeded Linux with Android by Cédric Cabessa (Genymobile)"
+        },
+        {
+            "id": "QVcXUi37AQY",
+            "speakers": "Paul Lammertsma",
+            "vid": "QVcXUi37AQY",
+            "title": "Make It Fit, how Android measures and draws views (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/QVcXUi37AQY/hqdefault.jpg",
+            "desc": "Make It Fit, how Android measures and draws views by Paul Lammertsma (Pixplicity)"
+        },
+        {
+            "id": "ikqmL8jpOcQ",
+            "speakers": "Johan Henricson",
+            "vid": "ikqmL8jpOcQ",
+            "title": "Best Practices For Boostraping your app's User Interface (EN)",
+            "topic": "UI/UX",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/ikqmL8jpOcQ/hqdefault.jpg",
+            "desc": "Best Practices For Boostraping your app's User Interface by Johan Henricson (Sony)"
+        },
+        {
+            "id": "eYhhCYjwjOs",
+            "speakers": "Cédric Ravalec, Daniel Fages",
+            "vid": "eYhhCYjwjOs",
+            "title": "Genymotion (EN)",
+            "topic": "Product announcement",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/eYhhCYjwjOs/hqdefault.jpg",
+            "desc": "Genymotion, new Android emulator by Cédric Ravalec & Daniel Fages (Genymobile)"
+        },
+        {
+            "id": "fToroqYJWG0",
+            "speakers": "Mark Kirstein",
+            "vid": "fToroqYJWG0",
+            "title": "Sneak peek preview of RhoMobile suite v4 (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/fToroqYJWG0/hqdefault.jpg",
+            "desc": "Sneak peek preview of RhoMobile suite v4 by Mark Kirstein (Motorola Solutions)"
+        },
+        {
+            "id": "UBHz-noN60I",
+            "speakers": "Benjamin Zores",
+            "vid": "UBHz-noN60I",
+            "title": "Android Plateform Anatomy (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/UBHz-noN60I/hqdefault.jpg",
+            "desc": "Android Plateform Anatomy by by Benjamin Zores (Alcatel-Lucent)"
+        },
+        {
+            "id": "po3gtCfLqd8",
+            "speakers": "Mathieu Hausherr, Aurelien Rambaux",
+            "vid": "po3gtCfLqd8",
+            "title": "Donnez le pouvoir a votre PO (FR)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/po3gtCfLqd8/hqdefault.jpg",
+            "desc": "Donnez le pouvoir de build a votre PO by Mathieu Hausherr (Octo Technology) & Aurelien Rambaux (Octo Technology)"
+        },
+        {
+            "id": "8btE35YYk5o",
+            "speakers": "Tim Messerschmidt",
+            "vid": "8btE35YYk5o",
+            "title": "Paypal's new Android SDK (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/8btE35YYk5o/hqdefault.jpg",
+            "desc": "PayPal's new Android SDK -- kicking ass with payments by Tim Messerschmidt (PayPal)"
+        },
+        {
+            "id": "bfaUN9Bk06o",
+            "speakers": "Eyal Lezmy",
+            "vid": "bfaUN9Bk06o",
+            "title": "Secure your app, fight the leaks (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/bfaUN9Bk06o/hqdefault.jpg",
+            "desc": "Secure your app, fight the leaks by Eyal Lezmy"
+        },
+        {
+            "id": "8kRbcNIfKaQ",
+            "speakers": "Olivier Gonthier",
+            "vid": "8kRbcNIfKaQ",
+            "title": "Android Testing (FR)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/8kRbcNIfKaQ/hqdefault.jpg",
+            "desc": "Android Testing by Olivier Gonthier (Zenika)"
+        },
+        {
+            "id": "YIArVywQe8k",
+            "speakers": "Cyril Mottier",
+            "vid": "YIArVywQe8k",
+            "title": "Crafting Custom Android Views (EN)",
+            "topic": "Dev",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/YIArVywQe8k/hqdefault.jpg",
+            "desc": "Crafting Custom Android Views by Cyril Mottier (Capitaine Train)"
+        },
+        {
+            "id": "zcSm7rsBnF0",
+            "speakers": "Peter van der Linden",
+            "vid": "zcSm7rsBnF0",
+            "title": "It's all Fun & Games on Android (EN)",
+            "topic": "Games",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/zcSm7rsBnF0/hqdefault.jpg",
+            "desc": "It's all Fun and Games on Android -- game coding without tears by Peter van der Linden (Immersion)"
+        },
+        {
+            "id": "cSGHecvZhuQ",
+            "speakers": "Alain Régnier",
+            "vid": "cSGHecvZhuQ",
+            "title": "Introduction à Google Glass (FR)",
+            "topic": "Google Glass",
+            "year": 2013,
+            "thumbnailUrl": "http://img.youtube.com/vi/cSGHecvZhuQ/hqdefault.jpg",
+            "desc": "Conférence d'introduction à Google Glass, réalisée pendant la Droidcon Paris 2013 par Alain Regnier le premier GlassExplorer français"
+        }
+    ]
+}
