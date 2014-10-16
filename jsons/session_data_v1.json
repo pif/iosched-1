@@ -14,7 +14,7 @@
             "hashtag": "keynote",
             "isLivestream": false,
             "captionsUrl": "",
-            "room": "auditorium",
+            "room": "blue",
             "speakers": [
                 "aliparr"
             ],
@@ -37,7 +37,7 @@
             "hashtag": "",
             "isLivestream": false,
             "captionsUrl": "",
-            "room": "leparisien",
+            "room": "red",
             "speakers": [
                 "janchong"
             ],
@@ -61,7 +61,7 @@
             "hashtag": "",
             "isLivestream": false,
             "captionsUrl": "",
-            "room": "salon",
+            "room": "art",
             "speakers": [
                 "maleev"
             ],
