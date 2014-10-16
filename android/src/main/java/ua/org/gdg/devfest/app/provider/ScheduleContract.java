@@ -435,7 +435,7 @@ public class ScheduleContract {
                 "vnd.android.cursor.item/vnd.devfestua2014.tag";
 
         /** Default "ORDER BY" clause. */
-        public static final String DEFAULT_SORT = TagsColumns.TAG_ORDER_IN_CATEGORY;
+        public static final String DEFAULT_SORT = TagsColumns.TAG_ORDER_IN_CATEGORY + " ASC";
 
         /**
          * Build {@link Uri} that references all tags.

@@ -29,10 +29,19 @@
         },
         {
             "category": "TYPE",
+            "name": "English",
+            "color": "",
+            "abstract": "",
+            "tag": "LANG_EN",
+            "originalid": "english",
+            "orderincategory": 1
+        },
+        {
+            "category": "TYPE",
             "name": "Ukrainian",
             "color": "",
             "abstract": "",
-            "tag": "THEME_UK",
+            "tag": "LANG_UK",
             "originalid": "ukrainian",
             "orderincategory": 2
         },
@@ -41,18 +50,9 @@
             "name": "Russian",
             "color": "",
             "abstract": "",
-            "tag": "THEME_RU",
+            "tag": "LANG_RU",
             "originalid": "russian",
-            "orderincategory": 2
-        },
-        {
-            "category": "TYPE",
-            "name": "English",
-            "color": "",
-            "abstract": "",
-            "tag": "THEME_EN",
-            "originalid": "english",
-            "orderincategory": 2
+            "orderincategory": 3
         },
         {
             "category": "THEME",

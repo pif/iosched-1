@@ -3,26 +3,20 @@
         {
             "color": "#303f9f",
             "order": 1,
-            "name": "#droidconparis",
-            "description": "Follow the general Google+ social conversation happening around Droidcon Paris"
+            "name": "#dfua",
+            "description": "Follow the general Google+ social conversation happening around GDG DevFest"
         },
         {
             "color": "#303f9f",
             "order": 2,
-            "name": "#droidcon",
-            "description": "Follow the general Google+ social conversation happening around Droidcon"
+            "name": "#gdg",
+            "description": "Follow the general Google+ social conversation happening around GDG"
         },
         {
             "color": "#303f9f",
             "order": 3,
-            "name": "#paug",
-            "description": "Follow the general Google+ social conversation happening around Paris Android User Group"
-        },
-        {
-            "color": "#303f9f",
-            "order": 4,
-            "name": "#bemyapp",
-            "description": "Follow the general Google+ social conversation happening around BeMyApp"
+            "name": "#gdglviv",
+            "description": "Follow the general Google+ social conversation happening around GDG Lviv"
         }
     ]
 }

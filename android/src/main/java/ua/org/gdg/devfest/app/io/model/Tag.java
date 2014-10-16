@@ -25,5 +25,5 @@ public class Tag {
     public String color;
     @SerializedName("abstract")
     public String _abstract;
-    public int order_in_category;
+    public int orderincategory;
 }

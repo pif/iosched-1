@@ -22,13 +22,14 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import ua.org.gdg.devfest.app.io.model.Tag;
-import ua.org.gdg.devfest.app.provider.ScheduleContract;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import ua.org.gdg.devfest.app.io.model.Tag;
+import ua.org.gdg.devfest.app.provider.ScheduleContract;
 
 import static ua.org.gdg.devfest.app.util.LogUtils.makeLogTag;
 
@@ -60,7 +61,7 @@ public class TagsHandler extends JSONHandler {
             builder.withValue(ScheduleContract.Tags.TAG_ID, tag.tag);
             builder.withValue(ScheduleContract.Tags.TAG_CATEGORY, tag.category);
             builder.withValue(ScheduleContract.Tags.TAG_NAME, tag.name);
-            builder.withValue(ScheduleContract.Tags.TAG_ORDER_IN_CATEGORY, tag.order_in_category);
+            builder.withValue(ScheduleContract.Tags.TAG_ORDER_IN_CATEGORY, tag.orderincategory);
             builder.withValue(ScheduleContract.Tags.TAG_ABSTRACT, tag._abstract);
             builder.withValue(ScheduleContract.Tags.TAG_COLOR, TextUtils.isEmpty(tag.color) ?
                     Color.LTGRAY : Color.parseColor(tag.color));

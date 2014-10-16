@@ -20,7 +20,11 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.ListFragment;
 import android.app.LoaderManager;
-import android.content.*;
+import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Intent;
+import android.content.Loader;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,7 +43,15 @@ import android.view.ViewParent;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.bumptech.glide.GenericRequestBuilder;
+import com.bumptech.glide.ListPreloader;
+
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.TimeZone;
 
 import ua.org.gdg.devfest.app.Config;
 import ua.org.gdg.devfest.app.R;
@@ -48,18 +60,18 @@ import ua.org.gdg.devfest.app.provider.ScheduleContract;
 import ua.org.gdg.devfest.app.ui.widget.CollectionView;
 import ua.org.gdg.devfest.app.ui.widget.CollectionViewCallbacks;
 import ua.org.gdg.devfest.app.ui.widget.MessageCardView;
-import ua.org.gdg.devfest.app.util.*;
+import ua.org.gdg.devfest.app.util.ImageLoader;
+import ua.org.gdg.devfest.app.util.PrefUtils;
+import ua.org.gdg.devfest.app.util.ThrottledContentObserver;
+import ua.org.gdg.devfest.app.util.TimeUtils;
+import ua.org.gdg.devfest.app.util.UIUtils;
+import ua.org.gdg.devfest.app.util.WiFiUtils;
 
-import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.TimeZone;
-
-import com.bumptech.glide.GenericRequestBuilder;
-import com.bumptech.glide.ListPreloader;
-
-import static ua.org.gdg.devfest.app.util.LogUtils.*;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGD;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGE;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGV;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGW;
+import static ua.org.gdg.devfest.app.util.LogUtils.makeLogTag;
 import static ua.org.gdg.devfest.app.util.UIUtils.buildStyledSnippet;
 
 /**
@@ -75,11 +87,17 @@ public class SessionsFragment extends Fragment implements
     private static final String STATE_SESSION_QUERY_TOKEN = "session_query_token";
     private static final String STATE_ARGUMENTS = "arguments";
 
-    /** The handler message for updating the search query. */
+    /**
+     * The handler message for updating the search query.
+     */
     private static final int MESSAGE_QUERY_UPDATE = 1;
-    /** The delay before actual requerying in millisecs. */
+    /**
+     * The delay before actual requerying in millisecs.
+     */
     private static final int QUERY_UPDATE_DELAY_MILLIS = 100;
-    /** The number of rows ahead to preload images for */
+    /**
+     * The number of rows ahead to preload images for
+     */
     private static final int ROWS_TO_PRELOAD = 2;
 
     private static final int ANIM_DURATION = 250;
@@ -199,15 +217,18 @@ public class SessionsFragment extends Fragment implements
 
     public interface Callbacks {
         public void onSessionSelected(String sessionId, View clickedView);
+
         public void onTagMetadataLoaded(TagMetadata metadata);
     }
 
     private static Callbacks sDummyCallbacks = new Callbacks() {
         @Override
-        public void onSessionSelected(String sessionId, View clickedView) {}
+        public void onSessionSelected(String sessionId, View clickedView) {
+        }
 
         @Override
-        public void onTagMetadataLoaded(TagMetadata metadata) {}
+        public void onTagMetadataLoaded(TagMetadata metadata) {
+        }
     };
 
     private Callbacks mCallbacks = sDummyCallbacks;
@@ -404,7 +425,7 @@ public class SessionsFragment extends Fragment implements
         }
 
         int token = loader.getId();
-        LOGD(TAG, "Loader finished: "  + (token == SessionsQuery.NORMAL_TOKEN ? "sessions" :
+        LOGD(TAG, "Loader finished: " + (token == SessionsQuery.NORMAL_TOKEN ? "sessions" :
                 token == SessionsQuery.SEARCH_TOKEN ? "search" : token == TAG_METADATA_TOKEN ? "tags" :
                         "unknown"));
         if (token == SessionsQuery.NORMAL_TOKEN || token == SessionsQuery.SEARCH_TOKEN) {
@@ -749,7 +770,6 @@ public class SessionsFragment extends Fragment implements
                 "photo_" + sessionId);
 
 
-
         // when we load a photo, it will fade in from transparent so the
         // background of the container must be the session color to avoid a white flash
         ViewParent parent = photoView.getParent();
@@ -831,16 +851,15 @@ public class SessionsFragment extends Fragment implements
         indicatorInSchedule.setVisibility(starred ? View.VISIBLE
                 : View.INVISIBLE);
 
-        if(starred)
-        {
+        if (starred) {
             int resId = R.drawable.indicator_in_schedule;
-            if(mainTag.equals(SessionDetailFragment.TOPIC_EVERYWHERE))
+            if (mainTag.equals(SessionDetailFragment.TOPIC_EVERYWHERE))
                 resId = R.drawable.indicator_in_schedule_red;
-            else if(mainTag.equals(SessionDetailFragment.TOPIC_DEVELOPMENT))
+            else if (mainTag.equals(SessionDetailFragment.TOPIC_DEVELOPMENT))
                 resId = R.drawable.indicator_in_schedule_blue;
-            else if(mainTag.equals(SessionDetailFragment.TOPIC_UI_UX))
+            else if (mainTag.equals(SessionDetailFragment.TOPIC_UI_UX))
                 resId = R.drawable.indicator_in_schedule_amber;
-            else if(mainTag.equals(SessionDetailFragment.TOPIC_OTHER))
+            else if (mainTag.equals(SessionDetailFragment.TOPIC_OTHER))
                 resId = R.drawable.indicator_in_schedule_indigo;
 
             indicatorInSchedule.setImageResource(resId);
@@ -953,7 +972,7 @@ public class SessionsFragment extends Fragment implements
 
         public void setDimens(int width, int height) {
             if (photoDimens == null) {
-                photoDimens = new int[] { width, height };
+                photoDimens = new int[]{width, height};
             }
         }
 

@@ -22,10 +22,14 @@ import android.database.Cursor;
 import android.provider.BaseColumns;
 import android.text.TextUtils;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+
 import ua.org.gdg.devfest.app.Config;
 import ua.org.gdg.devfest.app.provider.ScheduleContract;
-
-import java.util.*;
 
 public class TagMetadata {
 
@@ -37,7 +41,7 @@ public class TagMetadata {
 
     public static CursorLoader createCursorLoader(Context context) {
         return new CursorLoader(context, ScheduleContract.Tags.CONTENT_URI, TagsQuery.PROJECTION,
-                null, null, null);
+                null, null, ScheduleContract.Tags.DEFAULT_SORT);
     }
 
     public TagMetadata(Cursor cursor) {

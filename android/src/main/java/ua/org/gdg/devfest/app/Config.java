@@ -162,13 +162,13 @@ public class Config {
         // tag that indicates a session is a live session
         public static final String SESSIONS = "TYPE_SESSIONS";
 
-        // the tag category that we use to group sessions together when displaying them
-        public static final String SESSION_GROUPING_TAG_CATEGORY = "TYPE";
-
         // tag categories
-        public static final String CATEGORY_THEME = "THEME";
-        public static final String CATEGORY_TOPIC = "TOPIC";
-        public static final String CATEGORY_TYPE = "TYPE";
+        public static final String CATEGORY_THEME = "THEME"; // complexity
+        public static final String CATEGORY_TOPIC = "TOPIC"; // track
+        public static final String CATEGORY_TYPE = "TYPE";   // language
+
+        // the tag category that we use to group sessions together when displaying them
+        public static final String SESSION_GROUPING_TAG_CATEGORY = CATEGORY_THEME;
 
         public static final Map<String, Integer> CATEGORY_DISPLAY_ORDERS
                 = new HashMap<String, Integer>();

@@ -255,8 +255,8 @@ public class SessionsHandler extends JSONHandler {
             }
             Tag tag = mTagMap.get(tagId);
             if (tag != null && Config.Tags.SESSION_GROUPING_TAG_CATEGORY.equals(tag.category)) {
-                if (tag.order_in_category < order) {
-                    order = tag.order_in_category;
+                if (tag.orderincategory < order) {
+                    order = tag.orderincategory;
                 }
             }
         }

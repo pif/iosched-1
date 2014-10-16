@@ -440,7 +440,7 @@ public abstract class BaseActivity extends Activity implements
         // Other items that are always in the nav drawer irrespective of whether the
         // attendee is on-site or remote:
 //        mNavDrawerItems.add(NAVDRAWER_ITEM_SOCIAL);
-        mNavDrawerItems.add(NAVDRAWER_ITEM_VIDEO_LIBRARY);
+//        mNavDrawerItems.add(NAVDRAWER_ITEM_VIDEO_LIBRARY);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SPONSORS);
         mNavDrawerItems.add(NAVDRAWER_ITEM_DIRECTIONS);
 
@@ -805,7 +805,7 @@ public abstract class BaseActivity extends Activity implements
                 finish();
                 break;
             case NAVDRAWER_ITEM_DIRECTIONS:
-                String uri = "geo:48.8719444,2.3572243?q=67+Rue+du+Faubourg+Saint-Martin,+75010+Paris";
+                String uri = "geo:49.843293,24.028718?q=ulitsa+Teatralnaya,+22,+Lvov";
                 startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
                 break;
         }

@@ -23,13 +23,21 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.crashlytics.android.Crashlytics;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import ua.org.gdg.devfest.app.Config;
 import ua.org.gdg.devfest.app.R;
 import ua.org.gdg.devfest.app.model.TagMetadata;
@@ -40,10 +48,10 @@ import ua.org.gdg.devfest.app.util.AnalyticsManager;
 import ua.org.gdg.devfest.app.util.PrefUtils;
 import ua.org.gdg.devfest.app.util.UIUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static ua.org.gdg.devfest.app.util.LogUtils.*;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGD;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGE;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGW;
+import static ua.org.gdg.devfest.app.util.LogUtils.makeLogTag;
 
 public class BrowseSessionsActivity extends BaseActivity implements SessionsFragment.Callbacks {
     private static final String TAG = makeLogTag(BrowseSessionsActivity.class);
