@@ -2,39 +2,30 @@
     "tags": [
         {
             "category": "TOPIC",
-            "name": "Development",
-            "color": "#A4C739",
+            "name": "Android",
+            "color": "#90be4e",
             "abstract": "",
-            "tag": "TOPIC_DEVELOPMENT",
-            "originalid": "development",
+            "tag": "TOPIC_ANDROID",
+            "originalid": "android",
             "orderincategory": 1
         },
         {
             "category": "TOPIC",
-            "name": "Android Everywhere",
-            "color": "#03A9F4",
+            "name": "Web & Cloud",
+            "color": "#03a9f4",
             "abstract": "",
-            "tag": "TOPIC_EVERYWHERE",
-            "originalid": "everywhere",
+            "tag": "TOPIC_WEB",
+            "originalid": "web",
             "orderincategory": 2
         },
         {
             "category": "TOPIC",
-            "name": "UI/UX",
-            "color": "#E91E63",
+            "name": "Community",
+            "color": "#e91e63",
             "abstract": "",
-            "tag": "TOPIC_UI_UX",
-            "originalid": "uiux",
+            "tag": "TOPIC_COMMUNITY",
+            "originalid": "community",
             "orderincategory": 3
-        },
-        {
-            "category": "TOPIC",
-            "name": "Other",
-            "color": "#FFC107",
-            "abstract": "",
-            "tag": "TOPIC_OTHER",
-            "originalid": "other",
-            "orderincategory": 4
         },
         {
             "category": "TYPE",
