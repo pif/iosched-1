@@ -168,7 +168,7 @@ public class Config {
         public static final String CATEGORY_TYPE = "TYPE";   // language
 
         // the tag category that we use to group sessions together when displaying them
-        public static final String SESSION_GROUPING_TAG_CATEGORY = CATEGORY_THEME;
+        public static final String SESSION_GROUPING_TAG_CATEGORY = CATEGORY_TOPIC;
 
         public static final Map<String, Integer> CATEGORY_DISPLAY_ORDERS
                 = new HashMap<String, Integer>();
@@ -176,14 +176,14 @@ public class Config {
         public static final String SPECIAL_KEYNOTE = "FLAG_KEYNOTE";
 
         public static final String[] EXPLORE_CATEGORIES =
-                { CATEGORY_THEME, CATEGORY_TOPIC, CATEGORY_TYPE };
+                { CATEGORY_TOPIC, CATEGORY_TYPE, CATEGORY_THEME };
 
         public static final int[] EXPLORE_CATEGORY_ALL_STRING = {
-                R.string.all_themes, R.string.all_topics, R.string.all_types
+                R.string.all_topics, R.string.all_types, R.string.all_themes
         };
 
         public static final int[] EXPLORE_CATEGORY_TITLE = {
-                R.string.themes, R.string.topics, R.string.types
+                R.string.topics, R.string.types, R.string.themes
         };
     }
 
