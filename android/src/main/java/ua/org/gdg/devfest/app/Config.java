@@ -81,7 +81,7 @@ public class Config {
     public static final String ANNOUNCEMENTS_PLUS_ID = "";
 
     // YouTube API config
-    public static final String YOUTUBE_API_KEY = "AIzaSyDplZamhjNleiDRGHlWGGIMOPP9a_ogHRM";
+    public static final String YOUTUBE_API_KEY = "AIzaSyCTGNEA2CJpCN1LjAmZAjjubO5WpoQCyFc";
 
     // YouTube share URL
     public static final String YOUTUBE_SHARE_URL_PREFIX = "http://youtu.be/";
@@ -188,9 +188,9 @@ public class Config {
     }
 
     static {
-        Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_THEME, 0);
-        Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_TOPIC, 1);
-        Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_TYPE, 2);
+        Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_TOPIC, 0);
+        Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_TYPE, 1);
+        Tags.CATEGORY_DISPLAY_ORDERS.put(Tags.CATEGORY_THEME, 2);
     }
 
     private static String piece(String s, char start, char end) {

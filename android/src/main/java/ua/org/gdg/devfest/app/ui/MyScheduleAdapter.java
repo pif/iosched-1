@@ -28,18 +28,28 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.AbsListView;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 import ua.org.gdg.devfest.app.Config;
 import ua.org.gdg.devfest.app.R;
 import ua.org.gdg.devfest.app.model.ScheduleItem;
 import ua.org.gdg.devfest.app.provider.ScheduleContract;
-import ua.org.gdg.devfest.app.util.*;
+import ua.org.gdg.devfest.app.util.AnalyticsManager;
+import ua.org.gdg.devfest.app.util.ImageLoader;
+import ua.org.gdg.devfest.app.util.LPreviewUtilsBase;
+import ua.org.gdg.devfest.app.util.TimeUtils;
+import ua.org.gdg.devfest.app.util.UIUtils;
 
-import java.util.ArrayList;
-import java.util.Date;
-
-import static ua.org.gdg.devfest.app.util.LogUtils.*;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGD;
+import static ua.org.gdg.devfest.app.util.LogUtils.LOGE;
+import static ua.org.gdg.devfest.app.util.LogUtils.makeLogTag;
 
 /**
  * Adapter that produces views to render (one day of) the "My Schedule" screen.
@@ -143,6 +153,7 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
 
         TextView startTimeView = null;
         TextView endTimeView = null;
+        View sessionView = null;
 
         int itemViewType = getItemViewType(position);
         boolean isNowPlaying = false;
@@ -167,24 +178,7 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             view.setTag(TAG_ID_FOR_VIEW_TYPE, itemViewType);
             // Use one listener per view, so when the view is recycled, the listener is reused as
             // well. Use the View tag as a container for the destination Uri.
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Object tag = v.getTag(R.id.myschedule_uri_tagkey);
-                    if (tag != null && tag instanceof Uri) {
-                        Uri uri = (Uri) tag;
-                        /* [ANALYTICS:EVENT]
-                         * TRIGGER:   Select a slot on My Agenda
-                         * CATEGORY:  'My Schedule'
-                         * ACTION:    'selectslot'
-                         * LABEL:     URI indicating session ID or time interval of slot.
-                         * [/ANALYTICS]
-                         */
-                        AnalyticsManager.sendEvent("My Schedule", "selectslot", uri.toString());
-                        mContext.startActivity(new Intent(Intent.ACTION_VIEW, uri));
-                    }
-                }
-            });
+            view.setOnClickListener(createViewOnClickListener());
         }
 
         if (position < 0 || position >= mItems.size()) {
@@ -255,6 +249,12 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
         }
 
         view.setTag(R.id.myschedule_uri_tagkey, null);
+        sessionView = view.findViewById(R.id.box);
+        if (sessionView != null) {
+            sessionView.setOnClickListener(null);
+            sessionView.setTag(R.id.myschedule_uri_tagkey, null);
+        }
+
         if (item.type == ScheduleItem.FREE) {
             view.getLayoutParams().height = isPastDuringConference ? heightPast : heightNormal;
             boxView.setBackgroundResource(R.drawable.schedule_item_free);
@@ -267,6 +267,14 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             if (slotSubtitleView != null) {
                 slotSubtitleView.setText(item.subtitle);
                 slotSubtitleView.setTextColor(res.getColor(R.color.body_text_2));
+            }
+
+
+            if (sessionView != null) {
+                sessionView.setOnClickListener(createViewOnClickListener());
+                Uri uri = ScheduleContract.Sessions.buildUnscheduledSessionsInInterval(
+                        item.startTime, item.endTime);
+                sessionView.setTag(R.id.myschedule_uri_tagkey, uri);
             }
             Uri uri = ScheduleContract.Sessions.buildUnscheduledSessionsInInterval(
                     item.startTime, item.endTime);
@@ -284,6 +292,11 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             if (slotSubtitleView != null) {
                 slotSubtitleView.setText(item.subtitle);
                 slotSubtitleView.setTextColor(res.getColor(R.color.body_text_2));
+            }
+
+            if (sessionView != null) {
+                sessionView.setOnClickListener(null);
+                sessionView.setTag(R.id.myschedule_uri_tagkey, null);
             }
 
         } else if (item.type == ScheduleItem.SESSION) {
@@ -317,8 +330,17 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
                 slotSubtitleView.setText(item.subtitle);
                 slotSubtitleView.setTextColor(res.getColor(R.color.body_text_2_inverse));
             }
-            view.setTag(R.id.myschedule_uri_tagkey,
-                    ScheduleContract.Sessions.buildSessionUri(item.sessionId));
+
+            if (sessionView != null) {
+                sessionView.setOnClickListener(createViewOnClickListener());
+                // session rectangle opens session info
+                sessionView.setTag(R.id.myschedule_uri_tagkey,
+                        ScheduleContract.Sessions.buildSessionUri(item.sessionId));
+            }
+            // whole block opens other sessions
+            Uri uri = ScheduleContract.Sessions.buildUnscheduledSessionsInInterval(
+                    item.startTime, item.endTime);
+            view.setTag(R.id.myschedule_uri_tagkey, uri);
 
             // show or hide the "LIVE NOW" badge
             if (liveNowBadge != null) {
@@ -345,6 +367,27 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
         }
 
         return view;
+    }
+
+    private View.OnClickListener createViewOnClickListener() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Object tag = v.getTag(R.id.myschedule_uri_tagkey);
+                if (tag != null && tag instanceof Uri) {
+                    Uri uri = (Uri) tag;
+                        /* [ANALYTICS:EVENT]
+                         * TRIGGER:   Select a slot on My Agenda
+                         * CATEGORY:  'My Schedule'
+                         * ACTION:    'selectslot'
+                         * LABEL:     URI indicating session ID or time interval of slot.
+                         * [/ANALYTICS]
+                         */
+                    AnalyticsManager.sendEvent("My Schedule", "selectslot", uri.toString());
+                    mContext.startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                }
+            }
+        };
     }
 
     @Override

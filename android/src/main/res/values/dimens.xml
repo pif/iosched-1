@@ -127,5 +127,6 @@
     <dimen name="social_hz_margin">0dp</dimen>
     <dimen name="hashtag_text_size">14sp</dimen>
     <dimen name="hashtag_hero_text_size">45sp</dimen>
+    <dimen name="my_schedule_item_text_top_padding">12dp</dimen>
 
 </resources>

@@ -44,7 +44,8 @@
         android:paddingLeft="@dimen/keyline_1"
         android:paddingRight="@dimen/keyline_1"
         android:orientation="horizontal"
-        android:layout_height="@dimen/my_schedule_item_height"
+        android:minHeight="@dimen/my_schedule_item_height"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
         <!-- Start and end times -->
@@ -93,12 +94,13 @@
             <TextView
                 android:id="@+id/slot_title"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="wrap_content"
                 android:gravity="bottom"
                 android:text="@string/placeholder_session_title"
                 android:textSize="@dimen/text_size_large"
                 android:ellipsize="end"
-                android:maxLines="1" />
+                android:paddingTop="@dimen/my_schedule_item_text_top_padding"
+                />
 
             <TextView
                 android:id="@+id/slot_subtitle"
