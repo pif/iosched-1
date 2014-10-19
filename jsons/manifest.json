@@ -1,7 +1,7 @@
 {
     "format": "iosched-json-v1",
     "data_files": [
-        "blocks_v10.json",
+        "blocks_v1.json",
         "hashtags_v2.json",
         "partners_v1.json",
         "past_io_videolibrary_v2.json",

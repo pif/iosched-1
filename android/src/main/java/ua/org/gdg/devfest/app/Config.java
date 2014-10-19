@@ -55,11 +55,11 @@ public class Config {
 
     public static final long[][] CONFERENCE_DAYS = new long[][] {
             // start and end of day 1
-            { ParserUtils.parseTime("2014-10-24T06:30:00.000Z"),
-              ParserUtils.parseTime("2014-10-24T06:29:59.999Z") },
+            { ParserUtils.parseTime("2014-10-24T06:00:00.000Z"),
+              ParserUtils.parseTime("2014-10-24T23:59:59.999Z") },
             // start and end of day 2
-            { ParserUtils.parseTime("2014-10-25T06:30:00.000Z"),
-              ParserUtils.parseTime("2014-10-25T06:59:59.999Z") },
+            { ParserUtils.parseTime("2014-10-25T06:00:00.000Z"),
+              ParserUtils.parseTime("2014-10-25T23:59:59.999Z") },
         };
 
     public static final TimeZone CONFERENCE_TIMEZONE = TimeZone.getTimeZone("Europe/Kiev");

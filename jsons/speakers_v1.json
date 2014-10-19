@@ -296,6 +296,17 @@
             "website": "https://www.linkedin.com/in/moravskiy",
             "twitter": "",
             "thumbnailUrl": "http://devfest.gdg.org.ua/img/people/NazarMoravskyi.jpg"
+        },
+        {
+            "id": 29,
+            "bio": "Google, Head of Marketing, Ukraine and CIS",
+            "name": "Svyatoslav Komakha",
+            "company": "Google",
+            "title": "Head of Marketing, Ukraine and CIS",
+            "plusoneUrl": "https://plus.google.com/+SvyatoslavKomakha",
+            "website": "https://www.linkedin.com/in/komakha",
+            "twitter": "",
+            "thumbnailUrl": "http://devfest.gdg.org.ua/img/people/SvyatoslavKomakha.jpg"
         }
     ]
 }
