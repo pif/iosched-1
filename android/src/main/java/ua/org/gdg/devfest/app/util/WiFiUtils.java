@@ -16,6 +16,7 @@
 
 package ua.org.gdg.devfest.app.util;
 
+import android.annotation.SuppressLint;
 import android.app.*;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -158,6 +159,7 @@ public class WiFiUtils {
 
         public WiFiDialog() {}
 
+        @SuppressLint("ValidFragment")
         public WiFiDialog(boolean wifiEnabled) {
             super();
             mWiFiEnabled = wifiEnabled;
