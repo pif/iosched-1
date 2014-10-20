@@ -45,7 +45,7 @@ android {
     defaultConfig lpreview ? {} : {
         // Non-L-preview configuration
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 21
     }
 
     signingConfigs {
