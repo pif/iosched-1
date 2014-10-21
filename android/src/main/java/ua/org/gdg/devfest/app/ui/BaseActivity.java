@@ -950,10 +950,10 @@ public abstract class BaseActivity extends Activity implements
         super.onStart();
 
         // Perform one-time bootstrap setup, if needed
-//        if (!PrefUtils.isDataBootstrapDone(this) && mDataBootstrapThread == null) {
-//            LOGD(TAG, "One-time data bootstrap not done yet. Doing now.");
+        if (!PrefUtils.isDataBootstrapDone(this) && mDataBootstrapThread == null) {
+            LOGD(TAG, "One-time data bootstrap not done yet. Doing now.");
             performDataBootstrap();
-//        }
+        }
 
         startLoginProcess();
     }
