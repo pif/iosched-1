@@ -170,6 +170,9 @@ public class Config {
         // the tag category that we use to group sessions together when displaying them
         public static final String SESSION_GROUPING_TAG_CATEGORY = CATEGORY_TOPIC;
 
+        // the tag category that is shown in top left corner of the sesion card
+        public static final String SESSION_CARD_TAG_CATEGORY = CATEGORY_TYPE;
+
         public static final Map<String, Integer> CATEGORY_DISPLAY_ORDERS
                 = new HashMap<String, Integer>();
 

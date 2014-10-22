@@ -80,7 +80,22 @@ public class TagMetadata {
         for (String tagId : sessionTags) {
             Tag tag = getTag(tagId);
             if (tag != null && Config.Tags.SESSION_GROUPING_TAG_CATEGORY.equals(tag.getCategory()) &&
-                        tag.getOrderInCategory() < bestOrder) {
+                    tag.getOrderInCategory() < bestOrder) {
+                bestOrder = tag.getOrderInCategory();
+                bestTag = tag;
+            }
+        }
+        return bestTag;
+    }
+
+    /** Given the set of tags on a session, returns its group label. */
+    public Tag getSessionCardTag(String[] sessionTags) {
+        int bestOrder = Integer.MAX_VALUE;
+        Tag bestTag = null;
+        for (String tagId : sessionTags) {
+            Tag tag = getTag(tagId);
+            if (tag != null && Config.Tags.SESSION_CARD_TAG_CATEGORY.equals(tag.getCategory()) &&
+                    tag.getOrderInCategory() < bestOrder) {
                 bestOrder = tag.getOrderInCategory();
                 bestTag = tag;
             }

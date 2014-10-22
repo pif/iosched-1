@@ -802,9 +802,9 @@ public class SessionsFragment extends Fragment implements
 
         // render category
         if (categoryView != null) {
-            TagMetadata.Tag groupTag = mTagMetadata.getSessionGroupTag(tags);
-            if (groupTag != null && !Config.Tags.SESSIONS.equals(groupTag.getId())) {
-                categoryView.setText(groupTag.getName());
+            TagMetadata.Tag cardTag = mTagMetadata.getSessionCardTag(tags);
+            if (cardTag != null && !Config.Tags.SESSIONS.equals(cardTag.getId())) {
+                categoryView.setText(cardTag.getName());
                 categoryView.setVisibility(View.VISIBLE);
             } else {
                 categoryView.setVisibility(View.GONE);
