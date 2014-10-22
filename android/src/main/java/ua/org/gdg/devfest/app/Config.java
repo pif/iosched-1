@@ -33,11 +33,11 @@ public class Config {
     public static final String DOGFOOD_BUILD_WARNING_TEXT = "This is a test build.";
 
     // Public data manifest URL
-    public static final String PROD_CONFERENCE_DATA_MANIFEST_URL = "http://droidcon.parseapp.com/manifest.json";
+    public static final String PROD_CONFERENCE_DATA_MANIFEST_URL = "http://devfest.gdg.org.ua/app/manifest.json";
     public static final String PREPROD_CONFERENCE_DATA_MANIFEST_URL = "http://andrusiv.com/df/manifest.json";
 
     // Manifest URL override for Debug (staging) builds:
-    public static final String MANIFEST_URL = PREPROD_CONFERENCE_DATA_MANIFEST_URL;
+    public static final String MANIFEST_URL = PROD_CONFERENCE_DATA_MANIFEST_URL;
 
     public static final String BOOTSTRAP_DATA_TIMESTAMP = "Thu, 10 Apr 2014 00:01:03 GMT";
 
