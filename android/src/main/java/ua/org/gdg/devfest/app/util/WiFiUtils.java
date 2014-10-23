@@ -17,7 +17,13 @@
 package ua.org.gdg.devfest.app.util;
 
 import android.annotation.SuppressLint;
-import android.app.*;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -33,10 +39,10 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 import ua.org.gdg.devfest.app.Config;
 import ua.org.gdg.devfest.app.R;
-
-import java.util.List;
 
 import static ua.org.gdg.devfest.app.util.LogUtils.makeLogTag;
 
@@ -49,6 +55,12 @@ public class WiFiUtils {
     private static final String TAG = makeLogTag(WiFiUtils.class);
 
     public static void installConferenceWiFi(final Context context) {
+        final WifiManager wifiManager =
+                (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        // without this line .addNetwork always returns -1 if wifi is disabled
+        boolean wifiBefore = wifiManager.isWifiEnabled();
+        wifiManager.setWifiEnabled(true);
+
         // Create config
         WifiConfiguration config = new WifiConfiguration();
         // Must be in double quotes to tell system this is an ASCII SSID and passphrase.
@@ -56,8 +68,6 @@ public class WiFiUtils {
         config.preSharedKey = String.format("\"%s\"", Config.WIFI_PASSPHRASE);
 
         // Store config
-        final WifiManager wifiManager =
-                (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         int netId = wifiManager.addNetwork(config);
         if (netId != -1) {
             wifiManager.enableNetwork(netId, false);
@@ -74,6 +84,8 @@ public class WiFiUtils {
                     context.getResources().getString(R.string.wifi_install_error_message),
                     Toast.LENGTH_SHORT).show();
         }
+
+        wifiManager.setWifiEnabled(wifiBefore);
     }
 
     /**

@@ -186,7 +186,7 @@
 
     <!-- Explanation of wifi setup that appears in the WiFi setup dialog box. -->
     <string name="description_setup_wifi_body"><![CDATA[
-        Since you\'re attending in person, we can set up this device to access the conference Wi-Fi network (5Ghz only).
+        Since you\'re attending in person, we can set up this device to access the conference Wi-Fi network.
         By configuring your Wi-Fi now, you\'ll help prevent network congestion.
     ]]></string>
 

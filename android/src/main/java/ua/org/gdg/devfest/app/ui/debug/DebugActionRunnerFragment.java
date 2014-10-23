@@ -17,6 +17,7 @@
 package ua.org.gdg.devfest.app.ui.debug;
 
 import android.app.*;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ import android.widget.TextView;
 
 import ua.org.gdg.devfest.app.R;
 import ua.org.gdg.devfest.app.ui.debug.actions.*;
+import ua.org.gdg.devfest.app.util.WiFiUtils;
 
 import static ua.org.gdg.devfest.app.util.LogUtils.makeLogTag;
 
@@ -49,6 +51,17 @@ public class DebugActionRunnerFragment extends Fragment {
         tests.addView(createTestAction(new ForceAppDataSyncNowAction()));
         tests.addView(createTestAction(new TestScheduleHelperAction()));
         tests.addView(createTestAction(new ScheduleStarredSessionAlarmsAction()));
+        tests.addView(createTestAction(new DebugAction() {
+            @Override
+            public void run(Context context, Callback callback) {
+                WiFiUtils.installConferenceWiFi(context);
+            }
+
+            @Override
+            public String getLabel() {
+                return "Setup wifi";
+            }
+        }));
         tests.addView(createTestAction(new ShowSessionNotificationDebugAction()
         ));
         return rootView;
