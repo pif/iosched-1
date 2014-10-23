@@ -91,7 +91,7 @@ public class Config {
 
     // Conference public WiFi AP parameters
     public static final String WIFI_SSID = "devfest"; //TODO
-    public static final String WIFI_PASSPHRASE = "welcome"; //TODO
+    public static final String WIFI_PASSPHRASE = "welcometodfua"; //TODO
 
     // GCM config
     public static final String GCM_SERVER_PROD_URL = "";
